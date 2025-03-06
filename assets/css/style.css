@@ -1,0 +1,280 @@
+:root {
+  --carexpo-sidebar-bg: #004d33;
+  --carexpo-sidebar-active: #e67e22;
+  --carexpo-sidebar-hover: #006644;
+  --carexpo-sidebar-width: 250px;
+  --carexpo-sidebar-collapsed-width: 80px;
+  --carexpo-topbar-height: 60px;
+  --carexpo-scrollbar-color: #006644;
+  --sidebar-bg: #004225;
+  --sidebar-hover: #ff6f0033;
+  --sidebar-active: #ff6f00;
+  --sidebar-active-bg: #ff6f0033;
+  --input-field-bg-color: #f5f5f5;
+  --metric-card-title-color: #666666;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #333;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carexpo-dashboard-container {
+  height: 100vh;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+}
+.col-xl-2 {
+  width: 20% !important;
+  transition: width 0.3s ease;
+}
+
+.col-xl-10 {
+  width: 80% !important;
+  transition: width 0.3s ease;
+}
+
+.carexpo-sidebar.collapsed ~ .col-xl-2 {
+  width: var(--carexpo-sidebar-collapsed-width) !important;
+}
+
+.carexpo-sidebar.collapsed ~ .col-xl-10 {
+  width: calc(100% - var(--carexpo-sidebar-collapsed-width)) !important;
+}
+
+@media (max-width: 992px) {
+  .col-xl-10 {
+    width: 100% !important;
+  }
+}
+.carexpo-sidebar {
+  background-color: var(--carexpo-sidebar-bg);
+  color: white;
+  transition: all 0.3s ease;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Styling the scrollbar for all browsers */
+.carexpo-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.carexpo-sidebar::-webkit-scrollbar-track {
+  background: var(--carexpo-sidebar-bg);
+}
+
+.carexpo-sidebar::-webkit-scrollbar-thumb {
+  background-color: var(--carexpo-scrollbar-color);
+  border-radius: 20px;
+  border: 3px solid var(--carexpo-sidebar-bg);
+}
+
+/* For Firefox */
+.carexpo-sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--carexpo-scrollbar-color) var(--carexpo-sidebar-bg);
+}
+
+.carexpo-sidebar.collapsed {
+  width: var(--carexpo-sidebar-collapsed-width) !important;
+}
+
+.carexpo-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px 20px 10px;
+  transition: all 0.3s ease;
+}
+
+.carexpo-logo {
+  /* width: 60px;
+  height: 60px; */
+  border-radius: 50%;
+  background-color: white;
+  /* padding: 20px; */
+  transition: all 0.3s ease;
+  border: 2px solid white !important;
+}
+
+.carexpo-sidebar.collapsed .carexpo-logo {
+  width: 40px;
+  height: 40px;
+padding: 0px !important;
+}
+
+.carexpo-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.carexpo-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 7px 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  gap: 0px;
+  margin-left: 10px;
+}
+
+.carexpo-menu-item:hover {
+  background-color: var(--carexpo-sidebar-active);
+  color: white;
+}
+
+.carexpo-menu-item.active {
+  background-color: var(--carexpo-sidebar-active);
+  color: white;
+}
+
+.carexpo-menu-item svg {
+  margin-right: 15px;
+  font-size: 16px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.carexpo-sidebar.collapsed .carexpo-menu-item span {
+  display: none;
+}
+
+.carexpo-main-content {
+  background-color: white;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.carexpo-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+}
+
+.carexpo-toggle-btn {
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carexpo-search-container {
+  position: relative;
+  width: 300px;
+}
+
+.carexpo-search-input {
+  width: 100%;
+  padding: 8px 15px;
+  padding-right: 40px;
+  border: 1px solid #f5f5f5;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f5f5f5;
+}
+
+.carexpo-search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.carexpo-user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.carexpo-notification {
+  margin-right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.carexpo-user-profile {
+  cursor: pointer;
+}
+
+.carexpo-profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.carexpo-content-area {
+  padding: 20px;
+}
+
+.carexpo-close-sidebar {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .carexpo-sidebar {
+    position: fixed;
+    z-index: 1000;
+    left: -100%;
+    transition: left 0.3s ease;
+    width: var(--carexpo-sidebar-width) !important;
+  }
+
+  .carexpo-sidebar.show {
+    left: 0;
+  }
+
+  .carexpo-close-sidebar {
+    display: block;
+  }
+
+  .carexpo-search-container {
+    width: 200px;
+  }
+
+  .carexpo-sidebar .carexpo-menu-item span {
+    display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+  .carexpo-search-container {
+    display: none;
+  }
+
+  .carexpo-top-bar {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 576px) {
+  .carexpo-content-area {
+    padding: 15px;
+  }
+
+  .carexpo-top-bar {
+    padding: 0 15px;
+  }
+}
