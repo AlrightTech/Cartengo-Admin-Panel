@@ -46,4 +46,22 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
   
-  
+  // dropdown user-management table amna
+  // JavaScript to toggle the dropdown
+  function userToggleDropdown() {
+      const dropdownMenu = document.getElementById("userDropdownMenu");
+      dropdownMenu.classList.toggle("user-show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+      if (!event.target.matches('.user-action-btn')) {
+          const dropdowns = document.getElementsByClassName("user-dropdown-content");
+          for (let i = 0; i < dropdowns.length; i++) {
+              const openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('user-show')) {
+                  openDropdown.classList.remove('user-show');
+              }
+          }
+      }
+  };
