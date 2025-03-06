@@ -280,6 +280,397 @@ padding: 0px !important;
 }
 
 
+
+/* user-msnsgement amna start */
+        .table {
+
+            --bs-table-color: v;
+            --bs-table-bg: #F5F5F5 !important;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .user-mngmnt-table {
+            background: #F5F5F5;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+
+        }
+
+        .userr-nav-tabs {
+            /* border-bottom: 1px solid #dee2e6; */
+            /* margin-bottom: 20px; */
+            border-bottom: none;
+        }
+
+        .userr-nav-tabs .userr-nav-link {
+            border: none;
+            padding: 10px 15px;
+            margin-right: 5px;
+            border-radius: 0;
+            position: relative;
+            color: #666666;
+            font-family: "Urbanist";
+            font-weight: 600;
+            font-size: 13px;
+
+
+        }
+
+        .userr-nav-tabs .userr-nav-link.active {
+            color: #000;
+            font-weight: 500;
+            border-bottom: 2px solid #000;
+            background-color: transparent;
+            font-family: "Urbanist";
+            font-weight: 600;
+            font-size: 13px;
+
+
+        }
+
+        .userr-badge-count {
+            font-size: 12px;
+            padding: 6px;
+            margin-left: 5px;
+            font-family: "Urbanist";
+            font-weight: 700;
+            border-radius: 8px;
+        }
+
+
+        .userr-badge-all {
+            background-color: #212529;
+            color: white;
+
+        }
+
+        .userr-badge-active {
+            background: #22C55E29;
+            color: #118D57;
+
+        }
+
+        .userr-badge-pending {
+            background-color: #FFF2D6;
+
+            color: #B76E00;
+            ;
+        }
+
+        .userr-badge-suspended {
+            background-color: #FF563029;
+
+            color: #B71D18;
+
+        }
+
+        .search-filter-container {
+            display: flex;
+            justify-content: flex-end;
+            height: 37px;
+        }
+
+        .search-container {
+            position: relative;
+            margin-right: 10px;
+        }
+
+        .search-container input {
+            padding-left: 35px;
+            border: 1px solid #DEE2E6;
+            height: 38px;
+            background-color: transparent;
+            border-radius: 8px;
+            /* padding-right: 14px;
+padding-left: 14px; */
+
+        }
+
+        .search-container input::placeholder {
+            font-family: "Urbanist";
+            font-weight: 600;
+            font-size: 12.5px;
+
+        }
+
+
+        .search-container .user-bi-search {
+            position: absolute;
+            left: 10px;
+            top: 7px;
+            color: #6c757d;
+        }
+
+        .filter-btn {
+            background-color: transparent;
+            /* border: 1px solid #dee2e6; */
+            border: none;
+            border-radius: 5px;
+            padding: 6px 12px;
+            font-family: "Urbanist";
+            font-weight: 600;
+            font-size: 12.5px;
+            color: #666666;
+
+        }
+
+        /* <!-- CSS for Horizontal Scrollbar Below --> */
+        .userr-scroll-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            width: 100%;
+            padding-bottom: 5px;
+        }
+
+        .userr-scroll-container::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .userr-scroll-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .userr-scroll-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .userr-nav-tabs {
+            flex-wrap: nowrap;
+        }
+
+        .userr-nav-link {
+            white-space: nowrap;
+        }
+
+        .table {
+            margin-bottom: 0;
+        }
+
+        .table th {
+
+            border-top: 1px solid #DEE2E680;
+            padding: 12px 16px;
+
+            color: #666666;
+            font-family: "Urbanist";
+            font-weight: 700;
+            font-size: 13px;
+
+
+        }
+
+        .table td {
+            padding: 16px;
+            vertical-align: middle;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-info span {
+            font-family: "Urbanist";
+            font-weight: 600;
+            font-size: 13px;
+            color: #333333;
+
+
+        }
+
+        .usermngmnt-tale-col {
+            font-family: "Urbanist";
+            font-weight: 500;
+            font-size: 13px;
+
+            color: #333333;
+        }
+
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .status-active {
+            background-color: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+        }
+
+        .status-pending {
+            background-color: #FFF2D6;
+
+            color: #B76E00;
+
+        }
+
+        .status-suspended {
+            background-color: rgba(220, 53, 69, 0.1);
+            color: #dc3545;
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            color: #6c757d;
+            cursor: pointer;
+        }
+
+        .user-pagination {
+            margin-top: 20px;
+            justify-content: end;
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .user-pagination .user-page-item {
+            margin: 0 3px;
+        }
+
+        .user-pagination .user-page-item .user-page-link {
+
+
+            padding: 4px 12px;
+            color: #6c757d !important;
+            background-color: transparent;
+            border: 1px solid #dee2e6;
+            border-radius: 7px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .pg-txtt {
+            cursor: pointer;
+
+            font-size: 10px;
+            color: #6c757d !important;
+        }
+
+        .user-pagination .user-page-item.user-active .user-page-link {
+            background-color: #212529;
+            color: white !important;
+            border-radius: 7px;
+        }
+
+        .user-pagination .user-page-item.user-disabled .user-page-link {
+            color: #dee2e6;
+            pointer-events: none;
+        }
+
+        .user-mngmnt-table-bg {
+            background-color: #F5F5F5 !important;
+        }
+
+        .user-h{
+            font-family: "Urbanist";
+font-weight: 700;
+font-size: 18px;
+color: #333333;
+
+
+        }
+
+        .user-p{
+            color: #666666;
+            font-family: "Urbanist";
+font-weight: 600;
+font-size: 12.5px;
+
+
+        }
+
+        .user-p1{
+            color: #333333;
+            
+
+
+        }
+        /* Style for the dropdown container */
+        .user-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Style for the dropdown button */
+        .user-action-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        /* Style for the dropdown content (hidden by default) */
+        .user-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Style for the dropdown links */
+        .user-dropdown-content a {
+            color: black;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color on hover */
+        .user-dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show the dropdown menu when the button is clicked */
+        .user-show {
+            display: block;
+        }
+
+        @media (max-width: 992px) {
+            .hide-pg {
+                display: none;
+            }
+        }
+
+        
+
+        @media (max-width: 365px) {
+            .user-pagination .user-page-item .user-page-link {
+                padding: 3px 7px;
+            }
+        }
+
+        .more-size1 {
+          width: 12px;
+          height: 14px;
+        }
+
+        .more-size2 {
+          width: 8px;
+          height: 8px;
+        }
+    
+/* user-msnsgement amna end */
+
 /* Dashboard index page style starts here */
 .metric-card {
   background-color: var(--input-field-bg-color);
