@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="assets/images/fav-icon.svg" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>User Detail</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Bootstrap Icons -->
@@ -41,7 +41,7 @@
                     <img src="assets/images/fav-icon.svg" alt="Car Expo Logo" class="carexpo-logo" />
                 </div>
                 <div class="carexpo-sidebar-menu">
-                    <a href="#" class="carexpo-menu-item">
+                    <a href="./index.html" class="carexpo-menu-item">
                         <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -177,102 +177,305 @@
                     </div>
                 </div>
 
-                <div class="carexpo-content-area border border-danger">
-                    <!-- Dashboard content -->
-                    <div class="row">
-                        <a href="./user-management.html">
-                            <button class="btn text-start d-flex align-items-start gap-2" type="button">
-                                <svg width="25" height="25" viewBox="0 0 8 17" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M1.22741 8.97377L4.99874 12.7451L5.94141 11.8024L2.64141 8.50243L5.94141 5.20243L4.99874 4.25977L1.22741 8.0311C1.10243 8.15612 1.03222 8.32566 1.03222 8.50243C1.03222 8.67921 1.10243 8.84875 1.22741 8.97377Z"
-                                        fill="#666666" />
-                                </svg>
+                <div class="carexpo-content-area">
+                    <div class="px-3">
+                        <!-- Dashboard content -->
+                        <div class="row">
+                            <a href="./user-management.html">
+                                <button class="btn text-start d-flex align-items-start gap-2" type="button">
+                                    <svg width="25" height="25" viewBox="0 0 8 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M1.22741 8.97377L4.99874 12.7451L5.94141 11.8024L2.64141 8.50243L5.94141 5.20243L4.99874 4.25977L1.22741 8.0311C1.10243 8.15612 1.03222 8.32566 1.03222 8.50243C1.03222 8.67921 1.10243 8.84875 1.22741 8.97377Z"
+                                            fill="#666666" />
+                                    </svg>
 
-                                <span>Back</span>
-                            </button>
-                        </a>
-                        <div class="col-12 col-md-4 User-card mt-3">
-                            <div class="d-flex justify-content-end">
-                                <span class="User-status p-2 rounded-3">Suspended</span>
-                            </div>
+                                    <span>Back</span>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="row gap-3">
+                            <!-- user role card -->
+                            <div class="col-12 col-md-3 User-card mt-3">
+                                <div class="d-flex justify-content-end">
+                                    <span class="lightGreen-btn p-2 rounded-3">Suspended</span>
+                                </div>
 
-                            <!-- user img name and email-->
-                            <div class="d-flex flex-column align-items-center mt-3 gap-2">
-                                <img src="./assets/images/User Detail images/user 1.jpeg" alt="user img 1"
-                                    class="img-fluid rounded-circle User-card-img">
-                                <div class="d-flex flex-column align-items-center">
-                                    <span class="userCard-Username">Jayshri Tiwari</span>
-                                    <a class="UserEmail"
-                                        href="mailto:tim.jennings@example.com">tim.jennings@example.com</a>
+                                <!-- user img name and email-->
+                                <div class="d-flex flex-column align-items-center mt-3 gap-2">
+                                    <img src="./assets/images/User Detail images/user 1.jpeg" alt="user img 1"
+                                        class="img-fluid rounded-circle User-card-img">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <span class="userCard-Username">Jayshri Tiwari</span>
+                                        <a class="UserEmail"
+                                            href="mailto:tim.jennings@example.com">tim.jennings@example.com</a>
+                                    </div>
+                                </div>
+
+                                <!-- user role and button -->
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <!-- user role text -->
+                                    <div>
+                                        <h6 class="fw-bold">Role</h6>
+                                        <span class="UserRole fw-semibold">User role</span>
+                                    </div>
+
+                                    <!-- User role button -->
+                                    <div>
+                                        <div class="dropdown">
+                                            <button class="btn border" type="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Buyer
+                                                <svg width="15" height="15" viewBox="0 0 10 8" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_4778_2562)">
+                                                        <path d="M2.5 3.02772L5 4.97217L7.5 3.02772" stroke="#666666"
+                                                            stroke-width="0.8" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4778_2562">
+                                                            <rect width="7.77778" height="10" fill="white"
+                                                                transform="matrix(-4.37114e-08 -1 -1 2.32362e-08 10 7.88892)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Suspend text and checkbox -->
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div>
+                                        <h6 class="fw-bold">Suspend</h6>
+                                        <span class="UserRole fw-semibold">Ban or Unban User</span>
+                                    </div>
+
+                                    <!-- checkbox -->
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+
+                                <!-- User delete button -->
+                                <div class="d-flex justify-content-center mt-3">
+                                    <button class="lightGreen-btn border-0 text-danger p-2 rounded-2">Delete
+                                        User</button>
                                 </div>
                             </div>
 
-                            <!-- user role and button -->
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <!-- user role text -->
-                                <div>
-                                    <h6 class="fw-bold">Role</h6>
-                                    <span class="UserRole fw-semibold">User role</span>
-                                </div>
+                            <!-- pending and approval posts -->
+                            <div class="col-12 col-md-8 mt-3 Pending-approvalPosts">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="container">
+                                            <ul class="nav PendingApproval-nav-tabs">
+                                                <li class="nav-item">
+                                                    <a class="nav-link PendingApproval-nav-link active" id="pending-tab"
+                                                        data-bs-toggle="tab" href="#pending">Pending Approvals</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link PendingApproval-nav-link" id="posts-tab"
+                                                        data-bs-toggle="tab" href="#posts">Posts</a>
+                                                </li>
+                                            </ul>
 
-                                <!-- User role button -->
-                                <div>
-                                    <div class="dropdown">
-                                        <button class="btn border" type="button" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            Buyer
-                                            <svg width="15" height="15" viewBox="0 0 10 8" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_4778_2562)">
-                                                    <path d="M2.5 3.02772L5 4.97217L7.5 3.02772" stroke="#666666"
-                                                        stroke-width="0.8" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_4778_2562">
-                                                        <rect width="7.77778" height="10" fill="white"
-                                                            transform="matrix(-4.37114e-08 -1 -1 2.32362e-08 10 7.88892)" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
+                                            <div class="tab-content mt-3">
+                                                <div class="tab-pane fade show active" id="pending">
+                                                    <!-- car card 1 -->
+                                                    <div class="col-12 col-md-4 mt-3">
+                                                        <div class="carCards p-3">
 
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
+                                                            <!-- car img -->
+                                                            <div class="mt-2">
+                                                                <img src="./assets/images/Dashboard images/cards images/car 1 img.jpeg"
+                                                                    alt="car 1 img"
+                                                                    class="img-fluid rounded-2 car-imgs">
+                                                            </div>
+
+                                                            <!-- card body -->
+                                                            <div class="mt-2">
+                                                                <h6 class="car-title">Luxury Sedan Auction</h6>
+                                                                <span class="car-modal">2020 Toyota</span>
+
+                                                                <!-- start and end date -->
+                                                                <div class="mt-2 d-flex align-items-center gap-4">
+                                                                    <!-- start date -->
+                                                                    <div
+                                                                        class="d-flex flex-column justify-content-center gap-2">
+                                                                        <span class="car-dates">Start Date:</span>
+                                                                        <span class="car-date">2025-02-20</span>
+                                                                    </div>
+
+                                                                    <!-- end date -->
+                                                                    <div
+                                                                        class="d-flex flex-column justify-content-center gap-2">
+                                                                        <span class="car-dates">End Date:</span>
+                                                                        <span class="car-date">2025-02-27</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="mt-3 d-flex justify-content-end gap-3">
+                                                                    <button
+                                                                        class="btn lightGreen-btn px-4">Reject</button>
+                                                                    <button
+                                                                        class="btn lightYellow-btn px-4">Approve</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="posts">
+                                                    <div class="row">
+
+                                                        <!-- car card 1 -->
+                                                        <div class="col-12 col-md-4 mt-3">
+                                                            <div class="carCards p-3">
+                                                                <!-- card header -->
+                                                                <div
+                                                                    class="d-flex align-items-start justify-content-between gap-2">
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <!-- arrow up icon -->
+                                                                        <div
+                                                                            class="p-2 ArrowUp-icon-boxYellow rounded-3 d-flex justify-content-center align-items-center">
+                                                                            <svg width="18" height="18"
+                                                                                viewBox="0 0 18 18" fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path
+                                                                                    d="M7.16239 11.3625L13.5186 5.00625C13.6686 4.85625 13.8436 4.78125 14.0436 4.78125C14.2436 4.78125 14.4186 4.85625 14.5686 5.00625C14.7186 5.15625 14.7936 5.3345 14.7936 5.541C14.7936 5.7475 14.7186 5.9255 14.5686 6.075L7.68739 12.975C7.53739 13.125 7.36239 13.2 7.16239 13.2C6.96239 13.2 6.78739 13.125 6.63739 12.975L3.41239 9.75C3.26239 9.6 3.19039 9.422 3.19639 9.216C3.20239 9.01 3.28064 8.83175 3.43114 8.68125C3.58164 8.53075 3.75989 8.45575 3.96589 8.45625C4.17189 8.45675 4.34989 8.53175 4.49989 8.68125L7.16239 11.3625Z"
+                                                                                    fill="black" />
+                                                                            </svg>
+
+                                                                        </div>
+                                                                        <!-- cars price -->
+                                                                        <div class="d-flex flex-column">
+                                                                            <!-- text -->
+                                                                            <span
+                                                                                class="cars-prices-Yellow">$63,440</span>
+                                                                            <span class="bidders-text">10 Bidders</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- 3 dots -->
+                                                                    <i
+                                                                        class="bi bi-three-dots-vertical three-dots-dashboard"></i>
+                                                                </div>
+                                                                <!-- car img -->
+                                                                <div class="mt-2">
+                                                                    <img src="./assets/images/Dashboard images/cards images/car 1 img.jpeg"
+                                                                        alt="car 1 img"
+                                                                        class="img-fluid rounded-2 car-imgs">
+                                                                </div>
+
+                                                                <!-- card body -->
+                                                                <div class="mt-2">
+                                                                    <h6 class="car-title">Luxury Sedan Auction</h6>
+                                                                    <span class="car-modal">2020 Toyota</span>
+
+                                                                    <!-- start and end date -->
+                                                                    <div class="mt-2 d-flex align-items-center gap-4">
+                                                                        <!-- start date -->
+                                                                        <div
+                                                                            class="d-flex flex-column justify-content-center gap-2">
+                                                                            <span class="car-dates">Start Date:</span>
+                                                                            <span class="car-date">2025-02-20</span>
+                                                                        </div>
+
+                                                                        <!-- end date -->
+                                                                        <div
+                                                                            class="d-flex flex-column justify-content-center gap-2">
+                                                                            <span class="car-dates">End Date:</span>
+                                                                            <span class="car-date">2025-02-27</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- car card 2 -->
+                                                        <div class="col-12 col-md-4 mt-3">
+                                                            <div class="carCards p-3">
+                                                                <!-- card header -->
+                                                                <div
+                                                                    class="d-flex align-items-start justify-content-between gap-2">
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <!-- arrow up icon -->
+                                                                        <div
+                                                                            class="p-2 ArrowUp-icon-boxYellow rounded-3 d-flex justify-content-center align-items-center">
+                                                                            <svg width="18" height="18"
+                                                                                viewBox="0 0 18 18" fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path
+                                                                                    d="M7.16239 11.3625L13.5186 5.00625C13.6686 4.85625 13.8436 4.78125 14.0436 4.78125C14.2436 4.78125 14.4186 4.85625 14.5686 5.00625C14.7186 5.15625 14.7936 5.3345 14.7936 5.541C14.7936 5.7475 14.7186 5.9255 14.5686 6.075L7.68739 12.975C7.53739 13.125 7.36239 13.2 7.16239 13.2C6.96239 13.2 6.78739 13.125 6.63739 12.975L3.41239 9.75C3.26239 9.6 3.19039 9.422 3.19639 9.216C3.20239 9.01 3.28064 8.83175 3.43114 8.68125C3.58164 8.53075 3.75989 8.45575 3.96589 8.45625C4.17189 8.45675 4.34989 8.53175 4.49989 8.68125L7.16239 11.3625Z"
+                                                                                    fill="black" />
+                                                                            </svg>
+
+                                                                        </div>
+                                                                        <!-- cars price -->
+                                                                        <div class="d-flex flex-column">
+                                                                            <!-- text -->
+                                                                            <span
+                                                                                class="cars-prices-Yellow">$63,440</span>
+                                                                            <span class="bidders-text">10 Bidders</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- 3 dots -->
+                                                                    <i
+                                                                        class="bi bi-three-dots-vertical three-dots-dashboard"></i>
+                                                                </div>
+                                                                <!-- car img -->
+                                                                <div class="mt-2">
+                                                                    <img src="./assets/images/Dashboard images/cards images/car 2 img.jpeg"
+                                                                        alt="car 2 img"
+                                                                        class="img-fluid rounded-2 car-imgs">
+                                                                </div>
+
+                                                                <!-- card body -->
+                                                                <div class="mt-2">
+                                                                    <h6 class="car-title">Luxury Sedan Auction</h6>
+                                                                    <span class="car-modal">2020 Toyota</span>
+
+                                                                    <!-- start and end date -->
+                                                                    <div class="mt-2 d-flex align-items-center gap-4">
+                                                                        <!-- start date -->
+                                                                        <div
+                                                                            class="d-flex flex-column justify-content-center gap-2">
+                                                                            <span class="car-dates">Start Date:</span>
+                                                                            <span class="car-date">2025-02-20</span>
+                                                                        </div>
+
+                                                                        <!-- end date -->
+                                                                        <div
+                                                                            class="d-flex flex-column justify-content-center gap-2">
+                                                                            <span class="car-dates">End Date:</span>
+                                                                            <span class="car-date">2025-02-27</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Suspend text and checkbox -->
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <div>
-                                    <h6 class="fw-bold">Suspend</h6>
-                                    <span class="UserRole fw-semibold">Ban or Unban User</span>
-                                </div>
-
-                                <!-- checkbox -->
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-
-                            <!-- User delete button -->
-                            <div class="d-flex justify-content-center mt-3">
-                                <button class="userDelete-btn border-0 text-danger p-2 rounded-2">Delete User</button>
-                            </div>
-
-
                         </div>
-                        <div class="col-12 col-md-8"></div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
