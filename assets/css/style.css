@@ -381,6 +381,7 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
+
 /* 
 .notification-list {
   max-height: 400px;
@@ -433,6 +434,7 @@ body {
   background: var(--carexpo-scrollbar-color);
   border-radius: 5px;
 }
+
 /* #############off canvas styling end############### */
 
 .breadcrumb {
@@ -863,7 +865,7 @@ top: 342px;
 left: 1223px; */
   border-radius: 10px;
   padding: 10px 6px;
-  
+
 }
 
 /* Style for the dropdown links */
@@ -872,9 +874,9 @@ left: 1223px; */
   padding: 8px 12px;
   text-decoration: none;
   display: block;
-font-weight: 500;
-font-size: 10.5px;
-color: #333333;
+  font-weight: 500;
+  font-size: 10.5px;
+  color: #333333;
 
 }
 
@@ -887,10 +889,12 @@ color: #333333;
 .user-show {
   display: block;
 }
+
 .dd-icon-size {
   width: 11.6px;
   height: 11.6px;
 }
+
 @media (max-width: 992px) {
   .hide-pg {
     display: none;
@@ -1028,11 +1032,17 @@ color: #333333;
 .ArrowUp-icon-box-third {
   background-color: #FF1E1E;
 }
+.ArrowUp-icon-boxYellow{
+  background-color: #FEBA4C;
+}
 
 .cars-prices {
   font-weight: 700;
   font-size: 15px;
   color: #0DCB77;
+}
+.cars-prices-Yellow{
+  color: #FEBA4C;
 }
 
 .bidders-text {
@@ -1139,6 +1149,7 @@ canvas {
     height: auto !important;
   }
 }
+
 /* Dashboard index page style ends here */
 
 
@@ -1575,7 +1586,7 @@ canvas {
 /* car-information page end */
 /* create-auction page start */
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -1583,129 +1594,161 @@ canvas {
   font-weight: 600;
 }
 
-.container-main{
+.container-main {
   background-color: #f9f9f9;
-  
+
 }
-.image-container-upload{
+
+.image-container-upload {
   width: 120px;
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-padding: 0px 16px;
-  background-color:#E9ECEF;
+  padding: 0px 16px;
+  background-color: #E9ECEF;
   overflow: hidden;
   border-radius: 50%;
 
 }
+
 .image-container-upload img {
- height: 40px;
- width: 40px;
- cursor: pointer;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
 
 }
-.form-group-heading{
+
+.form-group-heading {
   padding: 0px 13px;
-font-weight: 400;
-font-size: 16px;
-  
-  
-  
+  font-weight: 400;
+  font-size: 16px;
+
+
+
 }
-.form-group{
+
+.form-group {
   display: flex;
   border-radius: 8px;
-  
+
 }
+
 .model-main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 5px 11px;
-  
-  
+
+
 }
 
 .form-group {
   display: flex;
   flex-direction: row;
-  width: 50%; 
+  width: 50%;
   padding: 5px 3px;
-  color:#999999;
-  
-  
+  color: #999999;
+
+
   /* Each input takes 50% of the row */
   /* Ensures responsiveness on smaller screens */
 }
 
-select, input {
-  width: 100%; /* Ensures full width inside the .form-group */
+select,
+input {
+  width: 100%;
+  /* Ensures full width inside the .form-group */
   padding: 12px 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background: #f9f9f9;
-  color:#999999;
-font-weight: 600;
-border-radius: 10px;
+  color: #999999;
+  font-weight: 600;
+  border-radius: 10px;
 }
+
 .publish-auction {
   display: flex;
   justify-content: end;
   border: none;
-  background-color: #f4a737; /* Adjust to match your exact shade */
+  background-color: #f4a737;
+  /* Adjust to match your exact shade */
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;
   border-radius: 5px;
 
 }
-.div-button{
+
+.div-button {
   display: flex;
   justify-content: end;
-  padding-inline-end: 25px!important;
+  padding-inline-end: 25px !important;
   padding: 10px 10px;
 }
+
 /* create-auction page end */
 /* User Detail page style starts here */
-a{
+a {
   text-decoration: none;
   color: black;
 }
-.User-card{
-border-radius: 10px;
-gap: 10px;
-padding: 20px;
-background-color: var(--input-field-bg-color);
-font-family: Urbanist;
+
+.User-card {
+  border-radius: 10px;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--input-field-bg-color);
+  font-family: Urbanist;
 }
 
-.User-status{
-font-weight: 600;
-font-size: 12px;
-color: #B71D18;
-background-color: #22C55E29;
+.lightGreen-btn {
+  font-weight: 600;
+  font-size: 15px;
+  color: #B71D18;
+  background-color: #22C55E29;
 }
-.User-card-img{
+
+.lightGreen-btn:hover {
+  background-color: #22c55e78;
+  cursor: pointer;
+  color: #B71D18;
+}
+
+.lightYellow-btn {
+  color: #333333;
+  background-color: #FEBA4C;
+  font-weight: 600;
+  font-size: 15px;
+}
+.lightYellow-btn:hover{
+  background-color: #f7b13f;
+}
+
+.User-card-img {
   width: 100px;
   height: 100px;
   object-fit: cover;
 }
-.userCard-Username{
-font-weight: 700;
-font-size: 20px;
-color: #333333;
+
+.userCard-Username {
+  font-weight: 700;
+  font-size: 20px;
+  color: #333333;
 }
 
-.UserEmail{
-font-size: 14px;
-font-weight: 500;
+.UserEmail {
+  font-size: 14px;
+  font-weight: 500;
 }
-.UserEmail:hover{
+
+.UserEmail:hover {
   cursor: pointer;
 }
-.UserRole{
-font-size: 14px;
+
+.UserRole {
+  font-size: 14px;
   color: #666666;
 }
 
@@ -1741,29 +1784,49 @@ font-size: 14px;
   height: 18px;
   width: 18px;
   left: 0px;
-  bottom: 1.5px;
+  bottom: 1px;
   background-color: white;
   transition: 0.4s;
   border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #1e252b;
 }
 
-input:checked + .slider::before {
+input:checked+.slider::before {
   transform: translateX(16px);
 }
 
-.userDelete-btn{
-  background-color: #22C55E29;
-  font-family: Urbanist;
-font-weight: 600;
-font-size: 14px;
-line-height: 100%;
-letter-spacing: 0%;
-text-align: right;
-color: #B71D18;
 
+.Pending-approvalPosts {
+  border-radius: 12px;
 }
+
+.PendingApproval-nav-tabs {
+  background-color: #F5F5F5;
+  border-radius: 18px;
+  padding-block: 10px;
+}
+
+.PendingApproval-nav-link {
+  padding: 0px !important;
+  margin-inline: 20px !important;
+  padding-block: 10px !important;
+}
+
+.PendingApproval-nav-tabs .PendingApproval-nav-link.active {
+  font-weight: bold;
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.PendingApproval-nav-tabs .PendingApproval-nav-link {
+  color: #6c757d;
+}
+
+.PendingApproval-nav-tabs .PendingApproval-nav-link:hover {
+  color: black;
+}
+
 /* User Detail page style ends here */
