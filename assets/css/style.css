@@ -280,22 +280,24 @@ body {
     padding: 0 15px;
   }
 }
+
 /* #############off canvas styling start############### */
 .offcanvas {
-    width: 350px;
-    padding: 0px;
+  width: 350px;
+  padding: 0px;
 }
 
 .offcanvas-header {
-    background: var(--input-field-bg-color);
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
+  background: var(--input-field-bg-color);
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
 }
 
 .offcanvas-title {
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
 }
+
 /* 
 .notification-list {
     max-height: 400px;
@@ -304,63 +306,64 @@ body {
 } */
 
 .notification-item {
-    background: white;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    font-size: 14px;
-    color: var(--metric-card-title-color);
+  background: white;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  color: var(--metric-card-title-color);
 }
 
 .notification-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .notification-time {
-    font-size: 12px;
-    color: #999;
+  font-size: 12px;
+  color: #999;
 }
 
 .btn-close {
-    outline: none;
+  outline: none;
 }
 
 .see-all {
-    text-align: right;
-    font-size: 14px;
-    color: var(--sidebar-active);
-    cursor: pointer;
+  text-align: right;
+  font-size: 14px;
+  color: var(--sidebar-active);
+  cursor: pointer;
 }
 
 .see-all:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Custom Scrollbar */
 .notification-list::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 .notification-list::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 .notification-list::-webkit-scrollbar-thumb {
-    background: var(--carexpo-scrollbar-color);
-    border-radius: 5px;
+  background: var(--carexpo-scrollbar-color);
+  border-radius: 5px;
 }
+
 /* #############off canvas styling end############### */
 
 
 /* #############Notification page styling start############### */
 
 .notifications-header {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .notifications-header h1 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .offcanvas {
@@ -433,53 +436,53 @@ body {
 /* #############off canvas styling end############### */
 
 .breadcrumb {
-    font-size: 0.9rem;
-    color: #6c757d;
+  font-size: 0.9rem;
+  color: #6c757d;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
-    content: "•";
+.breadcrumb-item+.breadcrumb-item::before {
+  content: "•";
 }
 
 .notification-list {
-    background: rgba(245, 245, 245, 1);
-    border-radius: 8px !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  background: rgba(245, 245, 245, 1);
+  border-radius: 8px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .notification-item {
-    padding: 0.8rem 1.5rem;
-    border-bottom: 1px solid #f0f0f0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.2s;
-    background-color: #f8f9fa;
-    cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+  background-color: #f8f9fa;
+  cursor: pointer;
 }
 
 .notification-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .notification-item:hover {
-    background-color: #d8d8d8;
+  background-color: #d8d8d8;
 }
 
 .notification-content {
-    flex-grow: 1;
-    padding-right: 1rem;
+  flex-grow: 1;
+  padding-right: 1rem;
 }
 
 .notification-time {
-    color: #6c757d;
-    font-size: 0.875rem;
-    white-space: nowrap;
+  color: #6c757d;
+  font-size: 0.875rem;
+  white-space: nowrap;
 }
 
 .just-now {
-    color: #198754;
-    font-weight: 500;
+  color: #198754;
+  font-weight: 500;
 }
 
 
@@ -766,6 +769,13 @@ padding-left: 14px; */
   color: #6c757d !important;
 }
 
+.pg-txtt1 {
+  cursor: pointer;
+
+  font-size: 12px;
+  color: #6c757d !important;
+}
+
 .user-pagination .user-page-item.user-active .user-page-link {
   background-color: #212529;
   color: white !important;
@@ -804,6 +814,11 @@ padding-left: 14px; */
 
 
 
+}
+
+.car-infoo {
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
 /* Style for the dropdown container */
@@ -860,6 +875,10 @@ left: 1223px; */
   padding: 8px 12px;
   text-decoration: none;
   display: block;
+font-weight: 500;
+font-size: 10.5px;
+color: #333333;
+
 }
 
 /* Change color on hover */
@@ -1123,6 +1142,531 @@ canvas {
 /* Dashboard index page style ends here */
 
 
+/* car-information page start */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "urbanist", sans-serif;
+}
+
+/* p{
+    margin-bottom: 0px;
+} */
+.hero-section-user {
+  width: 100%;
+  height: 100%;
+}
+
+.user-heading {
+  width: 83% !important;
+}
+
+.user-heading button {
+  background-color: #ffffff;
+  border: none;
+}
+
+.tb-clr {
+  background-color: #F5F5F5 !important;
+}
+
+.tbl-td {
+  font-weight: 600;
+  color: #252B42 !important;
+}
+
+/* ############# row1-side1 start ########### */
+.row1-side1 {
+  height: 350px;
+  border-radius: 8px;
+  background-color: #F5F5F5;
+}
+
+.row1-side1 img {
+  height: 220px;
+  width: 100%;
+}
+
+.row1s1-hp {
+  width: 97%;
+}
+
+.row1s1-hp p {
+  font-weight: 600;
+  font-size: 13px;
+  color: #666666;
+}
+
+.row1s1-hp h5 {
+  font-size: 1.15rem;
+  font-weight: 600 !important;
+}
+
+.row1s1-span {
+  font-weight: 600;
+  font-size: 13px;
+  color: #666666;
+}
+
+/* ############# row1-side1 end ########### */
+/*############### row1-side2 start ###############  */
+.row1-side2 {
+  background-color: #F5F5F5 !important;
+  height: 350px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.r1s2-heading {
+  padding-inline-start: 8px;
+}
+
+.r1s2-p {
+  margin-bottom: 0px;
+  color: #333333;
+}
+
+.status {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 10px;
+  border-radius: 7px;
+  font-size: 12px;
+  padding-inline-start: 8px;
+}
+
+.table td {
+  vertical-align: middle;
+  padding: 6px 10px;
+  /* Reduce padding to fit in height */
+}
+
+/*############### row1-side2 end ###############  */
+/*############### row2-side1 start ###############  */
+.row2-side1 {
+  background-color: #F5F5F5 !important;
+  height: 300px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.r2s1-heading {
+  padding-inline-start: 8px;
+}
+
+.r2s1-h {
+  color: #666666 !important;
+  font-weight: 600;
+}
+
+.table th,
+.table td {
+  padding: 8px 10px;
+  /* Adjusting padding */
+  font-size: 14px;
+  /* Reducing font size to fit content */
+  white-space: nowrap;
+  /* Ensuring text doesn't wrap */
+}
+
+.ellipsis {
+  cursor: pointer;
+}
+
+.tbr2s1-clr {
+  color: #333333 !important;
+}
+
+.tbr2s1-clr {
+  padding: 0.5rem !important;
+}
+
+/*############### row2-side1 end ###############  */
+
+
+/*############### row2-side2 start ###############  */
+.row2-side2 {
+  background-color: #F5F5F5;
+  height: 300px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.r2s2-heading {
+  padding-inline-start: 8px;
+}
+
+.table td {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.table th {
+  font-weight: 600;
+}
+
+.border-bottom-light {
+  border-bottom: 1.5px solid #ddd;
+}
+
+.border-bottom1 {
+  border-bottom: 1px solid #ddd;
+}
+
+/*############### row2-side2 end ###############  */
+/* ####################### media queries #################### */
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .row1-side1,
+  .row1-side2,
+  .row2-side1,
+  .row2-side2 {
+    width: 80%;
+  }
+
+}
+
+@media (max-width:430px) {
+  .row2-side1 {
+    height: 100%;
+  }
+
+  .table td {
+    font-size: 7px;
+    font-weight: 700;
+  }
+
+  .row2-side2 {
+    height: 100%;
+  }
+
+  .table th {
+    padding: 8px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}
+
+/* ####################### media queries #################### */
+/* car-information page start */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "urbanist", sans-serif;
+}
+
+/* p{
+    margin-bottom: 0px;
+} */
+.hero-section-user {
+  width: 100%;
+  height: 100%;
+}
+
+.user-heading {
+  width: 83% !important;
+}
+
+.user-heading button {
+  background-color: #ffffff;
+  border: none;
+}
+
+.tb-clr {
+  background-color: #F5F5F5 !important;
+}
+
+.tbl-td {
+  font-weight: 600;
+  color: #252B42 !important;
+}
+
+/* ############# row1-side1 start ########### */
+.row1-side1 {
+  height: 350px;
+  border-radius: 8px;
+  background-color: #F5F5F5;
+}
+
+.row1-side1 img {
+  height: 220px;
+  width: 100%;
+}
+
+.row1s1-hp {
+  width: 97%;
+}
+
+.row1s1-hp p {
+  font-weight: 600;
+  font-size: 13px;
+  color: #666666;
+}
+
+.row1s1-hp h5 {
+  font-size: 1.15rem;
+  font-weight: 600 !important;
+}
+
+.row1s1-span {
+  font-weight: 600;
+  font-size: 13px;
+  color: #666666;
+}
+
+/* ############# row1-side1 end ########### */
+/*############### row1-side2 start ###############  */
+.row1-side2 {
+  background-color: #F5F5F5 !important;
+  height: 350px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.r1s2-heading {
+  padding-inline-start: 8px;
+}
+
+.r1s2-p {
+  margin-bottom: 0px;
+  color: #333333;
+}
+
+.status {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 10px;
+  border-radius: 7px;
+  font-size: 12px;
+  padding-inline-start: 8px;
+}
+
+.table td {
+  vertical-align: middle;
+  padding: 6px 10px;
+  /* Reduce padding to fit in height */
+}
+
+/*############### row1-side2 end ###############  */
+/*############### row2-side1 start ###############  */
+.row2-side1 {
+  background-color: #F5F5F5 !important;
+  height: 300px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.r2s1-heading {
+  padding-inline-start: 8px;
+}
+
+.r2s1-h {
+  color: #666666 !important;
+  font-weight: 600;
+}
+
+.table th,
+.table td {
+  padding: 8px 10px;
+  /* Adjusting padding */
+  font-size: 14px;
+  /* Reducing font size to fit content */
+  white-space: nowrap;
+  /* Ensuring text doesn't wrap */
+}
+
+.ellipsis {
+  cursor: pointer;
+}
+
+.tbr2s1-clr {
+  color: #333333 !important;
+}
+
+.tbr2s1-clr {
+  padding: 0.5rem !important;
+}
+
+/*############### row2-side1 end ###############  */
+
+
+/*############### row2-side2 start ###############  */
+.row2-side2 {
+  background-color: #F5F5F5;
+  height: 300px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.r2s2-heading {
+  padding-inline-start: 8px;
+}
+
+.table td {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.table th {
+  font-weight: 600;
+}
+
+.border-bottom-light {
+  border-bottom: 1.5px solid #ddd;
+}
+
+.border-bottom1 {
+  border-bottom: 1px solid #ddd;
+}
+
+/*############### row2-side2 end ###############  */
+/* ####################### media queries #################### */
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .row1-side1,
+  .row1-side2,
+  .row2-side1,
+  .row2-side2 {
+    width: 80%;
+  }
+
+}
+
+@media (max-width:430px) {
+  .row2-side1 {
+    height: 100%;
+  }
+
+  .table td {
+    font-size: 7px;
+    font-weight: 700;
+  }
+
+  .row2-side2 {
+    height: 100%;
+  }
+
+  .table th {
+    padding: 8px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}
+
+/* ####################### media queries #################### */
+/* car-information page end */
+/* create-auction page start */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Urbanist;
+  font-weight: 600;
+}
+
+.container-main{
+  background-color: #f9f9f9;
+  
+}
+.image-container-upload{
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+padding: 0px 16px;
+  background-color:#E9ECEF;
+  overflow: hidden;
+  border-radius: 50%;
+
+}
+.image-container-upload img {
+ height: 40px;
+ width: 40px;
+ cursor: pointer;
+
+}
+.form-group-heading{
+  padding: 0px 13px;
+font-weight: 400;
+font-size: 16px;
+  
+  
+  
+}
+.form-group{
+  display: flex;
+  border-radius: 8px;
+  
+}
+.model-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px 11px;
+  
+  
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  width: 50%; 
+  padding: 5px 3px;
+  color:#999999;
+  
+  
+  /* Each input takes 50% of the row */
+  /* Ensures responsiveness on smaller screens */
+}
+
+select, input {
+  width: 100%; /* Ensures full width inside the .form-group */
+  padding: 12px 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  color:#999999;
+font-weight: 600;
+border-radius: 10px;
+}
+.publish-auction {
+  display: flex;
+  justify-content: end;
+  border: none;
+  background-color: #f4a737; /* Adjust to match your exact shade */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+
+}
+.div-button{
+  display: flex;
+  justify-content: end;
+  padding-inline-end: 25px!important;
+  padding: 10px 10px;
+}
+/* create-auction page end */
 /* User Detail page style starts here */
 a{
   text-decoration: none;
