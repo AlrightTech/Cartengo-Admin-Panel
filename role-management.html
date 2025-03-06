@@ -38,7 +38,7 @@
                         </svg>
                         <span>Dashboard</span>
                     </a>
-                    <a href="./user-management.html" class="carexpo-menu-item active">
+                    <a href="./user-management.html" class="carexpo-menu-item">
                         <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -50,7 +50,7 @@
                         </svg>
                         <span>User Management</span>
                     </a>
-                    <a href="./auction-management.html" class="carexpo-menu-item">
+                    <a href="./auction-management.html" class="carexpo-menu-item ">
                         <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -83,7 +83,7 @@
                         </svg>
                         <span>Analytics and Reports</span>
                     </a>
-                    <a href="#" class="carexpo-menu-item">
+                    <a href="./role-management.html" class="carexpo-menu-item active">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -165,8 +165,8 @@
                     <div class="row mt-4">
                         <div class="col-md-12">
                             <div class="container">
-                                <h1 class="user-h">Users</h1>
-                                <p class="user-p">Dashboard <span class="user-p1"> • Users </span> </p>
+                                <h1 class="user-h">Roles</h1>
+                                <p class="user-p">Dashboard <span class="user-p1"> • Roles </span> </p>
 
                                 <div class="row mt-4  mb-5">
                                     <div class="container user-mngmnt-table">
@@ -195,24 +195,17 @@
                                                                     <li class="nav-item" role="presentation">
                                                                         <a class="nav-link userr-nav-link"
                                                                             id="userr-active-tab" data-bs-toggle="tab"
-                                                                            href="#userr-active" role="tab">Active
+                                                                            href="#userr-active" role="tab">Seller
                                                                             <span
                                                                                 class="badge userr-badge-count userr-badge-active">44</span></a>
                                                                     </li>
                                                                     <li class="nav-item" role="presentation">
                                                                         <a class="nav-link userr-nav-link"
                                                                             id="userr-pending-tab" data-bs-toggle="tab"
-                                                                            href="#userr-pending" role="tab">Pending
-                                                                            Approval <span
+                                                                            href="#userr-pending" role="tab">Buyer <span
                                                                                 class="badge userr-badge-count userr-badge-pending">16</span></a>
                                                                     </li>
-                                                                    <li class="nav-item" role="presentation">
-                                                                        <a class="nav-link userr-nav-link"
-                                                                            id="userr-suspended-tab"
-                                                                            data-bs-toggle="tab" href="#userr-suspended"
-                                                                            role="tab">Suspended <span
-                                                                                class="badge userr-badge-count userr-badge-suspended">3</span></a>
-                                                                    </li>
+                                                                    
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -246,9 +239,10 @@
                                                 style="background-color: #F5F5F5 !important;">
                                                 <thead>
                                                     <tr>
-                                                        <th>Name</th>
-                                                        <th>Email Address</th>
-                                                        <th>Role</th>
+                                                        <th> Car Name </th>
+                                                        <th>Seller</th>
+                                                        <th>Start Date</th>
+                                                        <th>End Date</th>
                                                         <th>Date Registered</th>
                                                         <th>Status</th>
                                                         <th></th>
@@ -273,6 +267,9 @@
                                                     <i class="bi bi-three-dots-vertical"></i>
                                                 </button>
                                             </td> -->
+
+
+
                                                         <td>
                                                             <div class="user-dropdown">
                                                                 <!-- Dropdown Button -->
@@ -448,86 +445,70 @@
                                         <nav aria-label="User Page Navigation">
                                             <ul class="user-pagination">
                                                 <li class="user-page-item user-disabled hide-pg">
-                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                                        href="#" aria-label="First">
+                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center" href="#" aria-label="First">
                                                         <span aria-hidden="true" class="d-flex align-items-center">
-                                                            <img src="./assets/images/double-first-icon.svg"
-                                                                class="more-size1">
+                                                            <img src="./assets/images/double-first-icon.svg" class="more-size1">
                                                         </span>
                                                         <p class="pg-txtt mb-0 d-flex align-items-center">First</p>
                                                     </a>
                                                 </li>
-
+                                                
                                                 <li class="user-page-item user-disabled">
-                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                                        href="#" aria-label="Previous">
+                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center" href="#" aria-label="Previous">
                                                         <span aria-hidden="true" class="d-flex align-items-center">
-                                                            <img src="./assets/images/bak-arow-icon.svg"
-                                                                class="more-size2">
+                                                            <img src="./assets/images/bak-arow-icon.svg" class="more-size2">
                                                         </span>
                                                         <p class="pg-txtt mb-0 d-flex align-items-center">Back</p>
                                                     </a>
                                                 </li>
-
-                                                <li
-                                                    class="user-page-item d-flex align-items-center justify-content-center">
-                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                                        href="#">1</a>
+                                                
+                                                <li class="user-page-item d-flex align-items-center justify-content-center">
+                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt" href="#">1</a>
                                                 </li>
-
-                                                <li
-                                                    class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
-                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                                        href="#">2</a>
+                                                
+                                                <li class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
+                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt" href="#">2</a>
                                                 </li>
-
+                                                
                                                 <!-- <li class="user-page-item">
                                         <a class="user-page-link" href="#">3</a>
                                     </li>
                                     <li class="user-page-item">
                                         <a class="user-page-link" href="#">4</a>
                                     </li> -->
-                                                <li
-                                                    class="user-page-item user-disabled d-flex align-items-center justify-content-center">
-                                                    <a class="user-page-link d-flex align-items-center justify-content-center"
-                                                        style="padding: 10.5px 13px;" href="#">
-                                                        <img src="./assets/images/• • •.svg">
+                                    <li class="user-page-item user-disabled d-flex align-items-center justify-content-center">
+                                        <a class="user-page-link d-flex align-items-center justify-content-center" style="padding: 10.5px 13px;" href="#">
+                                            <img src="./assets/images/• • •.svg">
 
-                                                    </a>
-                                                </li>
-
-                                                <li
-                                                    class="user-page-item d-flex align-items-center justify-content-center">
-                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                                        href="#">7</a>
-                                                </li>
-
-                                                <li
-                                                    class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
-                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                                        href="#">8</a>
-                                                </li>
-
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="user-page-item d-flex align-items-center justify-content-center">
+                                        <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt" href="#">7</a>
+                                    </li>
+                                    
+                                    <li class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
+                                        <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt" href="#">8</a>
+                                    </li>
+                                    
                                                 <li class="user-page-item">
-                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                                        href="#" aria-label="Next">
+                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center" href="#" aria-label="Next">
                                                         <p class="pg-txtt mb-0 d-flex align-items-center">Next</p>
                                                         <span aria-hidden="true" class="d-flex align-items-center">
                                                             <img src="./assets/images/last-pg1.svg" class="more-size2">
                                                         </span>
                                                     </a>
                                                 </li>
-
+                                                
                                                 <li class="user-page-item hide-pg">
-                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                                        href="#" aria-label="Last">
+                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center" href="#" aria-label="Last">
                                                         <p class="pg-txtt mb-0 d-flex align-items-center">Last</p>
                                                         <span aria-hidden="true" class="d-flex align-items-center">
                                                             <img src="./assets/images/last-pg2.svg" class="more-size1">
                                                         </span>
                                                     </a>
                                                 </li>
-
+                                                
                                             </ul>
                                         </nav>
 
