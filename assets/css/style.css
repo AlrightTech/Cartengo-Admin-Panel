@@ -842,7 +842,7 @@ padding-left: 14px; */
   position: absolute;
   right: 0;
   background-color: #f9f9f9;
-  min-width: 120px;
+  /* min-width: 120px; */
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 
@@ -862,11 +862,8 @@ height: 128;
 top: 342px;
 left: 1223px; */
   border-radius: 10px;
-  padding-top: 10px;
-  padding-right: 16px;
-  padding-bottom: 10px;
-  padding-left: 16px;
-
+  padding: 10px 6px;
+  
 }
 
 /* Style for the dropdown links */
@@ -890,7 +887,10 @@ color: #333333;
 .user-show {
   display: block;
 }
-
+.dd-icon-size {
+  width: 11.6px;
+  height: 11.6px;
+}
 @media (max-width: 992px) {
   .hide-pg {
     display: none;
