@@ -62,7 +62,7 @@
                         </svg>
                         <span>Auction Management</span>
                     </a>
-                    <a href="./content-moderation.html" class="carexpo-menu-item">
+                    <a href="./content-moderation.html" class="carexpo-menu-item active">
                         <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -93,7 +93,7 @@
                         </svg>
                         <span>Role Management</span>
                     </a>
-                    <a href="./car-listing.html" class="carexpo-menu-item active">
+                    <a href="./car-listing.html" class="carexpo-menu-item">
                         <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -165,8 +165,8 @@
                     <div class="row mt-4">
                         <div class="col-md-12">
                             <div class="container">
-                                <h1 class="user-h">Car Listing</h1>
-                                <p class="user-p">Dashboard <span class="user-p1"> • Auction </span> </p>
+                                <h1 class="user-h">Content Moderation</h1>
+                                <p class="user-p">Dashboard <span class="user-p1"> • Content Moderation </span> </p>
 
                                 <div class="row mt-4  mb-5">
                                     <div class="container user-mngmnt-table">
@@ -192,25 +192,27 @@
                                                                             href="#userr-all" role="tab">All <span
                                                                                 class="badge userr-badge-count userr-badge-all">31</span></a>
                                                                     </li>
-                                                                    <li class="nav-item" role="presentation">
-                                                                        <a class="nav-link userr-nav-link"
-                                                                            id="userr-active-tab" data-bs-toggle="tab"
-                                                                            href="#userr-active" role="tab">Active
-                                                                            <span
-                                                                                class="badge userr-badge-count userr-badge-active">44</span></a>
-                                                                    </li>
+
                                                                     <li class="nav-item" role="presentation">
                                                                         <a class="nav-link userr-nav-link"
                                                                             id="userr-pending-tab" data-bs-toggle="tab"
                                                                             href="#userr-pending" role="tab">Pending
-                                                                            Approval <span
+                                                                             <span
                                                                                 class="badge userr-badge-count userr-badge-pending">16</span></a>
                                                                     </li>
                                                                     <li class="nav-item" role="presentation">
                                                                         <a class="nav-link userr-nav-link"
+                                                                            id="userr-active-tab" data-bs-toggle="tab"
+                                                                            href="#userr-active" role="tab">Reviewed
+                                                                            <span
+                                                                                class="badge userr-badge-count userr-badge-active">44</span></a>
+                                                                    </li>
+                                                                    
+                                                                    <li class="nav-item" role="presentation">
+                                                                        <a class="nav-link userr-nav-link"
                                                                             id="userr-suspended-tab"
                                                                             data-bs-toggle="tab" href="#userr-suspended"
-                                                                            role="tab">Completed <span
+                                                                            role="tab">Ban <span
                                                                                 class="badge userr-badge-count userr-badge-suspended">3</span></a>
                                                                     </li>
                                                                 </ul>
@@ -225,7 +227,7 @@
                                                                         class="img-fluid">
                                                                 </i>
                                                                 <input type="text" class="form-control"
-                                                                    placeholder="Search Auction">
+                                                                    placeholder="Search">
                                                             </div>
                                                             <button class="filter-btn">
                                                                 <i class="bi bi-funnel" style="font-size: 17px;"></i>
@@ -246,10 +248,10 @@
                                                 style="background-color: #F5F5F5 !important;">
                                                 <thead>
                                                     <tr>
-                                                        <th> Car Name </th>
-                                                        <th>Seller Name</th>
+                                                        <th> User Name </th>
+                                                        <th>Type</th>
+                                                        <th>Reason for Report </th>
                                                         <th>Status</th>
-                                                        <th>View Auction</th>
                                                         <th></th>
                                                     </tr>
                                                 </thead>
@@ -263,13 +265,12 @@
                                                                     Poloi</a>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Theresa Webb</td>
-                                                       
-                                                        <td><span class="status-badge status-pending">Sold</span>
-
+                                                        <td class="usermngmnt-tale-col1">
+                                                            <a href="#">Post</a>
                                                         </td>
-                                                        <td><span class="status-badge status-active">Approved</span></td>
-
+                                                        <td class="usermngmnt-tale-col">Spam</td>
+                                                        <td><span class="status-badge status-pending">Pending</span>
+                                                        </td>
                                                         <td>
                                                             <div class="user-dropdown">
                                                                 <!-- Dropdown Button -->
@@ -285,9 +286,20 @@
                                                                         class="d-flex align-items-center ">
                                                                         <img src="./assets/images/carbon_view.svg"
                                                                             class="me-3 dd-icon-size">
-                                                                            View Detail
+                                                                        Update Role
                                                                     </a>
-                                                                    
+                                                                    <a href="./create-aution-form.html"
+                                                                        class="d-flex align-items-center ">
+                                                                        <img src="./assets/images/clarity_edit-line.svg"
+                                                                            class="me-3 dd-icon-size">
+                                                                        Edit
+                                                                    </a>
+                                                                    <a href="./create-aution-form.html"
+                                                                        class="d-flex align-items-center ">
+                                                                        <img src="./assets/images/delete-dd-icon.svg"
+                                                                            class="me-3 dd-icon-size">
+                                                                        Delete
+                                                                    </a>
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -301,10 +313,11 @@
                                                                     Tiwari</a>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Ronald Richards</td>
-                                                        <td><span class="status-badge status-active">Available</span></td>
-                                                        <td><span class="status-badge status-pending">Pending</span>
-
+                                                        <td class="usermngmnt-tale-col1">
+                                                            <a href="#">Comment</a>
+                                                        </td>
+                                                        <td class="usermngmnt-tale-col">Hate Speech</td>
+                                                        <td><span class="status-badge status-reviewed">Reviewed</span></td>
                                                         <td>
                                                             <!-- <button class="action-btn">
                                                                 <i class="bi bi-three-dots-vertical"></i>
@@ -350,9 +363,10 @@
                                                                     Tiwari</a>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td><span class="status-badge status-active">Approved</span></td>
-
+                                                        <td class="usermngmnt-tale-col1">
+                                                            <a href="#">Post</a>
+                                                        </td>
+                                                        <td class="usermngmnt-tale-col">Harassment</td>
                                                         <td><span class="status-badge status-pending">Pending</span>
                                                         </td>
                                                         <td>
@@ -397,9 +411,59 @@
                                                                     Tiwari</a>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td><span class="status-badge status-pending">Sold</span>
+                                                        <td class="usermngmnt-tale-col1">
+                                                            <a href="#">Comment</a>
+                                                        </td>
+                                                        <td class="usermngmnt-tale-col">Hate Speech</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
+                                                        <td>
+                                                            <div class="user-dropdown">
+                                                                <!-- Dropdown Button -->
+                                                                <button class="user-action-btn"
+                                                                    onclick="userToggleDropdown()">
+                                                                    <!-- Bootstrap Icon -->
+                                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                                </button>
+                                                                <!-- Dropdown Menu -->
+                                                                <div id="userDropdownMenu"
+                                                                    class="user-dropdown-content">
+                                                                    <a href="./create-aution-form.html"
+                                                                        class="d-flex align-items-center ">
+                                                                        <img src="./assets/images/carbon_view.svg"
+                                                                            class="me-3 dd-icon-size">
+                                                                        Update Role
+                                                                    </a>
+                                                                    <a href="./create-aution-form.html"
+                                                                        class="d-flex align-items-center ">
+                                                                        <img src="./assets/images/clarity_edit-line.svg"
+                                                                            class="me-3 dd-icon-size">
+                                                                        Edit
+                                                                    </a>
+                                                                    <a href="./create-aution-form.html"
+                                                                        class="d-flex align-items-center ">
+                                                                        <img src="./assets/images/delete-dd-icon.svg"
+                                                                            class="me-3 dd-icon-size">
+                                                                        Delete
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="user-info">
+                                                                <img src="./assets/images/car-name1.png"
+                                                                    alt="Jayshn Tiwari" class="user-avatar">
+                                                                <a href="./car-info.html" class="car-infoo">Volkwagen
+                                                                    Poloi</a>
+                                                            </div>
+                                                        </td>
+                                                        <td class="usermngmnt-tale-col1">
+                                                            <a href="#">Post</a>
+                                                        </td>
+                                                        <td class="usermngmnt-tale-col">Spam</td>
+                                                        <td><span class="status-badge status-pending">Pending</span>
+                                                        </td>
                                                         <td>
                                                             <div class="user-dropdown">
                                                                 <!-- Dropdown Button -->
@@ -442,9 +506,62 @@
                                                                     Tiwari</a>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td><span class="status-badge status-active">Active</span></td>
-                                                        <td><span class="status-badge status-active">Active</span></td>
+                                                        <td class="usermngmnt-tale-col1">
+                                                            <a href="#">Comment</a>
+                                                        </td>
+                                                        <td class="usermngmnt-tale-col">Hate Speech</td>
+                                                        <td><span class="status-badge status-reviewed">Reviewed</span></td>
+                                                        <td>
+                                                            <!-- <button class="action-btn">
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </button> -->
+                                                            <div class="user-dropdown">
+                                                                <!-- Dropdown Button -->
+                                                                <button class="user-action-btn"
+                                                                    onclick="userToggleDropdown()">
+                                                                    <!-- Bootstrap Icon -->
+                                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                                </button>
+                                                                <!-- Dropdown Menu -->
+                                                                <div id="userDropdownMenu"
+                                                                    class="user-dropdown-content">
+                                                                    <a href="./create-aution-form.html"
+                                                                        class="d-flex align-items-center ">
+                                                                        <img src="./assets/images/carbon_view.svg"
+                                                                            class="me-3 dd-icon-size">
+                                                                        Update Role
+                                                                    </a>
+                                                                    <a href="./create-aution-form.html"
+                                                                        class="d-flex align-items-center ">
+                                                                        <img src="./assets/images/clarity_edit-line.svg"
+                                                                            class="me-3 dd-icon-size">
+                                                                        Edit
+                                                                    </a>
+                                                                    <a href="./create-aution-form.html"
+                                                                        class="d-flex align-items-center ">
+                                                                        <img src="./assets/images/delete-dd-icon.svg"
+                                                                            class="me-3 dd-icon-size">
+                                                                        Delete
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="user-info">
+                                                                <img src="./assets/images/active-user-img.png"
+                                                                    alt="Jayshn Tiwari" class="user-avatar">
+                                                                <a href="./car-info.html" class="car-infoo">Jayshn
+                                                                    Tiwari</a>
+                                                            </div>
+                                                        </td>
+                                                        <td class="usermngmnt-tale-col1">
+                                                            <a href="#">Post</a>
+                                                        </td>
+                                                        <td class="usermngmnt-tale-col">Harassment</td>
+                                                        <td><span class="status-badge status-pending">Pending</span>
+                                                        </td>
                                                         <td>
                                                             <div class="user-dropdown">
                                                                 <!-- Dropdown Button -->
@@ -487,8 +604,10 @@
                                                                     Tiwari</a>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td><span class="status-badge status-active">Approved</span></td>
+                                                        <td class="usermngmnt-tale-col1">
+                                                            <a href="#">Comment</a>
+                                                        </td>
+                                                        <td class="usermngmnt-tale-col">Hate Speech</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
                                                             <div class="user-dropdown">
@@ -523,142 +642,7 @@
                                                             </div>
                                                         </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="user-info">
-                                                                <img src="./assets/images/active-user-img.png"
-                                                                    alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Jayshn
-                                                                    Tiwari</a>
-                                                            </div>
-                                                        </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td><span class="status-badge status-suspended">Pending</span>
-                                                        <td><span class="status-badge status-active">Active</span></td>
-                                                        <td>
-                                                            <div class="user-dropdown">
-                                                                <!-- Dropdown Button -->
-                                                                <button class="user-action-btn"
-                                                                    onclick="userToggleDropdown()">
-                                                                    <!-- Bootstrap Icon -->
-                                                                    <i class="bi bi-three-dots-vertical"></i>
-                                                                </button>
-                                                                <!-- Dropdown Menu -->
-                                                                <div id="userDropdownMenu"
-                                                                    class="user-dropdown-content">
-                                                                    <a href="./create-aution-form.html"
-                                                                        class="d-flex align-items-center ">
-                                                                        <img src="./assets/images/carbon_view.svg"
-                                                                            class="me-3 dd-icon-size">
-                                                                        Update Role
-                                                                    </a>
-                                                                    <a href="./create-aution-form.html"
-                                                                        class="d-flex align-items-center ">
-                                                                        <img src="./assets/images/clarity_edit-line.svg"
-                                                                            class="me-3 dd-icon-size">
-                                                                        Edit
-                                                                    </a>
-                                                                    <a href="./create-aution-form.html"
-                                                                        class="d-flex align-items-center ">
-                                                                        <img src="./assets/images/delete-dd-icon.svg"
-                                                                            class="me-3 dd-icon-size">
-                                                                        Delete
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="user-info">
-                                                                <img src="./assets/images/active-user-img.png"
-                                                                    alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Jayshn
-                                                                    Tiwari</a>
-                                                            </div>
-                                                        </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td><span class="status-badge status-pending">Sold</span>
-                                                        <td><span class="status-badge status-active">Active</span></td>
-                                                        <td>
-                                                            <div class="user-dropdown">
-                                                                <!-- Dropdown Button -->
-                                                                <button class="user-action-btn"
-                                                                    onclick="userToggleDropdown()">
-                                                                    <!-- Bootstrap Icon -->
-                                                                    <i class="bi bi-three-dots-vertical"></i>
-                                                                </button>
-                                                                <!-- Dropdown Menu -->
-                                                                <div id="userDropdownMenu"
-                                                                    class="user-dropdown-content">
-                                                                    <a href="./create-aution-form.html"
-                                                                        class="d-flex align-items-center ">
-                                                                        <img src="./assets/images/carbon_view.svg"
-                                                                            class="me-3 dd-icon-size">
-                                                                        Update Role
-                                                                    </a>
-                                                                    <a href="./create-aution-form.html"
-                                                                        class="d-flex align-items-center ">
-                                                                        <img src="./assets/images/clarity_edit-line.svg"
-                                                                            class="me-3 dd-icon-size">
-                                                                        Edit
-                                                                    </a>
-                                                                    <a href="./create-aution-form.html"
-                                                                        class="d-flex align-items-center ">
-                                                                        <img src="./assets/images/delete-dd-icon.svg"
-                                                                            class="me-3 dd-icon-size">
-                                                                        Delete
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="user-info">
-                                                                <img src="./assets/images/active-user-img.png"
-                                                                    alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Jayshn
-                                                                    Tiwari</a>
-                                                            </div>
-                                                        </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td><span class="status-badge status-active">Active</span></td>
-                                                        <td><span class="status-badge status-suspended">Suspended</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class="user-dropdown">
-                                                                <!-- Dropdown Button -->
-                                                                <button class="user-action-btn"
-                                                                    onclick="userToggleDropdown()">
-                                                                    <!-- Bootstrap Icon -->
-                                                                    <i class="bi bi-three-dots-vertical"></i>
-                                                                </button>
-                                                                <!-- Dropdown Menu -->
-                                                                <div id="userDropdownMenu"
-                                                                    class="user-dropdown-content">
-                                                                    <a href="./create-aution-form.html"
-                                                                        class="d-flex align-items-center ">
-                                                                        <img src="./assets/images/carbon_view.svg"
-                                                                            class="me-3 dd-icon-size">
-                                                                        Update Role
-                                                                    </a>
-                                                                    <a href="./create-aution-form.html"
-                                                                        class="d-flex align-items-center ">
-                                                                        <img src="./assets/images/clarity_edit-line.svg"
-                                                                            class="me-3 dd-icon-size">
-                                                                        Edit
-                                                                    </a>
-                                                                    <a href="./create-aution-form.html"
-                                                                        class="d-flex align-items-center ">
-                                                                        <img src="./assets/images/delete-dd-icon.svg"
-                                                                            class="me-3 dd-icon-size">
-                                                                        Delete
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
+                                                    
                                                 </tbody>
                                             </table>
                                         </div>
@@ -744,7 +728,14 @@
 
                                             </ul>
                                         </nav>
+
+
+
+
+
                                     </div>
+
+
                                 </div>
                             </div>
                         </div>

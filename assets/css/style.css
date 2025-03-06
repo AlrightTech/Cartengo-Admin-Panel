@@ -708,6 +708,14 @@ padding-left: 14px; */
   color: #333333;
 }
 
+.usermngmnt-tale-col1 a {
+  /* font-family: "Urbanist"; */
+  font-weight: 500;
+  font-size: 13px;
+text-decoration: underline;
+  color: #333333;
+}
+
 .status-badge {
   padding: 5px 10px;
   border-radius: 4px;
@@ -719,7 +727,11 @@ padding-left: 14px; */
   background-color: rgba(40, 167, 69, 0.1);
   color: #28a745;
 }
-
+.status-reviewed {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #666666;
+  
+}
 .status-pending {
   background-color: #FFF2D6;
 
