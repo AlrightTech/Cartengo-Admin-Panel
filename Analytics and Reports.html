@@ -26,6 +26,9 @@
         rel="stylesheet">
     <!-- charts js link -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
 </head>
 
 <body>
@@ -354,16 +357,240 @@
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+
+                    <!-- charts here -->
+                    <div class="row mt-5">
+                        <!-- graph -->
+                        <div class="col-12 col-md-6">
+                            <div class="">
+                                <div class="chart-container p-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h5 class="fw-bold">Sales Trend</h5>
+                                            <p><strong>$44.1k</strong> (+27%) than last year</p>
+                                        </div>
+                                        <select id="timeFilter" class="form-select w-auto">
+                                            <option value="year">Year</option>
+                                            <option value="month">Month</option>
+                                        </select>
+                                    </div>
+                                    <canvas id="salesChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- circular chart -->
+                        <div class="col-12 col-md-6">
+                            <div class="UserEngagement-container">
+                                <h1 class="UserEngagement-title">User Engagement</h1>
+
+                                <div class="UserEngagement-chart-container">
+                                    <canvas id="UserEngagement-donut-chart"></canvas>
+                                    <div class="UserEngagement-percentage">
+                                        <p class="UserEngagement-percentage-value">+42%</p>
+                                        <p class="UserEngagement-percentage-label">than last year</p>
+                                    </div>
+                                </div>
+
+                                <div class="UserEngagement-legend">
+                                    <div class="UserEngagement-legend-item">
+                                        <div class="UserEngagement-legend-color UserEngagement-new-users"></div>
+                                        <span>New Users (46%)</span>
+                                    </div>
+                                    <div class="UserEngagement-legend-item">
+                                        <div class="UserEngagement-legend-color UserEngagement-active-bidders"></div>
+                                        <span>Active Bidders (38%)</span>
+                                    </div>
+                                    <div class="UserEngagement-legend-item">
+                                        <div class="UserEngagement-legend-color UserEngagement-others"></div>
+                                        <span>Others (26%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
+
+
+                    <!-- last chart and Top Buyers and Top sellers  -->
+                    <div class="row mt-4">
+                        <!-- Last chart -->
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <div class="chart-container">
+                                <h5 class="text-dark">Most Popular Car Models</h5>
+                                <canvas id="Last-pieChart" width="300" height="300"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Top Buyers and Top Sellers -->
+                        <div class="col-12 col-md-6 col-lg-6 p-0">
+                            <!-- Top Buyers -->
+                            <div class="d-flex justify-content-between gap-3">
+                                <!-- Top Buyers -->
+                                <div class="Top-Buyers p-3">
+                                    <h6 class="fw-bold">Top Buyers</h6>
+                                    <!-- Rahul Choudhary -->
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <!-- Rahul Choudhary img -->
+                                        <img src="./assets/images/Reports and Analytics images/Rahul Choudhary.jpeg"
+                                            alt="Rahul Choudhary img"
+                                            class="img-fluid Analytics-Users-images rounded-circle">
+                                        <!-- Rahul Choudhary detail -->
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <span class="m-0 Analytics-UserName">Rahul Choudhary</span>
+                                            <a href="mailto:nvt.isst.nute@gmail.com"
+                                                class="Analytics-UserEmail mt-1 text-muted">nvt.isst.nute@gmail.com</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mamta Lodhi -->
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <!-- Mamta Lodhi img -->
+                                        <img src="./assets/images/Reports and Analytics images/Mamta Lodhi.jpeg"
+                                            alt="Mamta Lodhi img"
+                                            class="img-fluid Analytics-Users-images rounded-circle">
+                                        <!-- Mamta Lodhi detail -->
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <span class="m-0 Analytics-UserName">Mamta Lodhi</span>
+                                            <a href="mailto:manhhachkt08@gmail.com"
+                                                class="Analytics-UserEmail mt-1 text-muted">manhhachkt08@gmail.com</a>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Hillery Moses -->
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <!-- Hillery Moses img -->
+                                        <img src="./assets/images/Reports and Analytics images/Hillery Moses.jpeg"
+                                            alt="Hillery Moses img"
+                                            class="img-fluid Analytics-Users-images rounded-circle">
+                                        <!-- Hillery Moses detail -->
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <span class="m-0 Analytics-UserName">Hillery Moses</span>
+                                            <a href="mailto:tranthuy.nute@gmail.com"
+                                                class="Analytics-UserEmail mt-1 text-muted">tranthuy.nute@gmail.com</a>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Sunil Bhadouriya -->
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <!-- Sunil Bhadouriya img -->
+                                        <img src="./assets/images/Reports and Analytics images/Sunil Bhadouriya.jpeg"
+                                            alt="Sunil Bhadouriya img"
+                                            class="img-fluid Analytics-Users-images rounded-circle">
+                                        <!-- Sunil Bhadouriya detail -->
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <span class="m-0 Analytics-UserName">Sunil Bhadouriya</span>
+                                            <a href="mailto:binhan628@gmail.com"
+                                                class="Analytics-UserEmail mt-1 text-muted">binhan628@gmail.com</a>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Mohd Hadi -->
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <!-- Mohd Hadi img -->
+                                        <img src="./assets/images/Reports and Analytics images/Mohd Hadi.jpeg"
+                                            alt="Mohd Hadi img"
+                                            class="img-fluid Analytics-Users-images rounded-circle">
+                                        <!-- Mohd Hadi detail -->
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <span class="m-0 Analytics-UserName">Mohd Hadi</span>
+                                            <a href="mailto:trungkienspktnd@gamail.com"
+                                                class="Analytics-UserEmail mt-1 text-muted">trungkienspktnd@gamail.com</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Top Sellers -->
+                                <div class="Top-Sellers p-3">
+                                    <h6 class="fw-bold">Top Sellers</h6>
+                                    <!-- Rahul Choudhary -->
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <!-- Rahul Choudhary img -->
+                                        <img src="./assets/images/Reports and Analytics images/Rahul Choudhary.jpeg"
+                                            alt="Rahul Choudhary img"
+                                            class="img-fluid Analytics-Users-images rounded-circle">
+                                        <!-- Rahul Choudhary detail -->
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <span class="m-0 Analytics-UserName">Rahul Choudhary</span>
+                                            <a href="mailto:nvt.isst.nute@gmail.com"
+                                                class="Analytics-UserEmail mt-1 text-muted">nvt.isst.nute@gmail.com</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mamta Lodhi -->
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <!-- Mamta Lodhi img -->
+                                        <img src="./assets/images/Reports and Analytics images/Mamta Lodhi.jpeg"
+                                            alt="Mamta Lodhi img"
+                                            class="img-fluid Analytics-Users-images rounded-circle">
+                                        <!-- Mamta Lodhi detail -->
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <span class="m-0 Analytics-UserName">Mamta Lodhi</span>
+                                            <a href="mailto:manhhachkt08@gmail.com"
+                                                class="Analytics-UserEmail mt-1 text-muted">manhhachkt08@gmail.com</a>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Hillery Moses -->
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <!-- Hillery Moses img -->
+                                        <img src="./assets/images/Reports and Analytics images/Hillery Moses.jpeg"
+                                            alt="Hillery Moses img"
+                                            class="img-fluid Analytics-Users-images rounded-circle">
+                                        <!-- Hillery Moses detail -->
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <span class="m-0 Analytics-UserName">Hillery Moses</span>
+                                            <a href="mailto:tranthuy.nute@gmail.com"
+                                                class="Analytics-UserEmail mt-1 text-muted">tranthuy.nute@gmail.com</a>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Sunil Bhadouriya -->
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <!-- Sunil Bhadouriya img -->
+                                        <img src="./assets/images/Reports and Analytics images/Sunil Bhadouriya.jpeg"
+                                            alt="Sunil Bhadouriya img"
+                                            class="img-fluid Analytics-Users-images rounded-circle">
+                                        <!-- Sunil Bhadouriya detail -->
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <span class="m-0 Analytics-UserName">Sunil Bhadouriya</span>
+                                            <a href="mailto:binhan628@gmail.com"
+                                                class="Analytics-UserEmail mt-1 text-muted">binhan628@gmail.com</a>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Mohd Hadi -->
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <!-- Mohd Hadi img -->
+                                        <img src="./assets/images/Reports and Analytics images/Mohd Hadi.jpeg"
+                                            alt="Mohd Hadi img"
+                                            class="img-fluid Analytics-Users-images rounded-circle">
+                                        <!-- Mohd Hadi detail -->
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <span class="m-0 Analytics-UserName">Mohd Hadi</span>
+                                            <a href="mailto:trungkienspktnd@gamail.com"
+                                                class="Analytics-UserEmail mt-1 text-muted">trungkienspktnd@gamail.com</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
         </div>
-
-        
-
-        
         <!-- Script for Analytics -->
         <script>
             document.addEventListener('DOMContentLoaded', function () {
@@ -544,6 +771,100 @@
             });
         </script>
 
+        <!-- script Analytics circular graph -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const UserEngagementInitChart = () => {
+                    const ctx = document.getElementById('UserEngagement-donut-chart').getContext('2d');
+
+                    // Data for the chart
+                    const data = {
+                        datasets: [{
+                            data: [46, 38, 26],
+                            backgroundColor: [
+                                '#007B6E', // Dark teal
+                                '#4CD69E', // Medium green
+                                '#D9F9E6'  // Light mint
+                            ],
+                            borderWidth: 0,
+                            cutout: '70%'
+                        }]
+                    };
+
+                    // Chart configuration
+                    const config = {
+                        type: 'doughnut',
+                        data: data,
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                },
+                                tooltip: {
+                                    enabled: false
+                                }
+                            },
+                            animation: {
+                                animateRotate: true,
+                                animateScale: true
+                            }
+                        }
+                    };
+
+                    // Create the chart
+                    new Chart(ctx, config);
+                };
+
+                UserEngagementInitChart();
+            });
+        </script>
+
+        <!-- script for last chart -->
+        <script>
+            const ctx3 = document.getElementById('Last-pieChart').getContext('2d');
+            new Chart(ctx3, {
+                type: 'pie',
+                data: {
+                    labels: ['Honda CR-V', 'Toyota Corolla', 'Toyota Camry'],
+                    datasets: [{
+                        data: [44, 34, 26],
+                        backgroundColor: ['#36C3DD', '#8A77F8', '#FF9B9B'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (tooltipItem) {
+                                    const data = [4100, 172.36, 104.97];
+                                    return `${data[tooltipItem.dataIndex]} Sales (${tooltipItem.raw}%)`;
+                                }
+                            }
+                        },
+                        datalabels: {
+                            color: '#fff',
+                            font: {
+                                weight: 'bold',
+                                size: 14
+                            },
+                            formatter: (value, ctx3) => {
+                                let labels = ['Honda CR-V\n4.1k Sales (44%)', 'Toyota Corolla\n172.36 (34%)', 'Toyota Camry\n104.97 (26%)'];
+                                return labels[ctx3.dataIndex];
+                            }
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        </script>
+
+
     </div>
 
     <!-- #######################Right side ofcanvas start########################## -->
@@ -614,6 +935,7 @@
     <!-- Chart JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script> -->
 
     <script src="./assets/js/dashboardScript.js"></script>
     <!-- Custom JS -->
