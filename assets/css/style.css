@@ -1950,4 +1950,113 @@ letter-spacing: 0%;
 .table-dots:hover{
   cursor: pointer;
 }
+
+.UserEngagement-container {
+  max-width: 600px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+}
+
+.UserEngagement-title {
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.UserEngagement-chart-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 40px;
+}
+
+.UserEngagement-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.UserEngagement-percentage-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.UserEngagement-percentage-label {
+  font-size: 16px;
+  color: #777;
+  margin: 0;
+}
+
+.UserEngagement-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.UserEngagement-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.UserEngagement-legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.UserEngagement-new-users {
+  background-color: #007B6E;
+}
+
+.UserEngagement-active-bidders {
+  background-color: #4CD69E;
+}
+
+.UserEngagement-others {
+  background-color: #D9F9E6;
+}
+
+.Last-chart-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.Top-Buyers,.Top-Sellers{
+  background-color: #F5F5F5;
+  border-radius: 12px;
+  padding-inline: 20px;
+}
+.Analytics-Users-images{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.Analytics-UserName{
+  font-family: Urbanist;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  
+}
+.Analytics-UserEmail{
+  color: #666666;
+font-weight: 500;
+font-size: 11.5px;
+}
 /* Analytics And Reports page style ends here */
