@@ -1,3 +1,8 @@
+*{
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 :root {
   --carexpo-sidebar-bg: #004d33;
   --carexpo-sidebar-active: #e67e22;
@@ -132,13 +137,19 @@ body {
 }
 
 .carexpo-menu-item:hover {
-  background-color: var(--carexpo-sidebar-active);
-  color: white;
+  background-color: #334b1e;
+  color: #ff6f00;
+  svg{
+    fill: #ff6f00 !important;
+  }
 }
 
 .carexpo-menu-item.active {
-  background-color: var(--carexpo-sidebar-active);
-  color: white;
+  background-color: #334b1e;
+  color: #ff6f00;
+  svg{
+    fill: #ff6f00 !important;
+  }
 }
 
 .carexpo-menu-item svg {
@@ -521,7 +532,7 @@ body {
   border-radius: 0;
   position: relative;
   color: #666666;
-  font-family: "Urbanist";
+  /* font-family: "Urbanist"; */
   font-weight: 600;
   font-size: 13px;
 
@@ -665,7 +676,7 @@ padding-left: 14px; */
   padding: 12px 16px;
 
   color: #666666;
-  font-family: "Urbanist";
+  /* font-family: "Urbanist"; */
   font-weight: 700;
   font-size: 13px;
 
@@ -701,7 +712,7 @@ padding-left: 14px; */
 }
 
 .usermngmnt-tale-col {
-  font-family: "Urbanist";
+  /* font-family: "Urbanist"; */
   font-weight: 500;
   font-size: 13px;
 
