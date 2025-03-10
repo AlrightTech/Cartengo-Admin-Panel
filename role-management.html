@@ -15,6 +15,12 @@
     <!-- Montserrat font imported -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bootstrap CSS (Already Required) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Bundle (Includes Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Merriweather:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Sofia+Sans:wght@1..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -27,6 +33,38 @@
 </head>
 
 <body>
+    <!-- modal start -->
+    <div class="modal fade" id="updateRoleModal" tabindex="-1" aria-labelledby="updateRoleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <div class="hp ">
+                    <h5 class="modal-title mb-3">Update Role</h5>
+                    <p class="hpp">Assign a New Role to user</p>
+                  </div>
+                  <button type="button" class="custom-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+      
+                </div>
+                <div class="modal-body">
+                
+                    <div class="mb">
+                        <select class="form-select">
+                            <option selected>Seller</option>
+                            <option>Admin</option>
+                            <option>Editor</option>
+                            <option>User</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning text-dark">Update</button>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <!-- modal end -->
+
     <div class="carexpo-dashboard-container container-fluid">
         <div class="row">
             <!-- Sidebar -->
@@ -221,7 +259,6 @@
                                                                 </ul>
                                                             </div>
                                                         </div>
-
                                                         <!-- Search and Filter -->
                                                         <div class="search-filter-container">
                                                             <div class="search-container">
@@ -239,9 +276,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
-
                                             </div>
                                         </div>
 
@@ -250,7 +284,7 @@
                                             <table class="table user-mngmnt-table-bg"
                                                 style="background-color: #F5F5F5 !important;">
                                                 <thead>
-                                                    <tr>
+                                                    <tr class="align-middle">
                                                         <th> Car Name </th>
                                                         <th>Seller</th>
                                                         <th>Start Date</th>
@@ -261,7 +295,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
+                                                    <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
                                                                 <img src="./assets/images/active-user-img.png"
@@ -273,65 +307,29 @@
                                                         <td class="usermngmnt-tale-col">Buyer</td>
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-pending">Pending</span>
-                                                        </td>
-                                                        <!-- <td>
-                                                <button class="action-btn">
-                                                    <i class="bi bi-three-dots-vertical"></i>
-                                                </button>
-                                            </td> -->
-
-
-
+                                                        </td>                                                       
                                                         <td>
-                                                            <div class="user-dropdown">
-                                                                <!-- Dropdown Button -->
-                                                                <button class="user-action-btn"
-                                                                    onclick="userToggleDropdown()">
-                                                                    <!-- Bootstrap Icon -->
-                                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <div class="dd-btn">
+                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                    </div>
                                                                 </button>
-                                                                <!-- Dropdown Menu -->
-                                                                <div id="userDropdownMenu"
-                                                                    class="user-dropdown-content">
-                                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">Active</a>
-                                                                    <div class="modal fade" id="updateRoleModal" tabindex="-1" aria-labelledby="updateRoleModalLabel" aria-hidden="true">
-                                                                        <div class="modal-dialog">
-                                                                            <div class="modal-content">
-                                                                                <div class="modal-header">
-                                                                                  <div class="hp ">
-                                                                                    <h5 class="modal-title mb-3">Update Role</h5>
-                                                                                    <p class="hpp">Assign a New Role to user</p>
-                                                                                  </div>
-                                                                                  <button type="button" class="custom-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                      
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                
-                                                                                    <div class="mb">
-                                                                                        <select class="form-select">
-                                                                                            <option selected>Seller</option>
-                                                                                            <option>Admin</option>
-                                                                                            <option>Editor</option>
-                                                                                            <option>User</option>
-                                                                                        </select>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="modal-footer">
-                                                                                    <button type="button" class="btn btn-warning text-dark">Update</button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                      </div>
-                                                                    <a href="#">Suspended</a>
-                                                                    <a href="#">Pending</a>
-                                                                </div>
-                                                            </div>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                </ul>
+                                                            </div>                                                            
+                                                            
                                                         </td>
 
 
 
                                                     </tr>
-                                                    <tr>
+                                                    <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
                                                                 <img src="./assets/images/active-user-img.png"
@@ -344,12 +342,23 @@
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
-                                                            <button class="action-btn">
-                                                                <i class="bi bi-three-dots-vertical"></i>
-                                                            </button>
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <div class="dd-btn">
+                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                    </div>
+                                                                </button>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                </ul>
+                                                            </div> 
                                                         </td>
                                                     </tr>
-                                                    <tr>
+                                                    <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
                                                                 <img src="./assets/images/active-user-img.png"
@@ -363,12 +372,23 @@
                                                         <td><span class="status-badge status-pending">Pending</span>
                                                         </td>
                                                         <td>
-                                                            <button class="action-btn">
-                                                                <i class="bi bi-three-dots-vertical"></i>
-                                                            </button>
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <div class="dd-btn">
+                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                    </div>
+                                                                </button>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                </ul>
+                                                            </div> 
                                                         </td>
                                                     </tr>
-                                                    <tr>
+                                                    <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
                                                                 <img src="./assets/images/active-user-img.png"
@@ -381,12 +401,23 @@
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
-                                                            <button class="action-btn">
-                                                                <i class="bi bi-three-dots-vertical"></i>
-                                                            </button>
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <div class="dd-btn">
+                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                    </div>
+                                                                </button>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                </ul>
+                                                            </div> 
                                                         </td>
                                                     </tr>
-                                                    <tr>
+                                                    <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
                                                                 <img src="./assets/images/active-user-img.png"
@@ -399,12 +430,23 @@
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
-                                                            <button class="action-btn">
-                                                                <i class="bi bi-three-dots-vertical"></i>
-                                                            </button>
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <div class="dd-btn">
+                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                    </div>
+                                                                </button>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                </ul>
+                                                            </div> 
                                                         </td>
                                                     </tr>
-                                                    <tr>
+                                                    <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
                                                                 <img src="./assets/images/active-user-img.png"
@@ -417,12 +459,23 @@
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
-                                                            <button class="action-btn">
-                                                                <i class="bi bi-three-dots-vertical"></i>
-                                                            </button>
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <div class="dd-btn">
+                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                    </div>
+                                                                </button>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                </ul>
+                                                            </div> 
                                                         </td>
                                                     </tr>
-                                                    <tr>
+                                                    <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
                                                                 <img src="./assets/images/active-user-img.png"
@@ -435,12 +488,23 @@
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
-                                                            <button class="action-btn">
-                                                                <i class="bi bi-three-dots-vertical"></i>
-                                                            </button>
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <div class="dd-btn">
+                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                    </div>
+                                                                </button>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                </ul>
+                                                            </div> 
                                                         </td>
                                                     </tr>
-                                                    <tr>
+                                                    <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
                                                                 <img src="./assets/images/active-user-img.png"
@@ -453,12 +517,23 @@
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
-                                                            <button class="action-btn">
-                                                                <i class="bi bi-three-dots-vertical"></i>
-                                                            </button>
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <div class="dd-btn">
+                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                    </div>
+                                                                </button>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                </ul>
+                                                            </div> 
                                                         </td>
                                                     </tr>
-                                                    <tr>
+                                                    <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
                                                                 <img src="./assets/images/active-user-img.png"
@@ -472,9 +547,20 @@
                                                         <td><span class="status-badge status-suspended">Suspended</span>
                                                         </td>
                                                         <td>
-                                                            <button class="action-btn">
-                                                                <i class="bi bi-three-dots-vertical"></i>
-                                                            </button>
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <div class="dd-btn">
+                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                    </div>
+                                                                </button>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                </ul>
+                                                            </div> 
                                                         </td>
                                                     </tr>
                                                 </tbody>

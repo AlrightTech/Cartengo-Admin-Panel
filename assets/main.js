@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
   
-  // dropdown user-management table amna
+  // dropdown user-management table 
   // JavaScript to toggle the dropdown
 function userToggleDropdown() {
   const dropdownMenu = document.getElementById("userDropdownMenu");
