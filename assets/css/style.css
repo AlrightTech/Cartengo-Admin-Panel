@@ -890,14 +890,14 @@ height: 128;
 top: 342px;
 left: 1223px; */
   border-radius: 10px;
-  padding: 10px 6px;
+  /* padding: 10px 6px; */
 
 }
 
 /* Style for the dropdown links */
 .user-dropdown-content a {
   color: black;
-  padding: 8px 12px;
+  /* padding: 8px 12px; */
   text-decoration: none;
   display: block;
   font-weight: 500;
@@ -919,6 +919,11 @@ left: 1223px; */
 .dd-icon-size {
   width: 11.6px;
   height: 11.6px;
+}
+
+.dd-icon-sizzz{
+  width: 20px;
+  height: 16px;
 }
 
 @media (max-width: 992px) {
