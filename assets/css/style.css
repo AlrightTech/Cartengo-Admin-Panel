@@ -6,6 +6,8 @@
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
+  /* height: auto; */
+  overflow: scroll !important;
 }
 
 ::-webkit-scrollbar {
@@ -2240,7 +2242,7 @@ Analytics-UserEmail {
   width: 62px;
   height: 60px;
 
-
+}
 
 /* admin-buyer header end */
 
@@ -2330,7 +2332,7 @@ Analytics-UserEmail {
 
 .buyer-user-top {
   border-radius: 10px;
-  background: #F7F7F7;
+  /* background: #F7F7F7; */
   font-weight: 600;
   font-size: 20px;
 
