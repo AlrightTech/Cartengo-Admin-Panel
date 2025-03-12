@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg buyer-custom-navbar px-lg-5 ">
+        <div class="container-fluid px-lg-5">
+            <!-- Left: Logo -->
+            <a class="navbar-brand " href="#">
+                <img src="/assets/images/buyer-db-logo.png" class="buyerr-logo" alt="Logo">
+            </a>
+
+            <!-- Right: Menu Icon for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#buyer-navbarContent">
+                <span class="buyer-menu-icon">☰</span>
+            </button>
+
+            <!-- Center & Right Items -->
+            <div class="collapse navbar-collapse buyer-navbar-collapse" id="buyer-navbarContent">
+                <!-- Center: Navigation Items -->
+                <ul class="navbar-nav mx-auto buyer-navbar-nav gap-lg-5 gap-2">
+                    <li class="nav-item buyer-nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item buyer-nav-item"><a class="nav-link" href="#">Explore Auction</a></li>
+                    <li class="nav-item buyer-nav-item"><a class="nav-link" href="#">My Bids</a></li>
+                    <li class="nav-item buyer-nav-item"><a class="nav-link" href="#">Favorite</a></li>
+                </ul>
+
+                <!-- Right: Icons (Visible on Large Screens, Appear Below on Small Screens) -->
+                <div class="buyer-icons d-lg-flex">
+                    <a href="#"><img src="/assets/images/solar_bell-linear.svg" alt="Notification" width="22"></a>
+                    <a href="#"><img src="/assets/images/buyer-progile-ing.png" alt="Profile" width="45"
+                            class="rounded-circle"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</body>
+
+</html>

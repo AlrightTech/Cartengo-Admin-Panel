@@ -2141,3 +2141,66 @@ font-weight: 500;
 font-size: 11.5px;
 }
 /* Analytics And Reports page style ends here */
+
+/* admin-buyer header start */
+.buyer-custom-navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.buyer-navbar-brand img {
+    height: 40px;
+}
+
+.buyer-navbar-nav {
+    margin: auto;
+}
+
+.buyer-nav-item a {
+
+    color: #333333;
+    /* font-family: "Urbanist"; */
+    font-weight: 600;
+    font-size: 14px;
+
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+
+
+}
+
+.buyer-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.buyer-menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .buyer-icons {
+        display: none;
+    }
+
+    .buyer-navbar-nav {
+        text-align: center;
+    }
+
+    .buyer-navbar-collapse.show .buyer-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+.buyerr-logo {
+    width: 62px;
+    height: 60px;
+
+}
+
+/* admin-buyer header end */
