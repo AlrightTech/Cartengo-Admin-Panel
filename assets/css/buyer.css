@@ -168,7 +168,7 @@
     font-size: 15px;
     line-height: 100%;
     letter-spacing: 0%;
-    text-align: center;
+    text-align: start;
     vertical-align: middle;
     text-transform: capitalize;
     color: #666666dc;
@@ -180,7 +180,8 @@
     height: 32px;
 }
 
-.Live-Auction-Next-btn:hover,.Live-Auction-Prev-btn:hover {
+.Live-Auction-Next-btn:hover,
+.Live-Auction-Prev-btn:hover {
     cursor: pointer;
     background-color: rgba(211, 211, 211, 0.215);
 }
@@ -192,13 +193,14 @@
 .Buyer-Cards-top-imgs {
     border-top-left-radius: 12px !important;
     border-top-right-radius: 12px !important;
-    height: 270px;
-    object-fit: cover;
+    height: 270px !important;
+    object-fit: cover !important;
 }
 
 .Buyer-Dashboard-cards {
     border-radius: 12px !important;
     border: 0px !important;
+    width: 16rem !important;
 }
 
 .Buyer-Dashboard-Cardbody {
@@ -303,7 +305,55 @@
     position: relative;
     height: 100%;
 }
-
 /* Live Auction Section ends */
 
+/* Highest Bidding Auctions starts */
+.brand-filter {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+}
+
+.brand-btn {
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-size: 13px;
+    border: 1px solid #dee2e6;
+    background-color: white;
+    color: #495057;
+    transition: all 0.2s ease;
+}
+
+.brand-btn.active {
+    background-color: #FF6F00;
+    color: white;
+    border-color: #FF6F00;
+}
+
+.brand-btn:hover:not(.active) {
+    background-color: #f8f9fa;
+}
+
+@media (min-width:320px) and (max-width:768px) {
+    .Buyer-Dashboard-cards{
+        width: 100% !important;
+    }
+    
+}
+/* Highest Bidding Auctions ends*/
+
+/* Footer starts */
+footer{
+    background-color: lightblue;
+}
+.Footer-needHelp-Description{
+    text-align: justify;
+    font-family: Urbanist;
+font-weight: 400;
+font-size: 13px;
+text-transform: capitalize;
+padding-inline: 15px;
+border: 2px solid red;
+}
+/* Footer ends */
 /* Buyer Dashboard styling starts here */
