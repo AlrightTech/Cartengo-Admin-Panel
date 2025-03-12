@@ -1,7 +1,13 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -20,6 +26,9 @@
   --sidebar-active-bg: #ff6f0033;
   --input-field-bg-color: #f5f5f5;
   --metric-card-title-color: #666666;
+
+  --font-family: "Urbanist", sans-serif;
+  --nav-items-light-color: #333333CC;
 }
 
 body {
@@ -142,7 +151,8 @@ body {
 .carexpo-menu-item:hover {
   background-color: #334b1e;
   color: #ff6f00;
-  svg{
+
+  svg {
     fill: #ff6f00 !important;
   }
 }
@@ -150,7 +160,8 @@ body {
 .carexpo-menu-item.active {
   background-color: #334b1e;
   color: #ff6f00;
-  svg{
+
+  svg {
     fill: #ff6f00 !important;
   }
 }
@@ -726,7 +737,7 @@ padding-left: 14px; */
   /* font-family: "Urbanist"; */
   font-weight: 500;
   font-size: 13px;
-text-decoration: underline;
+  text-decoration: underline;
   color: #333333;
 }
 
@@ -741,11 +752,13 @@ text-decoration: underline;
   background-color: rgba(40, 167, 69, 0.1);
   color: #28a745;
 }
+
 .status-reviewed {
   background-color: rgba(40, 167, 69, 0.1);
   color: #666666;
-  
+
 }
+
 .status-pending {
   background-color: #FFF2D6;
 
@@ -921,7 +934,7 @@ left: 1223px; */
   height: 11.6px;
 }
 
-.dd-icon-sizzz{
+.dd-icon-sizzz {
   width: 20px;
   height: 16px;
 }
@@ -1063,7 +1076,8 @@ left: 1223px; */
 .ArrowUp-icon-box-third {
   background-color: #FF1E1E;
 }
-.ArrowUp-icon-boxYellow{
+
+.ArrowUp-icon-boxYellow {
   background-color: #FEBA4C;
 }
 
@@ -1072,7 +1086,8 @@ left: 1223px; */
   font-size: 15px;
   color: #0DCB77;
 }
-.cars-prices-Yellow{
+
+.cars-prices-Yellow {
   color: #FEBA4C;
 }
 
@@ -1536,37 +1551,47 @@ canvas {
 body {
   font-family: 'Urbanist', sans-serif;
 }
+
 .modal-content {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.modal-header, .modal-footer {
-  border: none; /* Removes border from header & footer */
+
+.modal-header,
+.modal-footer {
+  border: none;
+  /* Removes border from header & footer */
 }
+
 .modal-title {
   font-weight: 700;
 }
+
 .hpp p {
   color: #6c757d;
   margin-bottom: 10px;
   font-weight: 600;
 }
+
 .form-select {
   border-radius: 8px;
   padding: 15px;
 }
+
 .btn-warning {
-  background-color:#FEBA4C;
+  background-color: #FEBA4C;
   border-radius: 8px;
   padding: 10px 38px;
   font-weight: 600;
   border: none;
   box-sizing: border-box;
 }
+
 .btn-warning:hover {
   background-color: transparent;
   border: 1px solid #FEBA4C
 }
+
 .custom-close-btn {
   width: 24px;
   height: 24px;
@@ -1576,7 +1601,8 @@ body {
   cursor: pointer;
   position: absolute;
   top: 20px;
-  right: 15px;}
+  right: 15px;
+}
 
 
 
@@ -1820,7 +1846,8 @@ a {
   font-weight: 600;
   font-size: 15px;
 }
-.lightYellow-btn:hover{
+
+.lightYellow-btn:hover {
   background-color: #f7b13f;
 }
 
@@ -1931,17 +1958,18 @@ input:checked+.slider::before {
 
 
 /* Analytics And Reports page style starts here */
-.downlaod-insights{
-  background-color:var(--input-field-bg-color);
+.downlaod-insights {
+  background-color: var(--input-field-bg-color);
   font-family: Urbanist;
-font-weight: 500;
-font-size: 12px;
-line-height: 100%;
-letter-spacing: 0%;
-vertical-align: middle;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
 
 }
-.downlaod-insights:hover{
+
+.downlaod-insights:hover {
   background-color: var(--input-field-bg-color);
 }
 
@@ -1956,19 +1984,19 @@ vertical-align: middle;
 
 .Analytics-card-title {
   font-family: Urbanist;
-font-weight: 700;
-font-size: 18px;
-line-height: 100%;
-letter-spacing: 0%;
-vertical-align: middle;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
 
   color: #333;
 }
 
 .Analytics-text-success {
   font-family: Urbanist;
-font-size: 14px;
-line-height: 100%;
+  font-size: 14px;
+  line-height: 100%;
   color: #333 !important;
 }
 
@@ -1977,7 +2005,7 @@ line-height: 100%;
   border: 1px solid #e0e0e0;
   font-size: 0.9rem;
   padding: 0.375rem 1rem;
-  
+
 }
 
 .Analytics-legend {
@@ -2016,19 +2044,20 @@ line-height: 100%;
   position: relative;
 }
 
-.Analytics-DataTable{
+.Analytics-DataTable {
   background-color: var(--input-field-bg-color);
   border-radius: 12px;
 }
-.Analytics-legend-label{
+
+.Analytics-legend-label {
   font-family: Urbanist;
-font-weight: 500;
-font-size: 12px;
-line-height: 100%;
-letter-spacing: 0%;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
-.table-dots:hover{
+.table-dots:hover {
   cursor: pointer;
 }
 
@@ -2115,92 +2144,35 @@ letter-spacing: 0%;
   text-align: center;
 }
 
-.Top-Buyers,.Top-Sellers{
+.Top-Buyers,
+.Top-Sellers {
   background-color: #F5F5F5;
   border-radius: 12px;
   padding-inline: 20px;
 }
-.Analytics-Users-images{
+
+.Analytics-Users-images {
   width: 50px;
   height: 50px;
   object-fit: cover;
 }
 
-.Analytics-UserName{
+.Analytics-UserName {
   font-family: Urbanist;
   font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
   vertical-align: middle;
-  
+
 }
-.Analytics-UserEmail{
+
+.Analytics-UserEmail {
   color: #666666;
-font-weight: 500;
-font-size: 11.5px;
+  font-weight: 500;
+  font-size: 11.5px;
 }
 /* Analytics And Reports page style ends here */
 
-/* admin-buyer header start */
-.buyer-custom-navbar {
-    background-color: #fff;
-    padding: 10px 20px;
-}
-
-.buyer-navbar-brand img {
-    height: 40px;
-}
-
-.buyer-navbar-nav {
-    margin: auto;
-}
-
-.buyer-nav-item a {
-
-    color: #333333;
-    /* font-family: "Urbanist"; */
-    font-weight: 600;
-    font-size: 14px;
-
-    text-align: center;
-    vertical-align: middle;
-    text-transform: capitalize;
 
 
-}
-
-.buyer-icons {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.buyer-menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-}
-
-@media (max-width: 991px) {
-    .buyer-icons {
-        display: none;
-    }
-
-    .buyer-navbar-nav {
-        text-align: center;
-    }
-
-    .buyer-navbar-collapse.show .buyer-icons {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
-}
-
-.buyerr-logo {
-    width: 62px;
-    height: 60px;
-
-}
-
-/* admin-buyer header end */
