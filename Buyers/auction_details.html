@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Auction - Speedster 2022</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+<style>
+    body{
+        background-color: #FFFFFF;
+        overflow: visible !important;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+
+    }
+    
+    .description_cont{
+        background-color: #F7F7F7;
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    .lot-number {
+        background-color: rgba(255, 111, 0,0.2);
+        color: var(--sidebar-active);
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+        display: inline-block;
+    }
+    .text-muted{
+        font-size: small;
+        color: #666666;
+    }
+    .title{
+        color: #333333;
+    }
+    .timer-box {
+        text-align: center;
+        padding: 10px;
+        background-color: #F7F7F7;
+        border-radius: 8px;
+        color: #666666;
+    }
+
+
+    .timer-value {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom:0 !important;
+        color: #333333;
+    }
+
+    .timer-label {
+        font-size: 12px;
+        color: #6c757d;
+    }
+
+    .bid-input {
+        border: 2px solid  #DADADA ;
+        border-radius: 12px;
+        max-width: 200px;
+        height: 60px;
+    }
+
+
+    .bid-now-btn {
+        background-color: var(--sidebar-active);
+        color: var(--input-field-bg-color);
+        border: none;
+        height: 60px;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .bid-now-btn:hover {
+        background-color: #e65c00 !important;
+
+    }
+    .bid-now-btn:active{
+        background-color: #FFFFFF !important;
+        border: 2px solid #e65c00 !important;
+        color: #e65c00 !important;
+    }
+
+    .category-tag {
+        font-size: 14px;
+        color: #333333;
+    }
+
+    .auction-dates {
+        color: #6c757d;
+        font-size: 14px;
+    }
+    
+    .auction-dates > p{
+        color: #666666;
+    }
+    .auction-dates> p>span{
+        font-weight: 600;
+    }
+    .timer > .col-3 >.timer-box{
+     border: 2px solid  #DADADA ;
+     border-radius: 16px;
+    
+    }
+    .bidd >p{
+        color: #666666;
+        font-weight: 600;
+    }
+    .counter_section button{
+        border: none !important;
+        outline: none !important;
+        background-color: #FFFFFF !important;
+        border-radius: 13;
+    }
+    .counter_section button:hover{
+        background-color: #DADADA !important;
+        color: #495057 !important;
+    }
+    .counter_section button:active{
+        background-color: #DADADA !important;
+        color: #495057 !important;
+
+    }
+    .counter_section input{
+        box-shadow: none !important;
+        outline: none !important;
+        border: none !important;
+    }
+    /* ================= images csss =================== */
+   
+    .main-image-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        height: 500px;
+        object-fit: contain;
+    }
+
+    .main-image-container img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .thumbnail-container {
+        overflow-x: auto;
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+    }
+
+    .thumbnail-container::-webkit-scrollbar {
+        display: none; 
+    }
+
+    .thumbnail {
+        flex: 0 0 auto;
+        /* width: 100px;
+        height: 75px; */
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* .thumbnail.active {
+        border-color: #ff6b00;
+    } */
+
+    .thumbnail:hover {
+        transform: translateY(-2px);
+    }
+</style>
+<body>
+    <div class="container-fluid px-md-5  py-4">
+        <div class="d-flex justify-content-center flex-column flex-md-row gap-4 mx-lg-5">
+           
+            <div class=" col-11 col-md-6 d-flex flex-column gap-3  ">
+                <div class="main-image-container">
+                    <img id="mainImage" src="../assets/images/buyers_dashboard_images/APPLE-HOME-POD-MINI-MY5G2BA-removebg-preview 1.svg" alt="Speedster 2022" class="img-fluid rounded shadow">
+                </div>
+                <div class=" row d-flex  thumbnail-container">
+                    <div class="col-4 col-md-3 thumbnail active" onclick="changeImage(this, '../assets/images/buyers_dashboard_images/Frame 301.png')">
+                        <img src="../assets/images/buyers_dashboard_images/Frame 301.png" alt="Front view" class="img-fluid rounded">
+                    </div>
+                    <div class=" col-4 col-md-3 thumbnail" onclick="changeImage(this, '../assets/images/buyers_dashboard_images/Frame 302 (1).png')">
+                        <img src="../assets/images/buyers_dashboard_images/Frame 302 (1).png" alt="Side view" class="img-fluid rounded">
+                    </div>
+                    <div class="col-4 col-md-3 thumbnail" onclick="changeImage(this, '../assets/images/buyers_dashboard_images/image.png')">
+                        <img src="../assets/images/buyers_dashboard_images/image.png" alt="Rear view" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details Column -->
+            <div class="col-11 col-md-6 description_cont ">
+                <span class="lot-number p-2 py-1 ">Lot # 238964</span>
+                <h1 class="h2 mt-2 title "><strong >Speedster 2022 - Midnight Black Edition</strong></h1>
+                
+                <p class="text-muted">
+                    Aptent taciti sociosq litor torquen per conubia nostra, per incep placerat felis non 
+                    aliquam.Mauris nec justo vitae ante euctor.Aptent taciti sociosq litor torquen per conubia 
+                    nostra, per incep placerat felis non aliquam.Mauris nec justo vitae ante euctor.
+                </p>
+
+                <div class="mb-4 bidd">
+                    <p class="mb-1">Current Bid:</p>
+                    <h2 class="mb-4" ><strong>$</strong> <strong id="current_bid">5,678.00</strong> </h2>
+                </div>
+
+                <!-- Timer -->
+                <div class="row g-2 mb-4 timer">
+                    <div class="col-3 col-md-2">
+                        <div class="timer-box">
+                            <p class="timer-value ">05</p>
+                            <span class="timer-label">Days</span>
+                        </div>
+                    </div>
+                    <div class="col-3 col-md-2">
+                        <div class="timer-box">
+                            <p class="timer-value">09</p>
+                            <span class="timer-label">Hours</span>
+                        </div>
+                    </div>
+                    <div class="col-3 col-md-2">
+                        <div class="timer-box">
+                            <p class="timer-value">54</p>
+                            <span class="timer-label">Mins</span>
+                        </div>
+                    </div>
+                    <div class="col-3 col-md-2">
+                        <div class="timer-box">
+                            <p class="timer-value">41</p>
+                            <span class="timer-label">Secs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Auction Dates -->
+                <div class="auction-dates mb-4">
+                    <p class="mb-1">Auction Started on:<span>Dec 30, 2025</span> </p>
+                    <p class="mb-3">Auction Ends on:<span>Feb 30, 2026</span> </p>
+                </div>
+
+               
+                <div class="input_section col-11 d-flex align-items-center gap-3 mb-4">
+                    <div class="counter_section col-6 col-md-5">
+                        <div class="input-group bid-input">
+                            <button class="btn btn-outline-secondary" id="decrementBid" type="button">-</button>
+                            <input type="text" id="bidAmount" class="form-control text-center" value="">
+                            <button class="btn btn-outline-secondary" id="incrementBid" type="button">+</button>
+                        </div>
+                    </div>
+                    <div class=" col-6 col-md-4">
+                        <button class="btn btn-primary bid-now-btn px-4">Bid Now</button>
+                    </div>
+                </div>
+                
+
+                <!-- Categories -->
+                <div class="mt-4">
+                    <p class="mb-1">Categories: <a href="#" class="category-tag">Audi</a></p>
+                    <p class="mb-1">Tags: <a href="#" class="category-tag">Car</a> <a href="#" class="category-tag">Audi</a><a href="#" class="category-tag">Popular</a></p>
+                    <p class="mb-1">SKU : <a href="#" class="category-tag">#khfg2543dsdf354</a></p>
+                    <p class="mb-1">Share : &nbsp <a href="#"><i><img src="../assets/images/buyers_dashboard_images/Vector.svg" alt=""></i></a>
+                        <a href="#"><i><img src="../assets/images/buyers_dashboard_images/lets-icons_insta.svg" alt=""></i></a>
+                        <a href="#"><i><img src="../assets/images/buyers_dashboard_images/ic_baseline-whatsapp.svg" alt=""></i></a>
+                        <a href="#"><i><img src="../assets/images/buyers_dashboard_images/simple-icons_x.svg" alt=""></i></a>
+                    
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const bidInput = document.getElementById('bidAmount');
+    const incrementBtn = document.getElementById('incrementBid');
+    const decrementBtn = document.getElementById('decrementBid');
+    const bidStep = 100; // Increment/decrement by $100
+
+    // Extract numeric value from bidInput
+    function getBidValue() {
+        return parseInt(bidInput.value.replace(/[^0-9]/g, ''), 10) || 0;
+    }
+
+    function updateBidDisplay(value) {
+        bidInput.value = formatBid(value);
+    }
+
+    function formatBid(value) {
+        return new Intl.NumberFormat('en-US', { 
+            style: 'currency', 
+            currency: 'USD',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        }).format(value);
+    }
+
+    incrementBtn.addEventListener('click', function() {
+        let currentBid = getBidValue();
+        updateBidDisplay(currentBid + bidStep);
+    });
+
+    decrementBtn.addEventListener('click', function() {
+        let currentBid = getBidValue();
+        if (currentBid > bidStep) {
+            updateBidDisplay(currentBid - bidStep);
+        }
+    });
+
+    bidInput.addEventListener('blur', function() {
+        let currentBid = getBidValue();
+        if (isNaN(currentBid) || currentBid <= 0) {
+            currentBid = 100; // Default bid amount if invalid
+        }
+        updateBidDisplay(currentBid);
+    });
+
+    // Set initial bid value
+    updateBidDisplay(5778);
+});
+
+     </script>
+     <script>
+        function changeImage(thumbnail, newSrc) {
+            // Update main image
+            document.getElementById('mainImage').src = newSrc;
+            
+            // Update active state of thumbnails
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            thumbnail.classList.add('active');
+        }
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
