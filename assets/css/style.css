@@ -1,7 +1,8 @@
-*{
+* {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -142,7 +143,8 @@ body {
 .carexpo-menu-item:hover {
   background-color: #334b1e;
   color: #ff6f00;
-  svg{
+
+  svg {
     fill: #ff6f00 !important;
   }
 }
@@ -150,7 +152,8 @@ body {
 .carexpo-menu-item.active {
   background-color: #334b1e;
   color: #ff6f00;
-  svg{
+
+  svg {
     fill: #ff6f00 !important;
   }
 }
@@ -726,7 +729,7 @@ padding-left: 14px; */
   /* font-family: "Urbanist"; */
   font-weight: 500;
   font-size: 13px;
-text-decoration: underline;
+  text-decoration: underline;
   color: #333333;
 }
 
@@ -741,11 +744,13 @@ text-decoration: underline;
   background-color: rgba(40, 167, 69, 0.1);
   color: #28a745;
 }
+
 .status-reviewed {
   background-color: rgba(40, 167, 69, 0.1);
   color: #666666;
-  
+
 }
+
 .status-pending {
   background-color: #FFF2D6;
 
@@ -921,7 +926,7 @@ left: 1223px; */
   height: 11.6px;
 }
 
-.dd-icon-sizzz{
+.dd-icon-sizzz {
   width: 20px;
   height: 16px;
 }
@@ -1063,7 +1068,8 @@ left: 1223px; */
 .ArrowUp-icon-box-third {
   background-color: #FF1E1E;
 }
-.ArrowUp-icon-boxYellow{
+
+.ArrowUp-icon-boxYellow {
   background-color: #FEBA4C;
 }
 
@@ -1072,7 +1078,8 @@ left: 1223px; */
   font-size: 15px;
   color: #0DCB77;
 }
-.cars-prices-Yellow{
+
+.cars-prices-Yellow {
   color: #FEBA4C;
 }
 
@@ -1536,37 +1543,47 @@ canvas {
 body {
   font-family: 'Urbanist', sans-serif;
 }
+
 .modal-content {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.modal-header, .modal-footer {
-  border: none; /* Removes border from header & footer */
+
+.modal-header,
+.modal-footer {
+  border: none;
+  /* Removes border from header & footer */
 }
+
 .modal-title {
   font-weight: 700;
 }
+
 .hpp p {
   color: #6c757d;
   margin-bottom: 10px;
   font-weight: 600;
 }
+
 .form-select {
   border-radius: 8px;
   padding: 15px;
 }
+
 .btn-warning {
-  background-color:#FEBA4C;
+  background-color: #FEBA4C;
   border-radius: 8px;
   padding: 10px 38px;
   font-weight: 600;
   border: none;
   box-sizing: border-box;
 }
+
 .btn-warning:hover {
   background-color: transparent;
   border: 1px solid #FEBA4C
 }
+
 .custom-close-btn {
   width: 24px;
   height: 24px;
@@ -1576,7 +1593,8 @@ body {
   cursor: pointer;
   position: absolute;
   top: 20px;
-  right: 15px;}
+  right: 15px;
+}
 
 
 
@@ -1820,7 +1838,8 @@ a {
   font-weight: 600;
   font-size: 15px;
 }
-.lightYellow-btn:hover{
+
+.lightYellow-btn:hover {
   background-color: #f7b13f;
 }
 
@@ -1931,17 +1950,18 @@ input:checked+.slider::before {
 
 
 /* Analytics And Reports page style starts here */
-.downlaod-insights{
-  background-color:var(--input-field-bg-color);
+.downlaod-insights {
+  background-color: var(--input-field-bg-color);
   font-family: Urbanist;
-font-weight: 500;
-font-size: 12px;
-line-height: 100%;
-letter-spacing: 0%;
-vertical-align: middle;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
 
 }
-.downlaod-insights:hover{
+
+.downlaod-insights:hover {
   background-color: var(--input-field-bg-color);
 }
 
@@ -1956,19 +1976,19 @@ vertical-align: middle;
 
 .Analytics-card-title {
   font-family: Urbanist;
-font-weight: 700;
-font-size: 18px;
-line-height: 100%;
-letter-spacing: 0%;
-vertical-align: middle;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
 
   color: #333;
 }
 
 .Analytics-text-success {
   font-family: Urbanist;
-font-size: 14px;
-line-height: 100%;
+  font-size: 14px;
+  line-height: 100%;
   color: #333 !important;
 }
 
@@ -1977,7 +1997,7 @@ line-height: 100%;
   border: 1px solid #e0e0e0;
   font-size: 0.9rem;
   padding: 0.375rem 1rem;
-  
+
 }
 
 .Analytics-legend {
@@ -2016,19 +2036,20 @@ line-height: 100%;
   position: relative;
 }
 
-.Analytics-DataTable{
+.Analytics-DataTable {
   background-color: var(--input-field-bg-color);
   border-radius: 12px;
 }
-.Analytics-legend-label{
+
+.Analytics-legend-label {
   font-family: Urbanist;
-font-weight: 500;
-font-size: 12px;
-line-height: 100%;
-letter-spacing: 0%;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
-.table-dots:hover{
+.table-dots:hover {
   cursor: pointer;
 }
 
@@ -2115,92 +2136,421 @@ letter-spacing: 0%;
   text-align: center;
 }
 
-.Top-Buyers,.Top-Sellers{
+.Top-Buyers,
+.Top-Sellers {
   background-color: #F5F5F5;
   border-radius: 12px;
   padding-inline: 20px;
 }
-.Analytics-Users-images{
+
+.Analytics-Users-images {
   width: 50px;
   height: 50px;
   object-fit: cover;
 }
 
-.Analytics-UserName{
+.Analytics-UserName {
   font-family: Urbanist;
   font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
   vertical-align: middle;
-  
+
 }
-.Analytics-UserEmail{
+
+.Analytics-UserEmail {
   color: #666666;
-font-weight: 500;
-font-size: 11.5px;
+  font-weight: 500;
+  font-size: 11.5px;
 }
+
 /* Analytics And Reports page style ends here */
 
 /* admin-buyer header start */
 .buyer-custom-navbar {
-    background-color: #fff;
-    padding: 10px 20px;
+  background-color: #fff;
+  padding: 10px 20px;
 }
 
 .buyer-navbar-brand img {
-    height: 40px;
+  height: 40px;
 }
 
 .buyer-navbar-nav {
-    margin: auto;
+  margin: auto;
 }
 
 .buyer-nav-item a {
 
-    color: #333333;
-    /* font-family: "Urbanist"; */
-    font-weight: 600;
-    font-size: 14px;
+  color: #333333;
+  /* font-family: "Urbanist"; */
+  font-weight: 600;
+  font-size: 14px;
 
-    text-align: center;
-    vertical-align: middle;
-    text-transform: capitalize;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
 
 
 }
 
 .buyer-icons {
-    display: flex;
-    gap: 15px;
-    align-items: center;
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .buyer-menu-icon {
-    font-size: 24px;
-    cursor: pointer;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 @media (max-width: 991px) {
-    .buyer-icons {
-        display: none;
-    }
+  .buyer-icons {
+    display: none;
+  }
 
-    .buyer-navbar-nav {
-        text-align: center;
-    }
+  .buyer-navbar-nav {
+    text-align: center;
+  }
 
-    .buyer-navbar-collapse.show .buyer-icons {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
+  .buyer-navbar-collapse.show .buyer-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
 
 .buyerr-logo {
-    width: 62px;
-    height: 60px;
+  width: 62px;
+  height: 60px;
 
 }
 
 /* admin-buyer header end */
+
+/* buyer header notification canvas start */
+.buyer-notif-headr {
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 16px;
+  color: #333333;
+}
+
+.se-al-noti {
+  color: #666666;
+  font-weight: 600;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.buyer-notification-item {
+  /* padding: 12px 16px;
+            border-radius: 8px; */
+  background-color: transparent;
+  /* margin-bottom: 10px; */
+}
+
+.buyer-notification-text {
+
+  color: #333333;
+  /* margin-bottom: 4px; */
+
+  font-weight: 500;
+  font-size: 11.6px;
+
+
+}
+
+.buyer-notification-time {
+  color: #666666;
+  text-align: right;
+
+  font-weight: 500;
+  font-size: 11.5px;
+
+
+}
+
+/* .buyer-notification-time.just-now {
+            font-weight: 600;
+        } */
+
+.notification-date {
+  font-size: 12px;
+  color: #666666;
+  text-align: right;
+}
+
+
+
+
+.notification-container {
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+.notification-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.notification-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.notification-container::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 4px;
+}
+
+
+/* buyer header notification canvas end */
+
+
+/* buyer-panel my account start */
+
+.buyer-user-top {
+  border-radius: 10px;
+  background: #F7F7F7;
+  font-weight: 600;
+  font-size: 20px;
+
+
+}
+
+.buyer-user-top1 {
+  font-weight: 400;
+  font-size: 12.5px;
+  color: #666666;
+
+
+}
+
+.sidebar-buyer-profil {
+  background-color: transparent;
+  /* min-height: 100vh; */
+  /* padding: 20px 0; */
+}
+
+/* .sidebar-item {
+padding: 15px 20px;
+color: #495057;
+transition: background-color 0.3s;
+display: block;
+text-decoration: none;
+} */
+
+.sidebar-item-buyr-profil {
+  padding: 15px 20px;
+  /* color: #495057; */
+  transition: background-color 0.3s;
+  display: block;
+  text-decoration: none;
+
+  background: #F7F7F7;
+
+  font-weight: 600;
+  font-size: 16px;
+
+  color: #333333;
+
+  border-radius: 10px;
+
+
+}
+
+.sidebar-item-buyr-profil1 {
+  padding: 15px 20px;
+  /* color: #495057; */
+  transition: background-color 0.3s;
+  display: block;
+  text-decoration: none;
+
+  background: transparent;
+
+  font-weight: 600;
+  font-size: 16px;
+
+  color: #666666;
+
+
+  border-radius: 10px;
+
+}
+
+.sidebar-item:hover {
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+/* .content {
+        padding: 20px;
+    } */
+
+@media (max-width: 768px) {
+  .sidebar-buyer-profil {
+    min-height: auto;
+  }
+}
+
+.edit-pen-btnn {
+
+  border-radius: 10px;
+  padding: 10px 27px;
+
+  background: #012B52;
+
+  font-weight: 500;
+  font-size: 12.7px;
+
+
+}
+
+.buyer-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f8f9fa;
+
+  font-weight: 400;
+  font-size: 12px;
+
+  color: #666666;
+
+}
+
+.buyer-label {
+  margin-bottom: 8px;
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+
+
+
+}
+
+/* Custom CSS for the tabs */
+/* .acont-byer-container {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+} */
+
+.acont-byer-nav {
+    /* border-bottom: none; */
+}
+
+.acont-byer-nav .nav-link {
+    border: none;
+    padding: 10px 20px;
+    position: relative;
+    background: transparent;
+
+    font-weight: 500;
+    font-size: 13px;
+    
+    vertical-align: middle;
+    
+    color: #666666;
+
+}
+.acont-byer-nav .nav-link:hover {
+  color: #666666;
+}
+.acont-byer-nav .nav-link.active {
+    color: #000;
+    background: transparent;
+    font-weight: 500;
+
+    
+font-size: 13px;
+
+vertical-align: middle;
+
+}
+
+.acont-byer-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+.acont-byer-content {
+    padding: 20px 0;
+}
+
+.acont-byer-pane {
+    display: none;
+}
+
+.acont-byer-pane.active {
+    display: block;
+}
+
+.acont-id-table-container {
+    /* max-width: 1000px; */
+    margin: 20px auto;
+}
+.acont-id-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.acont-id-auction-name {
+  color: #333333;
+  font-weight: 500;
+  font-size: 12.5px;
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+.acont-id-date{
+  color: #333333;
+  font-weight: 500;
+  font-size: 12.5px !important;
+}
+.acont-id-bid-amount {
+font-weight: 600 !important;
+font-size: 12.5px !important;
+
+    color: #333 !important;
+}
+.acont-id-status-badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+   
+    display: inline-block;
+
+font-weight: 500;
+font-size: 12.8px;
+
+}
+.acont-id-status-ongoing {
+    background-color: #ffe8d6;
+    color: #e57c2c;
+}
+.acont-id-status-completed {
+    background-color: #e6f4ea;
+    color: #2d8b57;
+}
+
+.bid-table-hdr {
+  /* font-family: Urbanist; */
+font-weight: 600 !important;
+font-size: 13px !important;
+color:  #666666 !important;
+}
+
+.acont-id-table td {
+  background-color: white !important;
+}
+/* buyer-panel my account end */
