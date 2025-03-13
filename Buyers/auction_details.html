@@ -324,6 +324,10 @@ padding: 3rem 1rem;
         .review-meta {
             text-align: left;
         }
+
+        .bid-input{
+        max-width: 100% !important;
+        }
     }
 
     @media (max-width: 480px) {
@@ -406,6 +410,7 @@ padding: 3rem 1rem;
         height: 60px;
         width: 100%;
         border-radius: 12px;
+        margin-top: 0 !important;
     }
 
     .bid-now-btn:hover {
@@ -418,7 +423,9 @@ padding: 3rem 1rem;
         border: 2px solid #e65c00 !important;
         color: #e65c00 !important;
     }
-
+    .btn-outline-secondary{
+      margin-top:  0 !important;
+    }
     .category-tag {
         font-size: 14px;
         color: #333333;
@@ -1125,12 +1132,12 @@ padding: 3rem 1rem;
                 <div class="input_section col-11 d-flex align-items-center gap-3 mb-4">
                     <div class="counter_section col-6 col-md-5">
                         <div class="input-group bid-input">
-                            <button class="btn btn-outline-secondary" id="decrementBid" type="button">-</button>
-                            <input type="text" id="bidAmount" class="form-control text-center" value="">
-                            <button class="btn btn-outline-secondary" id="incrementBid" type="button">+</button>
+                            <button class="btn btn-outline-secondary h-100" id="decrementBid" type="button">-</button>
+                            <input type="text" id="bidAmount" class="form-control text-center h-100" value="">
+                            <button class="btn btn-outline-secondary h-100" id="incrementBid" type="button">+</button>
                         </div>
                     </div>
-                    <div class=" col-6 col-md-4">
+                    <div class=" col-6 col-sm-5 col-md-4">
                         <button class="btn btn-primary bid-now-btn px-4 " data-bs-toggle="modal" data-bs-target="#confirmBidModal">Bid Now</button>
                     </div>
                 </div>
@@ -1156,7 +1163,7 @@ padding: 3rem 1rem;
             </div>
         </div>
 
-        <div class="container-fluid py-4 px-0 px-md-5">
+        <div class="container-fluid py-4 px-sm-4 px-lg-5">
 
             <!-- Tab Navigation -->
             <ul class="nav nav-tabs border-0 mb-4">
