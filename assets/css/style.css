@@ -1194,7 +1194,7 @@ canvas {
 }
 
 .user-heading {
-  width: 83% !important;
+  /* width: 83% !important; */
 }
 
 .user-heading button {
@@ -1366,7 +1366,7 @@ canvas {
   }
 }
 
-@media (max-width: 430px) {
+/* @media (max-width: 430px) {
   .row2-side1 {
     height: 100%;
   }
@@ -1385,7 +1385,7 @@ canvas {
     font-size: 11px;
     white-space: nowrap;
   }
-}
+} */
 
 /* ####################### media queries #################### */
 /* car-information page start */
@@ -1407,7 +1407,7 @@ canvas {
 }
 
 .user-heading {
-  width: 83% !important;
+  /* width: 83% !important; */
 }
 
 .user-heading button {
@@ -1636,7 +1636,7 @@ body {
   }
 }
 
-@media (max-width: 430px) {
+/* @media (max-width: 430px) {
   .row2-side1 {
     height: 100%;
   }
@@ -1655,7 +1655,7 @@ body {
     font-size: 11px;
     white-space: nowrap;
   }
-}
+} */
 
 /* ####################### media queries #################### */
 /* car-information page end */
@@ -2623,11 +2623,11 @@ input:checked+.slider::before {
 
 .receive-otp {
   font-family: Urbanist;
-font-weight: 500;
-font-size: 18px;
-line-height: 100%;
-letter-spacing: 0px;
-text-align: right;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
   color: #999999;
 }
 
@@ -3218,7 +3218,10 @@ text-decoration: none;
 /* Login Page styling end here */
 
 /* register page styling  starts here */
-.Create-Account-Body,.ForgetPassword-Body,.OTP-Page-Body,.Change-Password-Body {
+.Create-Account-Body,
+.ForgetPassword-Body,
+.OTP-Page-Body,
+.Change-Password-Body {
   background-image: url('../images/Buyer Dashboard images/Login page images/login page bg.png');
   background-size: cover;
   background-position: center;
@@ -3241,52 +3244,62 @@ text-decoration: none;
 /* Confirm Bid modal by Ahad starts here */
 .modal-content {
   background: #F5F5F5;
-}.modal-header{
-  border-bottom: none;
-  
 }
-.image-logo{
-  height: 60px;
-  width: 60px;
- margin-bottom: 13px;
+
+.modal-header {
+  border-bottom: none;
 
 }
-.text-bid{
+
+.image-logo {
+  height: 60px;
+  width: 60px;
+  margin-bottom: 13px;
+
+}
+
+.text-bid {
   color: #666666;
   font-weight: 400;
   font-size: 14px;
   font-family: urbanist;
 }
-.close-btn{
+
+.close-btn {
   border: none;
   background: transparent;
 }
-.btn1{
+
+.btn1 {
   background: #DADADA;
   padding: 9px 30px;
   border-radius: 10px;
   border: none;
   color: #999999;
 }
-.btn2{
+
+.btn2 {
   background: #FF6F00;
   padding: 9px 30px;
   border-radius: 10px;
   border: none;
   color: white;
 }
-.form-check-label{
+
+.form-check-label {
   color: #666666;
   font-weight: 400;
   font-size: 14px;
   font-family: urbanist;
 }
-.text-p{
+
+.text-p {
   color: #666666;
   font-weight: 400;
   font-size: 14px;
   font-family: urbanist;
 }
+
 /* Confirm Bid modal by Ahad  ends here*/
 
 
@@ -3367,22 +3380,29 @@ text-decoration: none;
   background: #ddd;
   border-radius: 4px;
 }
+
 /* Navbar style ends here */
-.switch-by-btn{
-font-weight: 600;
-font-size: 12.5px;
-vertical-align: middle;
-border-radius: 10px;
-
-padding: 9px 16px;
-
-
+.switch-by-btn {
+  font-weight: 600 !important;
+  font-size: 12.5px !important;
+  vertical-align: middle !important;
+  border-radius: 10px !important;
+  padding: 9px 16px !important;
+  background: #ff6f00 !important;
+  color: white !important;
 }
 
-.actv-auct{
-font-weight: 600;
-font-size: 16px;
-vertical-align: middle;
+.switch-by-btn:hover {
+  background: white !important;
+  color: #ff6f00 !important;
+  border: 1px solid #ff6f00 !important;
+}
+
+
+.actv-auct {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  vertical-align: middle;
 
 }
 
@@ -3392,20 +3412,20 @@ vertical-align: middle;
 }
 
 .ad-auction-hd {
-font-size: 18.5px;
+  font-size: 18.5px;
 }
 
-.ad-auction-p{
-   color: #666666;
-   font-size: 12.5px;
+.ad-auction-p {
+  color: #666666;
+  font-size: 12.5px;
 
 }
 
-.ad-auction-p1{
-font-weight: 600;
-font-size: 12.5px;
+.ad-auction-p1 {
+  font-weight: 600;
+  font-size: 12.5px;
 
-color: #999999;
+  color: #999999;
 
 
 }
@@ -3420,9 +3440,9 @@ color: #999999;
 }
 
 .seller-ad-action-input::placeholder {
-  color:  #999999;
-  font-size: 14px; 
-  opacity: 1; 
+  color: #999999;
+  font-size: 14px;
+  opacity: 1;
 }
 
 .seller-editor-container {
@@ -3454,13 +3474,15 @@ color: #999999;
   color: #6c757d;
   cursor: pointer;
 }
+
 .seller-content-area:empty::before {
   content: "Add Description" !important;
-  color:  #999999 !important;
-  font-size: 14px !important; 
-  opacity: 1; 
+  color: #999999 !important;
+  font-size: 14px !important;
+  opacity: 1;
   font-weight: 600 Im !important;
 }
+
 .seller-button {
   width: 36px;
   height: 36px;
@@ -3502,13 +3524,11 @@ color: #999999;
 
 .camera-inner-container {
   width: 100px;
-height: 100px;
+  height: 100px;
 
 }
 
-.orng-clrr {
-
-}
+.orng-clrr {}
 
 /* .nav-link .orng-clrr .active {
 color:  #FF6F00 !important;
@@ -3529,19 +3549,21 @@ border-bottom: 2px solid #FF6F00 !important;
 }
 
 .userr-nav-tabs .seller-nav-link.active {
-  color:  #FF6F00 !important;
-border-bottom: 2px solid #FF6F00 !important;
+  color: #FF6F00 !important;
+  border-bottom: 2px solid #FF6F00 !important;
   font-weight: 500;
   background-color: transparent;
   font-family: "Urbanist";
   font-weight: 600;
   font-size: 13px;
 }
+
 .total-trasacion-icon {
   width: 32px;
-height: 32px;
+  height: 32px;
 
 }
+
 .earning-card {
   background-color: var(--input-field-bg-color);
   border-radius: 12px;
@@ -3552,28 +3574,151 @@ height: 32px;
 
 .earning-number {
   color: #999999;
-  
+
   font-weight: 600;
   font-size: 10.6px;
   vertical-align: middle;
-  
+
 }
 
 .earning-value {
-font-weight: 600;
-font-size: 14.5px;
-vertical-align: middle;
+  font-weight: 600;
+  font-size: 14.5px;
+  vertical-align: middle;
 }
 
-.earning-transaction{
-font-weight: 700;
-font-size: 17px;
+.earning-transaction {
+  font-weight: 700;
+  font-size: 17px;
 
 
 }
 
-.upload-p{
+.upload-p {
   color: #333333 !important;
 
 }
+
+.bell-bg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #F5F5F5;
+
+}
+
+
+/* SELLER-CHANGE-PASSWORD START */
+.seller-password-group {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.seller-password-input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 16px;
+  color: #8c8c8c;
+}
+
+.seller-password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+/* SELLER-CHANGE-PASSWORD END */
+
+/* Container Styling */
+.seller-toggle-container {
+  background: #F7F7F7;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Individual Toggle Box */
+.seller-toggle-box {
+  background: #F9F9F9;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #E0E0E0;
+}
+
+/* Toggle Switch */
+.seller-toggle-input {
+  display: none;
+}
+
+.seller-toggle-label {
+  width: 31px;
+  height: 10px;
+  background: #999999;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.seller-toggle-label::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #D5D5D5;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Checked State */
+.seller-toggle-input:checked+.seller-toggle-label {
+  background: #D3D3D3;
+}
+
+.seller-toggle-input:checked+.seller-toggle-label::after {
+  background: #FF7A00;
+  transform: translateX(20px);
+}
+
+/* orange linegraph in seller module start */
+.chart-container-seller {
+  width: 100%;
+  max-width: 900px;
+  /* margin: 50px auto; */
+  background: #F5F5F5;
+  padding: 20px;
+  border-radius: 14px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+.dropdown-seller {
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 10px;
+  vertical-align: middle;
+  color: #666666;
+  border-radius: 6px;
+  padding: 6px 8px 6px 7px;
+  border: 1px solid #DEE2E6;
+}
+
+#performanceChartSeller {
+  height: 180px !important;
+  max-height: 200px !important;
+}
+/* orange linegraph in seller module end */
 
