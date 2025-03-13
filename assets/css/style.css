@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -11,6 +10,7 @@
   /* overflow: scroll !important; */
 
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -40,9 +40,14 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #333;
+  /* background-color: #333; */
   height: 100vh;
   overflow: auto;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid black;
 }
 
 .carexpo-dashboard-container {
@@ -63,11 +68,11 @@ body {
   transition: width 0.3s ease;
 }
 
-.carexpo-sidebar.collapsed ~ .col-xl-2 {
+.carexpo-sidebar.collapsed~.col-xl-2 {
   width: var(--carexpo-sidebar-collapsed-width) !important;
 }
 
-.carexpo-sidebar.collapsed ~ .col-xl-10 {
+.carexpo-sidebar.collapsed~.col-xl-10 {
   width: calc(100% - var(--carexpo-sidebar-collapsed-width)) !important;
 }
 
@@ -167,6 +172,7 @@ body {
 .carexpo-menu-item.active {
   background-color: #334b1e;
   color: #ff6f00;
+
   svg {
     fill: #ff6f00 !important;
   }
@@ -472,7 +478,7 @@ body {
   color: #6c757d;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
   content: "•";
 }
 
@@ -1042,6 +1048,7 @@ left: 1223px; */
 .ArrowUp-icon-box-third {
   background-color: #ff1e1e;
 }
+
 .ArrowUp-icon-boxYellow {
   background-color: #feba4c;
 }
@@ -1051,6 +1058,7 @@ left: 1223px; */
   font-size: 15px;
   color: #0dcb77;
 }
+
 .cars-prices-Yellow {
   color: #feba4c;
 }
@@ -1343,6 +1351,7 @@ canvas {
 /*############### row2-side2 end ###############  */
 /* ####################### media queries #################### */
 @media (min-width: 768px) and (max-width: 992px) {
+
   .row1-side1,
   .row1-side2,
   .row2-side1,
@@ -1508,9 +1517,11 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .modal-header,
 .modal-footer {
-  border: none; /* Removes border from header & footer */
+  border: none;
+  /* Removes border from header & footer */
 }
 
 .modal-title {
@@ -1610,6 +1621,7 @@ body {
 /*############### row2-side2 end ###############  */
 /* ####################### media queries #################### */
 @media (min-width: 768px) and (max-width: 992px) {
+
   .row1-side1,
   .row1-side2,
   .row2-side1,
@@ -1762,6 +1774,7 @@ a {
   font-weight: 600;
   font-size: 15px;
 }
+
 .lightYellow-btn:hover {
   background-color: #f7b13f;
 }
@@ -1830,11 +1843,11 @@ a {
   border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #1e252b;
 }
 
-input:checked + .slider::before {
+input:checked+.slider::before {
   transform: translateX(16px);
 }
 
@@ -1959,6 +1972,7 @@ input:checked + .slider::before {
   background-color: var(--input-field-bg-color);
   border-radius: 12px;
 }
+
 .Analytics-legend-label {
   font-family: Urbanist;
   font-weight: 500;
@@ -2075,6 +2089,7 @@ input:checked + .slider::before {
   letter-spacing: 0%;
   vertical-align: middle;
 }
+
 .Analytics-UserEmail {
   color: #666666;
   font-weight: 500;
@@ -2127,7 +2142,8 @@ input:checked + .slider::before {
   .buyer-navbar-nav {
     text-align: center;
   }
-/*   color: #333333;
+
+  /*   color: #333333;
   font-weight: 600;
   font-size: 14px;
 
@@ -2146,11 +2162,13 @@ input:checked + .slider::before {
   width: 62px;
   height: 60px;
 }
+
 .description_cont {
   background-color: #f7f7f7;
   padding: 1.5rem;
   border-radius: 12px;
 }
+
 .lot-number {
   background-color: rgba(255, 111, 0, 0.2);
   color: var(--sidebar-active);
@@ -2159,13 +2177,16 @@ input:checked + .slider::before {
   font-size: 14px;
   display: inline-block;
 }
+
 .text-muted {
   font-size: small;
   color: #666666;
 }
+
 .title {
   color: #333333;
 }
+
 .timer-box {
   text-align: center;
   padding: 10px;
@@ -2173,6 +2194,7 @@ input:checked + .slider::before {
   border-radius: 8px;
   color: #666666;
 }
+
 .timer-value {
   font-size: 24px;
   font-weight: 500;
@@ -2204,6 +2226,7 @@ input:checked + .slider::before {
 .bid-now-btn:hover {
   background-color: #e65c00 !important;
 }
+
 .bid-now-btn:active {
   background-color: #ffffff !important;
   border: 2px solid #e65c00 !important;
@@ -2220,39 +2243,47 @@ input:checked + .slider::before {
   font-size: 14px;
 }
 
-.auction-dates > p {
+.auction-dates>p {
   color: #666666;
 }
-.auction-dates > p > span {
+
+.auction-dates>p>span {
   font-weight: 600;
 }
-.timer > .col-3 > .timer-box {
+
+.timer>.col-3>.timer-box {
   border: 2px solid #dadada;
   border-radius: 16px;
 }
-.bidd > p {
+
+.bidd>p {
   color: #666666;
   font-weight: 600;
 }
+
 .counter_section button {
   border: none !important;
   outline: none !important;
   background-color: #ffffff !important;
   border-radius: 13;
 }
+
 .counter_section button:hover {
   background-color: #dadada !important;
   color: #495057 !important;
 }
+
 .counter_section button:active {
   background-color: #dadada !important;
   color: #495057 !important;
 }
+
 .counter_section input {
   box-shadow: none !important;
   outline: none !important;
   border: none !important;
 }
+
 /* ================= images csss =================== */
 
 .main-image-container {
@@ -2309,51 +2340,53 @@ input:checked + .slider::before {
 
 /* ================= auth styling start =================== */
 
-.login-page{
-  background-image: url(/assets/images/login-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 100% 100%;
-  height: 100vh;
-}
+.login-page {}
 
 .register {
   color: #ff6f00;
   text-decoration: none;
 }
+
 .account-text {
   color: #666666;
   font-weight: 600;
 }
+
 .text-login {
   font-weight: 700;
   font-size: 24px;
   color: #333333;
 }
+
 .form-label {
   font-size: 20px;
   font-weight: 600;
   color: #333333;
 }
+
 .form-control {
   font-size: 16px;
   font-weight: 400;
   color: #999999;
 }
+
 .text-continue {
   color: #999999;
   font-weight: 500;
 }
+
 .btn {
   background: #ff6f00;
   margin-top: 18px;
 }
+
 .btn2 {
   padding: 6px 20px;
   border-radius: 10px;
   display: flex;
   color: #666666;
 }
+
 @media (max-width: 454px) {
   .btn2 {
     padding: 10px 15px;
@@ -2362,35 +2395,44 @@ input:checked + .slider::before {
     color: #666666;
   }
 }
+
 .button-light {
   background: #f5f5f5;
 }
+
 .btn:hover {
   background: #ff6f00;
 }
+
 .password-wrapper {
   position: relative;
   width: 100%;
 }
+
 .password-wrapper input {
   width: 100%;
-  padding-right: 40px; /* Space for the icon */
+  padding-right: 40px;
+  /* Space for the icon */
   border-radius: 10px;
   border: 1px solid #ccc;
   padding: 12px 15px;
 }
+
 .password-wrapper .eye-icon {
   position: absolute;
   right: 11px;
-  bottom: 17px; /* Positions icon in the bottom-right */
+  bottom: 17px;
+  /* Positions icon in the bottom-right */
   cursor: pointer;
   color: #888;
   font-size: 14px;
 }
+
 .text-create {
   font-size: 26px;
   font-weight: 700;
 }
+
 .btn {
   background: #ff6f00;
   margin-top: 20px;
@@ -2398,40 +2440,49 @@ input:checked + .slider::before {
   font-size: 16px;
   color: white;
 }
+
 .btn:hover {
   background: #ff6f00;
   color: white;
 }
+
 .text-account {
   color: #666666;
   font-weight: 500;
 }
+
 .text-span {
   color: #ff6f00;
   font-weight: 600;
   text-decoration: none;
 }
+
 .form-label {
   color: #333333;
   font-weight: 600;
 }
+
 .form-control {
   color: #999999;
   font-weight: 400;
   font-size: 12px;
   padding: 10px;
 }
+
 .password-wrapper {
   position: relative;
   width: 100%;
 }
+
 .password-wrapper input {
   width: 100%;
-  padding-right: 40px; /* Space for the icon */
+  padding-right: 40px;
+  /* Space for the icon */
   border-radius: 10px;
   border: 1px solid #ccc;
   padding: 10px;
 }
+
 .password-wrapper .eye-icon {
   position: absolute;
   right: 15px;
@@ -2440,6 +2491,7 @@ input:checked + .slider::before {
   cursor: pointer;
   color: #888;
 }
+
 .forget-password-card {
   max-width: 400px;
   background: white;
@@ -2448,11 +2500,13 @@ input:checked + .slider::before {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin: 50px auto;
 }
+
 .p-text {
   color: #666666;
   font-weight: 700;
   font-size: 15px;
 }
+
 @media (max-width: 454px) {
   .p-text {
     color: #666666;
@@ -2460,6 +2514,7 @@ input:checked + .slider::before {
     font-size: 12px;
   }
 }
+
 /* Input field styling */
 .form-control {
   border-radius: 8px;
@@ -2480,6 +2535,7 @@ input:checked + .slider::before {
 .btn-primary:hover {
   background-color: #e56200;
 }
+
 .otp-card {
   max-width: 500px;
   background: white;
@@ -2500,6 +2556,7 @@ input:checked + .slider::before {
   border-radius: 8px;
   margin: 5px;
 }
+
 @media (max-width: 454px) {
   .otp-input {
     width: 50px;
@@ -2512,11 +2569,11 @@ input:checked + .slider::before {
     margin: 5px;
   }
 }
+
 .p-text {
   color: #666666;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
-  font-family: urbanist;
 }
 
 /* Resend OTP link */
@@ -2528,6 +2585,7 @@ input:checked + .slider::before {
   cursor: pointer;
   text-decoration: none;
 }
+
 @media (max-width: 454px) {
   .resend-link {
     color: #ff7300;
@@ -2556,12 +2614,17 @@ input:checked + .slider::before {
 .btn-primary:hover {
   background-color: #e56200;
 }
+
 .receive-otp {
-  font-family: urbanist;
-  font-size: 18px;
-  font-weight: 700;
+  font-family: Urbanist;
+font-weight: 500;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0px;
+text-align: right;
   color: #999999;
 }
+
 @media (max-width: 454px) {
   .receive-otp {
     font-family: urbanist;
@@ -2570,6 +2633,7 @@ input:checked + .slider::before {
     color: #999999;
   }
 }
+
 /* Styling for the card */
 .password-card {
   width: 400px;
@@ -2582,6 +2646,7 @@ input:checked + .slider::before {
 .input-group .form-control {
   border-right: none;
 }
+
 .buyer-icons {
   display: flex;
   gap: 15px;
@@ -2617,6 +2682,7 @@ input:checked + .slider::before {
   width: 62px;
   height: 60px;
 }
+
 .input-group-text {
   background: white;
   border-left: none;
@@ -2639,17 +2705,20 @@ input:checked + .slider::before {
 .reset-btn:hover {
   background-color: #e66300;
 }
+
 .text-new {
   color: #666666;
   font-family: urbanist;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
 }
+
 .form-label {
   font-family: urbanist;
   font-weight: 600;
   font-size: 20px;
 }
+
 .form-control {
   font-family: urbanist;
   font-weight: 400;
@@ -2873,67 +2942,70 @@ text-decoration: none;
 } */
 
 .acont-byer-nav {
-    /* border-bottom: none; */
+  /* border-bottom: none; */
 }
 
 .acont-byer-nav .nav-link {
-    border: none;
-    padding: 10px 20px;
-    position: relative;
-    background: transparent;
+  border: none;
+  padding: 10px 20px;
+  position: relative;
+  background: transparent;
 
-    font-weight: 500;
-    font-size: 13px;
-    
-    vertical-align: middle;
-    
-    color: #666666;
+  font-weight: 500;
+  font-size: 13px;
+
+  vertical-align: middle;
+
+  color: #666666;
 
 }
+
 .acont-byer-nav .nav-link:hover {
   color: #666666;
 }
+
 .acont-byer-nav .nav-link.active {
-    color: #000;
-    background: transparent;
-    font-weight: 500;
+  color: #000;
+  background: transparent;
+  font-weight: 500;
 
-    
-font-size: 13px;
 
-vertical-align: middle;
+  font-size: 13px;
+
+  vertical-align: middle;
 
 }
 
 .acont-byer-nav .nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
 }
 
 .acont-byer-content {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .acont-byer-pane {
-    display: none;
+  display: none;
 }
 
 .acont-byer-pane.active {
-    display: block;
+  display: block;
 }
 
 .acont-id-table-container {
-    /* max-width: 1000px; */
-    margin: 20px auto;
+  /* max-width: 1000px; */
+  margin: 20px auto;
 }
+
 .acont-id-table th {
-    background-color: #f8f9fa;
-    font-weight: bold;
+  background-color: #f8f9fa;
+  font-weight: bold;
 }
 
 .acont-id-auction-name {
@@ -2943,48 +3015,353 @@ vertical-align: middle;
   text-decoration: underline;
   text-decoration-style: solid;
 }
-.acont-id-date{
+
+.acont-id-date {
   color: #333333;
   font-weight: 500;
   font-size: 12.5px !important;
 }
+
 .acont-id-bid-amount {
-font-weight: 600 !important;
-font-size: 12.5px !important;
+  font-weight: 600 !important;
+  font-size: 12.5px !important;
 
-    color: #333 !important;
+  color: #333 !important;
 }
+
 .acont-id-status-badge {
-    padding: 5px 10px;
-    border-radius: 4px;
-   
-    display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
 
-font-weight: 500;
-font-size: 12.8px;
+  display: inline-block;
+
+  font-weight: 500;
+  font-size: 12.8px;
 
 }
+
 .acont-id-status-ongoing {
-    background-color: #ffe8d6;
-    color: #e57c2c;
+  background-color: #ffe8d6;
+  color: #e57c2c;
 }
+
 .acont-id-status-completed {
-    background-color: #e6f4ea;
-    color: #2d8b57;
+  background-color: #e6f4ea;
+  color: #2d8b57;
 }
 
 .bid-table-hdr {
   /* font-family: Urbanist; */
-font-weight: 600 !important;
-font-size: 13px !important;
-color:  #666666 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  color: #666666 !important;
 }
 
 .acont-id-table td {
   background-color: white !important;
 }
+
 /* buyer-panel my account end */
 
+
+
+/* Login Page styling starts here */
+.loginpage-body {
+  background-image: url('../images/Buyer Dashboard images/Login page images/login page bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.login-logo-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-logo {
+  width: 130px;
+  height: auto;
+}
+
+.login-register-link {
+  color: #FF6B00;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-register-link:hover {
+  text-decoration: underline;
+}
+
+.login-form-label {
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.login-form-control {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0%;
+}
+
+.login-password-field {
+  position: relative;
+}
+
+.login-password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.login-btn-signin {
+  background-color: #FF6B00;
+  border: none;
+  padding: 0.75rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.login-btn-signin:hover {
+  background-color: #e66000;
+}
+
+.login-divider {
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: 0.8rem;
+  color: #6c757d;
+  position: relative;
+}
+
+.login-social-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.login-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-social-btn:hover {
+  background-color: #f8f9fa;
+}
+
+.login-social-btn img {
+  height: 24px;
+  width: auto;
+}
+
+.social-divider-lines {
+  border-top: 1px solid lightgray;
+}
+
+.login-social-btn {
+  background-color: #F5F5F5;
+}
+
+.Login-btns-text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.Login-socials-boxes {
+  background-color: #F5F5F5;
+}
+
+.Login-socials-boxes:hover {
+  cursor: pointer;
+  background-color: #e7e7e7;
+}
+
+@media (min-width:320px) and (max-width:768px) {
+  .login-social-login {
+    flex-wrap: wrap;
+  }
+}
+
+/* Login Page styling end here */
+
+/* register page styling  starts here */
+.Create-Account-Body,.ForgetPassword-Body,.OTP-Page-Body,.Change-Password-Body {
+  background-image: url('../images/Buyer Dashboard images/Login page images/login page bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.form-control {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0%;
+
+}
+
+/* register page styling  ends here */
+
+
+
+/* Confirm Bid modal by Ahad starts here */
+.modal-content {
+  background: #F5F5F5;
+}.modal-header{
+  border-bottom: none;
+  
+}
+.image-logo{
+  height: 60px;
+  width: 60px;
+ margin-bottom: 13px;
+
+}
+.text-bid{
+  color: #666666;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: urbanist;
+}
+.close-btn{
+  border: none;
+  background: transparent;
+}
+.btn1{
+  background: #DADADA;
+  padding: 9px 30px;
+  border-radius: 10px;
+  border: none;
+  color: #999999;
+}
+.btn2{
+  background: #FF6F00;
+  padding: 9px 30px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+.form-check-label{
+  color: #666666;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: urbanist;
+}
+.text-p{
+  color: #666666;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: urbanist;
+}
+/* Confirm Bid modal by Ahad  ends here*/
+
+
+/* Navbar style starts here */
+.buyer-notif-headr {
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 16px;
+  color: #333333;
+}
+
+.se-al-noti {
+  color: #666666;
+  font-weight: 600;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.buyer-notification-item {
+  /* padding: 12px 16px;
+  border-radius: 8px; */
+  background-color: transparent;
+  /* margin-bottom: 10px; */
+}
+
+.buyer-notification-text {
+
+  color: #333333;
+  /* margin-bottom: 4px; */
+
+  font-weight: 500;
+  font-size: 11.6px;
+
+
+}
+
+.buyer-notification-time {
+  color: #666666;
+  text-align: right;
+
+  font-weight: 500;
+  font-size: 11.5px;
+
+
+}
+
+/* .buyer-notification-time.just-now {
+  font-weight: 600;
+} */
+
+.notification-date {
+  font-size: 12px;
+  color: #666666;
+  text-align: right;
+}
+
+
+
+
+.notification-container {
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+.notification-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.notification-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.notification-container::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 4px;
+}
+/* Navbar style ends here */
 .switch-by-btn{
 font-weight: 600;
 font-size: 12.5px;
