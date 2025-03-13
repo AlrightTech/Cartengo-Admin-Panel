@@ -1,0 +1,2502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Details</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- buyer css -->
+    <link rel="stylesheet" href="../assets/css/buyer.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/images/buyer-db-logo.png" type="image/x-icon" />
+    <!-- Bootstrap cdns -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+</head>
+<style>
+    /* ==============table ==================== */
+    .table {
+        color: #666666;
+    }
+
+    .nav-tabs .nav-link {
+        color: #666666;
+        border: none;
+        border-bottom: 2px solid transparent;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #333333;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #333333;
+    }
+
+    .table-responsive {
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .table> :not(.table_head)>*>* {
+        padding: 1rem;
+        background-color: #FFFFFF;
+    }
+
+    .table>.table_head>*>* {
+        padding: 1rem !important;
+        color: #666666;
+        background-color: #F5F5F5;
+    }
+
+
+    @media (max-width: 576px) {
+        /* .table > :not(caption) > * > * {
+        padding: 0.75rem;
+    } */
+
+        .nav-tabs .nav-link {
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .table td {
+            font-size: 12px !important;
+        }
+
+        .table th {
+            font-size: 12px !important;
+        }
+    }
+
+    /* ================= second tab =========== */
+    .best-thing {
+        /* padding: 4rem 1rem; */
+        background-color: #fff;
+        font-weight: 500;
+    }
+
+    /* .container {
+max-width: 800px;
+margin: 0 auto;
+} */
+
+    .title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #666666;
+        margin-bottom: 1.5rem;
+    }
+
+    .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0;
+        display: grid;
+        gap: 1rem;
+    }
+
+    .features-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 1rem;
+        color: #444;
+        line-height: 1;
+    }
+
+    .features-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #333333;
+    }
+
+    @media (max-width: 768px) {
+        /* .best-thing {
+padding: 3rem 1rem;
+} */
+
+        .title {
+            font-size: 1.6rem;
+        }
+
+
+    }
+
+    /* ===================== 3rd tab ================= */
+    .rating-reviews {
+        max-width: 1200px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 2rem;
+    }
+
+    .rating-container {
+        display: flex;
+        gap: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Rating Distribution */
+    .rating-distribution {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    .rating-bar {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .star-number {
+        min-width: 1rem;
+        text-align: right;
+        color: #666;
+    }
+
+    .bar-container {
+        flex: 1;
+        height: 14px;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .bar {
+        height: 100%;
+        background-color: #ff8c00;
+        border-radius: 4px;
+    }
+
+    /* Overall Rating */
+    .overall-rating {
+        text-align: center;
+    }
+
+    .rating-number {
+        font-size: 3rem;
+        font-weight: 600;
+        color: #333;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+
+    .star-rating {
+        color: #ff8c00;
+        font-size: 1.25rem;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+    }
+
+    .star {
+        position: relative;
+    }
+
+    .star.filled {
+        color: #ff8c00;
+    }
+
+    .star.half {
+        position: relative;
+        display: inline-block;
+    }
+
+    .star.half:before {
+        content: "★";
+        position: absolute;
+        left: 0;
+        width: 50%;
+        overflow: hidden;
+        color: #ff8c00;
+    }
+
+    .star.half:after {
+        content: "★";
+        color: #ddd;
+    }
+
+    .review-count {
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+    /* Review Cards */
+    .review-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        /* max-width: 50rem !important; */
+    }
+
+    .review-card {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 1.5rem;
+    }
+
+    .review-header {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    .reviewer-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .reviewer-name {
+        font-weight: 600;
+        color: #333;
+    }
+
+    .verified-badge {
+        background: #ff8c00;
+        color: white;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+    }
+
+    .review-meta {
+        text-align: right;
+    }
+
+    .review-date {
+        color: #666;
+        font-size: 0.9rem;
+        margin-top: 0.25rem;
+        text-align: start;
+    }
+
+    .review-text {
+        color: #444;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .rating-container {
+            flex-direction: column-reverse;
+            gap: 2rem;
+        }
+
+        .rating-distribution {
+            max-width: 100%;
+        }
+
+        .review-header {
+            flex-direction: column;
+        }
+
+        .review-meta {
+            text-align: left;
+        }
+
+        .bid-input{
+        max-width: 100% !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+
+        .section-title {
+            font-size: 1.5rem;
+        }
+
+        .rating-number {
+            font-size: 2.5rem;
+        }
+
+        .star-rating {
+            font-size: 1rem;
+        }
+
+        .review-card {
+            padding: 1rem;
+        }
+    }
+
+    .description_cont {
+        background-color: #F7F7F7;
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .lot-number {
+        background-color: rgba(255, 111, 0, 0.2);
+        color: var(--sidebar-active);
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+        display: inline-block;
+    }
+
+    .text-muted {
+        font-size: small;
+        color: #666666;
+    }
+
+    .title {
+        color: #333333;
+    }
+
+    .timer-box {
+        text-align: center;
+        padding: 10px;
+        background-color: #F7F7F7;
+        border-radius: 8px;
+        color: #666666;
+    }
+
+
+    .timer-value {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 0 !important;
+        color: #333333;
+    }
+
+    .timer-label {
+        font-size: 12px;
+        color: #6c757d;
+    }
+
+    .bid-input {
+        border: 2px solid #DADADA;
+        border-radius: 12px;
+        max-width: 200px;
+        height: 60px;
+    }
+
+
+    .bid-now-btn {
+        background-color: var(--sidebar-active);
+        color: var(--input-field-bg-color);
+        border: none;
+        height: 60px;
+        width: 100%;
+        border-radius: 12px;
+        margin-top: 0 !important;
+    }
+
+    .bid-now-btn:hover {
+        background-color: #e65c00 !important;
+
+    }
+
+    .bid-now-btn:active {
+        background-color: #FFFFFF !important;
+        border: 2px solid #e65c00 !important;
+        color: #e65c00 !important;
+    }
+    .btn-outline-secondary{
+      margin-top:  0 !important;
+    }
+    .category-tag {
+        font-size: 14px;
+        color: #333333;
+    }
+
+    .auction-dates {
+        color: #6c757d;
+        font-size: 14px;
+    }
+
+    .auction-dates>p {
+        color: #666666;
+    }
+
+    .auction-dates>p>span {
+        font-weight: 600;
+    }
+
+    .timer>.col-3>.timer-box {
+        border: 2px solid #DADADA;
+        border-radius: 16px;
+
+    }
+
+    .bidd>p {
+        color: #666666;
+        font-weight: 600;
+    }
+
+    .counter_section button {
+        border: none !important;
+        outline: none !important;
+        background-color: #FFFFFF !important;
+        border-radius: 13;
+    }
+
+    .counter_section button:hover {
+        background-color: #DADADA !important;
+        color: #495057 !important;
+    }
+
+    .counter_section button:active {
+        background-color: #DADADA !important;
+        color: #495057 !important;
+
+    }
+
+    .counter_section input {
+        box-shadow: none !important;
+        outline: none !important;
+        border: none !important;
+    }
+
+    /* ================= images csss =================== */
+
+    .main-image-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        height: 500px;
+        object-fit: contain;
+    }
+
+    .main-image-container img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    @media (max-width : 1100px) {
+        .main-image-container img {
+            min-height: -webkit-fill-available;
+            object-fit: cover;
+        }
+
+    }
+
+    .thumbnail-container {
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .thumbnail-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .thumbnail {
+        flex: 0 0 auto;
+        /* width: 100px;
+        height: 75px; */
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* .thumbnail.active {
+        border-color: #ff6b00;
+    } */
+
+    .thumbnail:hover {
+        transform: translateY(-2px);
+    }
+
+    /* ==============table ==================== */
+    .table {
+        color: #666666;
+    }
+
+    .nav-tabs .nav-link {
+        color: #666666;
+        border: none;
+        border-bottom: 2px solid transparent;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #333333;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #333333;
+    }
+
+    .table-responsive {
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .table> :not(.table_head)>*>* {
+        padding: 1rem;
+        background-color: #FFFFFF;
+    }
+
+    .table>.table_head>*>* {
+        padding: 1rem !important;
+        color: #666666;
+        background-color: #F5F5F5;
+    }
+
+
+    @media (max-width: 576px) {
+        /* .table > :not(caption) > * > * {
+                padding: 0.75rem;
+            } */
+
+        .nav-tabs .nav-link {
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .table td {
+            font-size: 12px !important;
+        }
+
+        .table th {
+            font-size: 12px !important;
+        }
+    }
+
+    /* ================= second tab =========== */
+    .best-thing {
+        /* padding: 4rem 1rem; */
+        background-color: #fff;
+        font-weight: 500;
+    }
+
+    /* .container {
+  max-width: 800px;
+  margin: 0 auto;
+} */
+
+    .title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #666666;
+        margin-bottom: 1.5rem;
+    }
+
+    .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0;
+        display: grid;
+        gap: 1rem;
+    }
+
+    .features-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 1rem;
+        color: #444;
+        line-height: 1;
+    }
+
+    .features-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #333333;
+    }
+
+    @media (max-width: 768px) {
+        /* .best-thing {
+    padding: 3rem 1rem;
+  } */
+
+        .title {
+            font-size: 1.6rem;
+        }
+
+
+    }
+
+    /* ===================== 3rd tab ================= */
+    .rating-reviews {
+        max-width: 1200px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 2rem;
+    }
+
+    .rating-container {
+        display: flex;
+        gap: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Rating Distribution */
+    .rating-distribution {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    .rating-bar {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .star-number {
+        min-width: 1rem;
+        text-align: right;
+        color: #666;
+    }
+
+    .bar-container {
+        flex: 1;
+        height: 14px;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .bar {
+        height: 100%;
+        background-color: #ff8c00;
+        border-radius: 4px;
+    }
+
+    /* Overall Rating */
+    .overall-rating {
+        text-align: center;
+    }
+
+    .rating-number {
+        font-size: 3rem;
+        font-weight: 600;
+        color: #333;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+
+    .star-rating {
+        color: #ff8c00;
+        font-size: 1.25rem;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+    }
+
+    .star {
+        position: relative;
+    }
+
+    .star.filled {
+        color: #ff8c00;
+    }
+
+    .star.half {
+        position: relative;
+        display: inline-block;
+    }
+
+    .star.half:before {
+        content: "★";
+        position: absolute;
+        left: 0;
+        width: 50%;
+        overflow: hidden;
+        color: #ff8c00;
+    }
+
+    .star.half:after {
+        content: "★";
+        color: #ddd;
+    }
+
+    .review-count {
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+    /* Review Cards */
+    .review-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        /* max-width: 50rem !important; */
+    }
+
+    .review-card {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 1.5rem;
+    }
+
+    .review-header {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    .reviewer-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .reviewer-name {
+        font-weight: 600;
+        color: #333;
+    }
+
+    .verified-badge {
+        background: #ff8c00;
+        color: white;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+    }
+
+    .review-meta {
+        text-align: right;
+    }
+
+    .review-date {
+        color: #666;
+        font-size: 0.9rem;
+        margin-top: 0.25rem;
+        text-align: start;
+    }
+
+    .review-text {
+        color: #444;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .rating-container {
+            flex-direction: column-reverse;
+            gap: 2rem;
+        }
+
+        .rating-distribution {
+            max-width: 100%;
+        }
+
+        .review-header {
+            flex-direction: column;
+        }
+
+        .review-meta {
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+
+        .section-title {
+            font-size: 1.5rem;
+        }
+
+        .rating-number {
+            font-size: 2.5rem;
+        }
+
+        .star-rating {
+            font-size: 1rem;
+        }
+
+        .review-card {
+            padding: 1rem;
+        }
+    }
+</style>
+
+<body>
+
+
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="notificationOffcanvas"
+        aria-labelledby="notificationOffcanvasLabel">
+        <div class="offcanvas-header border-0" style="background-color: transparent;">
+            <h5 id="notificationOffcanvasLabel" class="buyer-notif-headr mb-0">Notifications</h5>
+            <button type="button" class="btn-close" style="font-size: 10px;" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body pt-1">
+            <p class="mb-0 text-end se-al-noti">See All</p>
+
+            <div class="notification-container mt-3">
+                <!-- Notification Items -->
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Your recent auction listing has been approved and is now live
+                    </div>
+                    <div class="buyer-notification-time just-now mb-2">Just Now</div>
+                </div>
+
+                <!-- <hr> -->
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">System update scheduled for 12:00 AM - 2:00 AM. Platform may be
+                        temporarily unavailable.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Your account has been suspended due to multiple reported
+                        violations. Contact support for more details.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Your profile verification was successful. Welcome aboard!</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Auction for Toyota Corolla 2022 ends in 1 hour. Place your
+                        final bids.</div>
+                    <div class="buyer-notification-time just-now">Just Now</div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">New comment on your auction listing: Is this car still under
+                        warranty?</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Password changed successfully. If you did not perform this
+                        action, contact support immediately.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Congratulations. Your bid won the auction for Honda Civic 2023.
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Your post has been removed due to policy violations. Please
+                        review our community guidelines.</div>
+                    <div class="buyer-notification-time just-now">Just Now</div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">New auction listing available: Ford Mustang GT 2021. Check it
+                        out now.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Congratulations. Your bid won the auction for Honda Civic 2023.
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Auction for Toyota Corolla 2022 ends in 1 hour. Place your
+                        final bids.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">System update scheduled for 12:00 AM - 2:00 AM. Platform may be
+                        temporarily unavailable.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar starts here -->
+    <nav class="navbar navbar-expand-lg buyer-custom-navbar px-lg-5">
+        <div class="container-fluid px-lg-5">
+            <!-- Left: Logo -->
+            <a class="navbar-brand active" href="./index.html">
+                <img src="/assets/images/buyer-db-logo.png" class="buyerr-logo" alt="Logo">
+            </a>
+
+            <!-- Right: Menu Icon for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#buyer-navbarContent">
+                <span class="buyer-menu-icon">☰</span>
+            </button>
+
+            <!-- Center & Right Items -->
+            <div class="collapse navbar-collapse buyer-navbar-collapse" id="buyer-navbarContent">
+                <!-- Center: Navigation Items -->
+                <ul class="navbar-nav mx-auto buyer-navbar-nav gap-lg-5 gap-2">
+                    <li class="nav-item buyer-nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                    <li class="nav-item buyer-nav-item"><a class="nav-link" href="./auction_details.html">Explore
+                            Auction</a></li>
+                    <li class="nav-item buyer-nav-item"><a class="nav-link" href="./my-account-bids.html">My Bids</a>
+                    </li>
+                    <li class="nav-item buyer-nav-item"><a class="nav-link"
+                            href="./my-account-favorite.html">Favorite</a></li>
+                </ul>
+
+                <!-- Right: Icons (Visible on Large Screens, Appear Below on Small Screens) -->
+                <div class="buyer-icons d-lg-flex">
+                    <!-- Notification Icon with Offcanvas Trigger -->
+                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#notificationOffcanvas">
+                        <img src="/assets/images/solar_bell-linear.svg" alt="Notification" width="22">
+                    </a>
+
+                    <!-- <a href="#"><img src="/assets/images/buyer-progile-ing.png" alt="Profile" width="45"
+                            class="rounded-circle">
+                    </a> -->
+                    <div class="container d-flex justify-content-end">
+                        <div class="dropdown">
+                            <a href="#" class="d-block text-decoration-none" id="profileDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/assets/images/buyer-progile-ing.png" alt="Profile" width="45"
+                                    class="rounded-circle">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-sm rounded">
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="my-account.html">
+                                        <i class="fas fa-user-circle me-2 text-primary"></i> My Account
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center text-danger" href="#">
+                                        <i class="fas fa-sign-out-alt me-2"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends here -->
+
+
+
+    
+    <section>
+        <div class="container">
+            <div class="row ">
+                <div class="d-flex justify-content-between align-items-center  lh-sm bg-light text-dark px-3 pt-2 pb-3 rounded mt-5">
+                    <div class="">
+                    <div class="buyer-user-top pt-1 pb-1">
+                        All Auctions 
+                    </div>
+                    <div class="buyer-user-top1 mb-0">169 Active</div>
+                    </div>
+                    <div class=" d-flex justify-content-center gap-2 align-items-center">
+                        <div class="">
+                            <img src="/Cartengo-Admin-Panel/assets/images/buyers_dashboard_images/sort.svg" alt="sort">
+                        </div>
+                        <div class="sort_by">
+                            <p class="mb-0">SORT BY</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="row mt-5">
+                        <div class="col-md-3 col-lg-3 sidebar-buyer-profil px-0">
+                            <aside class="categories-sidebar">
+                                <h2 class="categories-title">Categories</h2>
+                                <ul class="categories-list">
+                                  <li class="category-item">
+                                    <span class="category-name">ATV</span>
+                                    <span class="category-count">(01)</span>
+                                  </li>
+                                  <li class="category-item">
+                                    <span class="category-name">Boats</span>
+                                    <span class="category-count">(45)</span>
+                                  </li>
+                                  <li class="category-item">
+                                    <span class="category-name">Buses</span>
+                                    <span class="category-count">(02)</span>
+                                  </li>
+                                  <li class="category-item">
+                                    <span class="category-name">Caravan</span>
+                                    <span class="category-count">(06)</span>
+                                  </li>
+                                  <li class="category-item">
+                                    <span class="category-name">Car</span>
+                                    <span class="category-count">(87)</span>
+                                  </li>
+                                  <li class="category-item">
+                                    <span class="category-name">Industriail</span>
+                                    <span class="category-count">(24)</span>
+                                  </li>
+                                  <li class="category-item">
+                                    <span class="category-name">Audi</span>
+                                    <span class="category-count">(25)</span>
+                                  </li>
+                                </ul>
+                              </aside>
+                        </div>
+
+                        <!-- Main Content -->
+                        <div class="col-md-9 col-lg-9 ">
+
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 1.jpeg"
+                                                    alt="Car 1 img" />
+                                                <!-- card inner icon and content -->
+                                                <div
+                                                    class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                                    <div
+                                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                                        <!-- card header live and heart icon -->
+                                                        <div
+                                                            class="d-flex justify-content-end align-items-center px-2 py-2">
+
+                                                            <!-- white heart box -->
+                                                            <div
+                                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.11103 1.6819C1.61672 1.1761 2.28649 0.867604 2.99956 0.812047C3.71264 0.75649 4.4221 0.957524 5.00003 1.3789C5.61065 0.937116 6.36515 0.741261 7.11355 0.830269C7.86196 0.919277 8.54947 1.28663 9.03944 1.85931C9.52941 2.43199 9.78596 3.16807 9.75809 3.92123C9.73022 4.67439 9.41998 5.3895 8.88903 5.9244L6.06053 8.7529C5.77924 9.03411 5.39778 9.19208 5.00003 9.19208C4.60229 9.19208 4.22082 9.03411 3.93953 8.7529L1.11103 5.9249C0.548465 5.3623 0.232422 4.59927 0.232422 3.80365C0.232422 3.00804 0.548465 2.24451 1.11103 1.6819Z"
+                                                                        fill="#FF6F00" />
+                                                                </svg>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Speedster 2022 –
+                                                    Midnight Black
+                                                    Edition</h5>
+                                                <p class="card-text">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                                    </div>
+                                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 2.jpeg"
+                                                    alt="Car 1 img" />
+                                                <!-- card inner icon and content -->
+                                                <div
+                                                    class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                                    <div
+                                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                                        <!-- card header live and heart icon -->
+                                                        <div
+                                                            class="d-flex justify-content-end align-items-center px-2 py-2">
+
+                                                            <!-- white heart box -->
+                                                            <div
+                                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.11103 1.6819C1.61672 1.1761 2.28649 0.867604 2.99956 0.812047C3.71264 0.75649 4.4221 0.957524 5.00003 1.3789C5.61065 0.937116 6.36515 0.741261 7.11355 0.830269C7.86196 0.919277 8.54947 1.28663 9.03944 1.85931C9.52941 2.43199 9.78596 3.16807 9.75809 3.92123C9.73022 4.67439 9.41998 5.3895 8.88903 5.9244L6.06053 8.7529C5.77924 9.03411 5.39778 9.19208 5.00003 9.19208C4.60229 9.19208 4.22082 9.03411 3.93953 8.7529L1.11103 5.9249C0.548465 5.3623 0.232422 4.59927 0.232422 3.80365C0.232422 3.00804 0.548465 2.24451 1.11103 1.6819Z"
+                                                                        fill="#FF6F00" />
+                                                                </svg>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Speedster 2022 –
+                                                    Midnight Black
+                                                    Edition</h5>
+                                                <p class="card-text">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                                    </div>
+                                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 1.jpeg"
+                                                    alt="Car 1 img" />
+                                                <!-- card inner icon and content -->
+                                                <div
+                                                    class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                                    <div
+                                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                                        <!-- card header live and heart icon -->
+                                                        <div
+                                                            class="d-flex justify-content-end align-items-center px-2 py-2">
+
+                                                            <!-- white heart box -->
+                                                            <div
+                                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.11103 1.6819C1.61672 1.1761 2.28649 0.867604 2.99956 0.812047C3.71264 0.75649 4.4221 0.957524 5.00003 1.3789C5.61065 0.937116 6.36515 0.741261 7.11355 0.830269C7.86196 0.919277 8.54947 1.28663 9.03944 1.85931C9.52941 2.43199 9.78596 3.16807 9.75809 3.92123C9.73022 4.67439 9.41998 5.3895 8.88903 5.9244L6.06053 8.7529C5.77924 9.03411 5.39778 9.19208 5.00003 9.19208C4.60229 9.19208 4.22082 9.03411 3.93953 8.7529L1.11103 5.9249C0.548465 5.3623 0.232422 4.59927 0.232422 3.80365C0.232422 3.00804 0.548465 2.24451 1.11103 1.6819Z"
+                                                                        fill="#FF6F00" />
+                                                                </svg>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Speedster 2022 –
+                                                    Midnight Black
+                                                    Edition</h5>
+                                                <p class="card-text">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                                    </div>
+                                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 1.jpeg"
+                                                    alt="Car 1 img" />
+                                                <!-- card inner icon and content -->
+                                                <div
+                                                    class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                                    <div
+                                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                                        <!-- card header live and heart icon -->
+                                                        <div
+                                                            class="d-flex justify-content-end align-items-center px-2 py-2">
+
+                                                            <!-- white heart box -->
+                                                            <div
+                                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.11103 1.6819C1.61672 1.1761 2.28649 0.867604 2.99956 0.812047C3.71264 0.75649 4.4221 0.957524 5.00003 1.3789C5.61065 0.937116 6.36515 0.741261 7.11355 0.830269C7.86196 0.919277 8.54947 1.28663 9.03944 1.85931C9.52941 2.43199 9.78596 3.16807 9.75809 3.92123C9.73022 4.67439 9.41998 5.3895 8.88903 5.9244L6.06053 8.7529C5.77924 9.03411 5.39778 9.19208 5.00003 9.19208C4.60229 9.19208 4.22082 9.03411 3.93953 8.7529L1.11103 5.9249C0.548465 5.3623 0.232422 4.59927 0.232422 3.80365C0.232422 3.00804 0.548465 2.24451 1.11103 1.6819Z"
+                                                                        fill="#FF6F00" />
+                                                                </svg>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Speedster 2022 –
+                                                    Midnight Black
+                                                    Edition</h5>
+                                                <p class="card-text">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                                    </div>
+                                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 1.jpeg"
+                                                    alt="Car 1 img" />
+                                                <!-- card inner icon and content -->
+                                                <div
+                                                    class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                                    <div
+                                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                                        <!-- card header live and heart icon -->
+                                                        <div
+                                                            class="d-flex justify-content-end align-items-center px-2 py-2">
+
+                                                            <!-- white heart box -->
+                                                            <div
+                                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.11103 1.6819C1.61672 1.1761 2.28649 0.867604 2.99956 0.812047C3.71264 0.75649 4.4221 0.957524 5.00003 1.3789C5.61065 0.937116 6.36515 0.741261 7.11355 0.830269C7.86196 0.919277 8.54947 1.28663 9.03944 1.85931C9.52941 2.43199 9.78596 3.16807 9.75809 3.92123C9.73022 4.67439 9.41998 5.3895 8.88903 5.9244L6.06053 8.7529C5.77924 9.03411 5.39778 9.19208 5.00003 9.19208C4.60229 9.19208 4.22082 9.03411 3.93953 8.7529L1.11103 5.9249C0.548465 5.3623 0.232422 4.59927 0.232422 3.80365C0.232422 3.00804 0.548465 2.24451 1.11103 1.6819Z"
+                                                                        fill="#FF6F00" />
+                                                                </svg>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Speedster 2022 –
+                                                    Midnight Black
+                                                    Edition</h5>
+                                                <p class="card-text">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                                    </div>
+                                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 1.jpeg"
+                                                    alt="Car 1 img" />
+                                                <!-- card inner icon and content -->
+                                                <div
+                                                    class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                                    <div
+                                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                                        <!-- card header live and heart icon -->
+                                                        <div
+                                                            class="d-flex justify-content-end align-items-center px-2 py-2">
+
+                                                            <!-- white heart box -->
+                                                            <div
+                                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.11103 1.6819C1.61672 1.1761 2.28649 0.867604 2.99956 0.812047C3.71264 0.75649 4.4221 0.957524 5.00003 1.3789C5.61065 0.937116 6.36515 0.741261 7.11355 0.830269C7.86196 0.919277 8.54947 1.28663 9.03944 1.85931C9.52941 2.43199 9.78596 3.16807 9.75809 3.92123C9.73022 4.67439 9.41998 5.3895 8.88903 5.9244L6.06053 8.7529C5.77924 9.03411 5.39778 9.19208 5.00003 9.19208C4.60229 9.19208 4.22082 9.03411 3.93953 8.7529L1.11103 5.9249C0.548465 5.3623 0.232422 4.59927 0.232422 3.80365C0.232422 3.00804 0.548465 2.24451 1.11103 1.6819Z"
+                                                                        fill="#FF6F00" />
+                                                                </svg>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Speedster 2022 –
+                                                    Midnight Black
+                                                    Edition</h5>
+                                                <p class="card-text">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                                    </div>
+                                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 1.jpeg"
+                                                    alt="Car 1 img" />
+                                                <!-- card inner icon and content -->
+                                                <div
+                                                    class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                                    <div
+                                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                                        <!-- card header live and heart icon -->
+                                                        <div
+                                                            class="d-flex justify-content-end align-items-center px-2 py-2">
+
+                                                            <!-- white heart box -->
+                                                            <div
+                                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.11103 1.6819C1.61672 1.1761 2.28649 0.867604 2.99956 0.812047C3.71264 0.75649 4.4221 0.957524 5.00003 1.3789C5.61065 0.937116 6.36515 0.741261 7.11355 0.830269C7.86196 0.919277 8.54947 1.28663 9.03944 1.85931C9.52941 2.43199 9.78596 3.16807 9.75809 3.92123C9.73022 4.67439 9.41998 5.3895 8.88903 5.9244L6.06053 8.7529C5.77924 9.03411 5.39778 9.19208 5.00003 9.19208C4.60229 9.19208 4.22082 9.03411 3.93953 8.7529L1.11103 5.9249C0.548465 5.3623 0.232422 4.59927 0.232422 3.80365C0.232422 3.00804 0.548465 2.24451 1.11103 1.6819Z"
+                                                                        fill="#FF6F00" />
+                                                                </svg>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Speedster 2022 –
+                                                    Midnight Black
+                                                    Edition</h5>
+                                                <p class="card-text">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                                    </div>
+                                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 1.jpeg"
+                                                    alt="Car 1 img" />
+                                                <!-- card inner icon and content -->
+                                                <div
+                                                    class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                                    <div
+                                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                                        <!-- card header live and heart icon -->
+                                                        <div
+                                                            class="d-flex justify-content-end align-items-center px-2 py-2">
+
+                                                            <!-- white heart box -->
+                                                            <div
+                                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.11103 1.6819C1.61672 1.1761 2.28649 0.867604 2.99956 0.812047C3.71264 0.75649 4.4221 0.957524 5.00003 1.3789C5.61065 0.937116 6.36515 0.741261 7.11355 0.830269C7.86196 0.919277 8.54947 1.28663 9.03944 1.85931C9.52941 2.43199 9.78596 3.16807 9.75809 3.92123C9.73022 4.67439 9.41998 5.3895 8.88903 5.9244L6.06053 8.7529C5.77924 9.03411 5.39778 9.19208 5.00003 9.19208C4.60229 9.19208 4.22082 9.03411 3.93953 8.7529L1.11103 5.9249C0.548465 5.3623 0.232422 4.59927 0.232422 3.80365C0.232422 3.00804 0.548465 2.24451 1.11103 1.6819Z"
+                                                                        fill="#FF6F00" />
+                                                                </svg>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Speedster 2022 –
+                                                    Midnight Black
+                                                    Edition</h5>
+                                                <p class="card-text">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                                    </div>
+                                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 1.jpeg"
+                                                    alt="Car 1 img" />
+                                                <!-- card inner icon and content -->
+                                                <div
+                                                    class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                                    <div
+                                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                                        <!-- card header live and heart icon -->
+                                                        <div
+                                                            class="d-flex justify-content-end align-items-center px-2 py-2">
+
+                                                            <!-- white heart box -->
+                                                            <div
+                                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M1.11103 1.6819C1.61672 1.1761 2.28649 0.867604 2.99956 0.812047C3.71264 0.75649 4.4221 0.957524 5.00003 1.3789C5.61065 0.937116 6.36515 0.741261 7.11355 0.830269C7.86196 0.919277 8.54947 1.28663 9.03944 1.85931C9.52941 2.43199 9.78596 3.16807 9.75809 3.92123C9.73022 4.67439 9.41998 5.3895 8.88903 5.9244L6.06053 8.7529C5.77924 9.03411 5.39778 9.19208 5.00003 9.19208C4.60229 9.19208 4.22082 9.03411 3.93953 8.7529L1.11103 5.9249C0.548465 5.3623 0.232422 4.59927 0.232422 3.80365C0.232422 3.00804 0.548465 2.24451 1.11103 1.6819Z"
+                                                                        fill="#FF6F00" />
+                                                                </svg>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Speedster 2022 –
+                                                    Midnight Black
+                                                    Edition</h5>
+                                                <p class="card-text">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                                    </div>
+                                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="container-fluid px-0 acont-id-table-container">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <div class="mt-4 container p-0">
+        <div class="d-flex align-items-center gap-3 Buyerdashboard-Cards">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper d-flex gap-0">
+                    <!-- card 1 -->
+                    <div class="swiper-slide">
+                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 1.jpeg"
+                                    alt="Car 1 img" />
+                                <!-- card inner icon and content -->
+                                <div class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                    <div
+                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                        <!-- card header live and heart icon -->
+                                        <div
+                                            class="d-flex justify-content-between align-items-center px-2 py-2">
+                                            <!-- live icon box -->
+                                            <div
+                                                class="BuyerCards-liveIcon d-flex gap-1 align-items-center p-1 rounded-5 px-2 py-1">
+                                                <svg width="13" height="13" viewBox="0 0 12 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_4947_410)">
+                                                        <path
+                                                            d="M4.9975 10.5015V11.5015H10.9975V10.5015H4.9975ZM4.705 0.844482L0.815998 4.73348L1.523 5.44048L2.0535 5.26398L3.291 6.50148L0.462498 9.32998L1.1695 10.037L3.998 7.20848L5.2 8.41048L5.0585 8.97648L5.766 9.68348L9.655 5.79448L8.948 5.08698L8.382 5.22848L5.2355 2.08198L5.412 1.55198L4.705 0.844482Z"
+                                                            fill="white" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4947_410">
+                                                            <rect width="12" height="12" fill="white"
+                                                                transform="matrix(-1 0 0 1 12 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <p class="m-0 BuyerCards-Live-title">Live</p>
+                                            </div>
+                                            <!-- white heart box -->
+                                            <div
+                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                <svg width="15" height="15" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M9.188 2.21197C10.0175 2.59097 10.625 3.49297 10.625 4.56847C10.625 5.66697 10.175 6.51397 9.531 7.23997C8.9995 7.83797 8.3565 8.33397 7.7295 8.81697C7.58017 8.93197 7.43267 9.04664 7.287 9.16097C7.024 9.36847 6.7895 9.54997 6.563 9.68247C6.3365 9.81497 6.155 9.87497 6 9.87497C5.845 9.87497 5.663 9.81497 5.437 9.68247C5.2105 9.54997 4.976 9.36847 4.713 9.16097C4.56733 9.04631 4.41983 8.93181 4.2705 8.81747C3.6435 8.33347 3.0005 7.83797 2.469 7.23997C1.8245 6.51397 1.375 5.66697 1.375 4.56847C1.375 3.49347 1.9825 2.59097 2.812 2.21197C3.618 1.84347 4.701 1.94097 5.73 3.01047C5.76498 3.04677 5.80692 3.07563 5.85331 3.09535C5.8997 3.11507 5.94959 3.12523 6 3.12523C6.05041 3.12523 6.1003 3.11507 6.14669 3.09535C6.19308 3.07563 6.23502 3.04677 6.27 3.01047C7.299 1.94097 8.382 1.84347 9.188 2.21197ZM6 2.22997C7.156 1.19497 8.4505 1.04997 9.5 1.52947C10.607 2.03697 11.375 3.21297 11.375 4.56897C11.375 5.90147 10.82 6.91847 10.0915 7.73847C9.5085 8.39497 8.795 8.94447 8.1645 9.42947C8.02117 9.53947 7.8835 9.64647 7.7515 9.75047C7.495 9.95247 7.22 10.1675 6.9415 10.3305C6.663 10.4935 6.345 10.6255 6 10.6255C5.655 10.6255 5.337 10.493 5.0585 10.3305C4.7795 10.1675 4.505 9.95247 4.2485 9.75047C4.1165 9.64647 3.97883 9.53947 3.8355 9.42947C3.2055 8.94447 2.4915 8.39447 1.9085 7.73847C1.18 6.91847 0.625 5.90147 0.625 4.56897C0.625 3.21297 1.3925 2.03697 2.5 1.53047C3.5495 1.05047 4.844 1.19547 6 2.22997Z"
+                                                        fill="black" />
+                                                </svg>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- time bottom box -->
+                                        <div
+                                            class="d-flex gap-3 align-items-center justify-content-between py-1 mx-2 px-3 my-2 rounded-5 bg-white">
+                                            <!-- Days -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">125</p>
+                                                <p class="m-0 ByerCards-timeDescription">Days</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Hours -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">09</p>
+                                                <p class="m-0 ByerCards-timeDescription">Hours</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Minutes -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">54</p>
+                                                <p class="m-0 ByerCards-timeDescription">Mins</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Secs -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">41</p>
+                                                <p class="m-0 ByerCards-timeDescription">Secs</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Speedster 2022 –
+                                    Midnight Black
+                                    Edition</h5>
+                                <p class="card-text">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                    </div>
+                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="swiper-slide">
+                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 2.jpeg"
+                                    alt="Car img 2" />
+                                <!-- card inner icon and content -->
+                                <div class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                    <div
+                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                        <!-- card header live and heart icon -->
+                                        <div
+                                            class="d-flex justify-content-between align-items-center px-2 py-2">
+                                            <!-- live icon box -->
+                                            <div
+                                                class="BuyerCards-liveIcon d-flex gap-1 align-items-center p-1 rounded-5 px-2 py-1">
+                                                <svg width="13" height="13" viewBox="0 0 12 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_4947_410)">
+                                                        <path
+                                                            d="M4.9975 10.5015V11.5015H10.9975V10.5015H4.9975ZM4.705 0.844482L0.815998 4.73348L1.523 5.44048L2.0535 5.26398L3.291 6.50148L0.462498 9.32998L1.1695 10.037L3.998 7.20848L5.2 8.41048L5.0585 8.97648L5.766 9.68348L9.655 5.79448L8.948 5.08698L8.382 5.22848L5.2355 2.08198L5.412 1.55198L4.705 0.844482Z"
+                                                            fill="white" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4947_410">
+                                                            <rect width="12" height="12" fill="white"
+                                                                transform="matrix(-1 0 0 1 12 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <p class="m-0 BuyerCards-Live-title">Live</p>
+                                            </div>
+                                            <!-- white heart box -->
+                                            <div
+                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                <svg width="15" height="15" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M9.188 2.21197C10.0175 2.59097 10.625 3.49297 10.625 4.56847C10.625 5.66697 10.175 6.51397 9.531 7.23997C8.9995 7.83797 8.3565 8.33397 7.7295 8.81697C7.58017 8.93197 7.43267 9.04664 7.287 9.16097C7.024 9.36847 6.7895 9.54997 6.563 9.68247C6.3365 9.81497 6.155 9.87497 6 9.87497C5.845 9.87497 5.663 9.81497 5.437 9.68247C5.2105 9.54997 4.976 9.36847 4.713 9.16097C4.56733 9.04631 4.41983 8.93181 4.2705 8.81747C3.6435 8.33347 3.0005 7.83797 2.469 7.23997C1.8245 6.51397 1.375 5.66697 1.375 4.56847C1.375 3.49347 1.9825 2.59097 2.812 2.21197C3.618 1.84347 4.701 1.94097 5.73 3.01047C5.76498 3.04677 5.80692 3.07563 5.85331 3.09535C5.8997 3.11507 5.94959 3.12523 6 3.12523C6.05041 3.12523 6.1003 3.11507 6.14669 3.09535C6.19308 3.07563 6.23502 3.04677 6.27 3.01047C7.299 1.94097 8.382 1.84347 9.188 2.21197ZM6 2.22997C7.156 1.19497 8.4505 1.04997 9.5 1.52947C10.607 2.03697 11.375 3.21297 11.375 4.56897C11.375 5.90147 10.82 6.91847 10.0915 7.73847C9.5085 8.39497 8.795 8.94447 8.1645 9.42947C8.02117 9.53947 7.8835 9.64647 7.7515 9.75047C7.495 9.95247 7.22 10.1675 6.9415 10.3305C6.663 10.4935 6.345 10.6255 6 10.6255C5.655 10.6255 5.337 10.493 5.0585 10.3305C4.7795 10.1675 4.505 9.95247 4.2485 9.75047C4.1165 9.64647 3.97883 9.53947 3.8355 9.42947C3.2055 8.94447 2.4915 8.39447 1.9085 7.73847C1.18 6.91847 0.625 5.90147 0.625 4.56897C0.625 3.21297 1.3925 2.03697 2.5 1.53047C3.5495 1.05047 4.844 1.19547 6 2.22997Z"
+                                                        fill="black" />
+                                                </svg>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- time bottom box -->
+                                        <div
+                                            class="d-flex gap-3 align-items-center justify-content-between  py-1 mx-2 px-3 my-2 rounded-5 bg-white">
+                                            <!-- Days -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">125</p>
+                                                <p class="m-0 ByerCards-timeDescription">Days</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Hours -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">09</p>
+                                                <p class="m-0 ByerCards-timeDescription">Hours</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Minutes -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">54</p>
+                                                <p class="m-0 ByerCards-timeDescription">Mins</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Secs -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">41</p>
+                                                <p class="m-0 ByerCards-timeDescription">Secs</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">TurboMax GT – Limited
+                                    Sports Variant</h5>
+                                <p class="card-text">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                    </div>
+                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="swiper-slide">
+                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 3.jpeg"
+                                    alt="car img 3" />
+                                <!-- card inner icon and content -->
+                                <div class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                    <div
+                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                        <!-- card header live and heart icon -->
+                                        <div
+                                            class="d-flex justify-content-between align-items-center px-2 py-2">
+                                            <!-- live icon box -->
+                                            <div
+                                                class="BuyerCards-liveIcon d-flex gap-1 align-items-center p-1 rounded-5 px-2 py-1">
+                                                <svg width="13" height="13" viewBox="0 0 12 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_4947_410)">
+                                                        <path
+                                                            d="M4.9975 10.5015V11.5015H10.9975V10.5015H4.9975ZM4.705 0.844482L0.815998 4.73348L1.523 5.44048L2.0535 5.26398L3.291 6.50148L0.462498 9.32998L1.1695 10.037L3.998 7.20848L5.2 8.41048L5.0585 8.97648L5.766 9.68348L9.655 5.79448L8.948 5.08698L8.382 5.22848L5.2355 2.08198L5.412 1.55198L4.705 0.844482Z"
+                                                            fill="white" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4947_410">
+                                                            <rect width="12" height="12" fill="white"
+                                                                transform="matrix(-1 0 0 1 12 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <p class="m-0 BuyerCards-Live-title">Live</p>
+                                            </div>
+                                            <!-- white heart box -->
+                                            <div
+                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                <svg width="15" height="15" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M9.188 2.21197C10.0175 2.59097 10.625 3.49297 10.625 4.56847C10.625 5.66697 10.175 6.51397 9.531 7.23997C8.9995 7.83797 8.3565 8.33397 7.7295 8.81697C7.58017 8.93197 7.43267 9.04664 7.287 9.16097C7.024 9.36847 6.7895 9.54997 6.563 9.68247C6.3365 9.81497 6.155 9.87497 6 9.87497C5.845 9.87497 5.663 9.81497 5.437 9.68247C5.2105 9.54997 4.976 9.36847 4.713 9.16097C4.56733 9.04631 4.41983 8.93181 4.2705 8.81747C3.6435 8.33347 3.0005 7.83797 2.469 7.23997C1.8245 6.51397 1.375 5.66697 1.375 4.56847C1.375 3.49347 1.9825 2.59097 2.812 2.21197C3.618 1.84347 4.701 1.94097 5.73 3.01047C5.76498 3.04677 5.80692 3.07563 5.85331 3.09535C5.8997 3.11507 5.94959 3.12523 6 3.12523C6.05041 3.12523 6.1003 3.11507 6.14669 3.09535C6.19308 3.07563 6.23502 3.04677 6.27 3.01047C7.299 1.94097 8.382 1.84347 9.188 2.21197ZM6 2.22997C7.156 1.19497 8.4505 1.04997 9.5 1.52947C10.607 2.03697 11.375 3.21297 11.375 4.56897C11.375 5.90147 10.82 6.91847 10.0915 7.73847C9.5085 8.39497 8.795 8.94447 8.1645 9.42947C8.02117 9.53947 7.8835 9.64647 7.7515 9.75047C7.495 9.95247 7.22 10.1675 6.9415 10.3305C6.663 10.4935 6.345 10.6255 6 10.6255C5.655 10.6255 5.337 10.493 5.0585 10.3305C4.7795 10.1675 4.505 9.95247 4.2485 9.75047C4.1165 9.64647 3.97883 9.53947 3.8355 9.42947C3.2055 8.94447 2.4915 8.39447 1.9085 7.73847C1.18 6.91847 0.625 5.90147 0.625 4.56897C0.625 3.21297 1.3925 2.03697 2.5 1.53047C3.5495 1.05047 4.844 1.19547 6 2.22997Z"
+                                                        fill="black" />
+                                                </svg>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- time bottom box -->
+                                        <div
+                                            class="d-flex gap-3 align-items-center justify-content-between  py-1 mx-2 px-3 my-2 rounded-5 bg-white">
+                                            <!-- Days -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">125</p>
+                                                <p class="m-0 ByerCards-timeDescription">Days</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Hours -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">09</p>
+                                                <p class="m-0 ByerCards-timeDescription">Hours</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Minutes -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">54</p>
+                                                <p class="m-0 ByerCards-timeDescription">Mins</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Secs -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">41</p>
+                                                <p class="m-0 ByerCards-timeDescription">Secs</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Elite Sedan 2021 –
+                                    Executive <br> Class</h5>
+                                <p class="card-text">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                    </div>
+                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="swiper-slide">
+                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 4.jpeg"
+                                    alt="Car img 4" />
+                                <!-- card inner icon and content -->
+                                <div class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                    <div
+                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                        <!-- card header live and heart icon -->
+                                        <div
+                                            class="d-flex justify-content-between align-items-center px-2 py-2">
+                                            <!-- live icon box -->
+                                            <div
+                                                class="BuyerCards-liveIcon d-flex gap-1 align-items-center p-1 rounded-5 px-2 py-1">
+                                                <svg width="13" height="13" viewBox="0 0 12 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_4947_410)">
+                                                        <path
+                                                            d="M4.9975 10.5015V11.5015H10.9975V10.5015H4.9975ZM4.705 0.844482L0.815998 4.73348L1.523 5.44048L2.0535 5.26398L3.291 6.50148L0.462498 9.32998L1.1695 10.037L3.998 7.20848L5.2 8.41048L5.0585 8.97648L5.766 9.68348L9.655 5.79448L8.948 5.08698L8.382 5.22848L5.2355 2.08198L5.412 1.55198L4.705 0.844482Z"
+                                                            fill="white" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4947_410">
+                                                            <rect width="12" height="12" fill="white"
+                                                                transform="matrix(-1 0 0 1 12 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <p class="m-0 BuyerCards-Live-title">Live</p>
+                                            </div>
+                                            <!-- white heart box -->
+                                            <div
+                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                <svg width="15" height="15" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M9.188 2.21197C10.0175 2.59097 10.625 3.49297 10.625 4.56847C10.625 5.66697 10.175 6.51397 9.531 7.23997C8.9995 7.83797 8.3565 8.33397 7.7295 8.81697C7.58017 8.93197 7.43267 9.04664 7.287 9.16097C7.024 9.36847 6.7895 9.54997 6.563 9.68247C6.3365 9.81497 6.155 9.87497 6 9.87497C5.845 9.87497 5.663 9.81497 5.437 9.68247C5.2105 9.54997 4.976 9.36847 4.713 9.16097C4.56733 9.04631 4.41983 8.93181 4.2705 8.81747C3.6435 8.33347 3.0005 7.83797 2.469 7.23997C1.8245 6.51397 1.375 5.66697 1.375 4.56847C1.375 3.49347 1.9825 2.59097 2.812 2.21197C3.618 1.84347 4.701 1.94097 5.73 3.01047C5.76498 3.04677 5.80692 3.07563 5.85331 3.09535C5.8997 3.11507 5.94959 3.12523 6 3.12523C6.05041 3.12523 6.1003 3.11507 6.14669 3.09535C6.19308 3.07563 6.23502 3.04677 6.27 3.01047C7.299 1.94097 8.382 1.84347 9.188 2.21197ZM6 2.22997C7.156 1.19497 8.4505 1.04997 9.5 1.52947C10.607 2.03697 11.375 3.21297 11.375 4.56897C11.375 5.90147 10.82 6.91847 10.0915 7.73847C9.5085 8.39497 8.795 8.94447 8.1645 9.42947C8.02117 9.53947 7.8835 9.64647 7.7515 9.75047C7.495 9.95247 7.22 10.1675 6.9415 10.3305C6.663 10.4935 6.345 10.6255 6 10.6255C5.655 10.6255 5.337 10.493 5.0585 10.3305C4.7795 10.1675 4.505 9.95247 4.2485 9.75047C4.1165 9.64647 3.97883 9.53947 3.8355 9.42947C3.2055 8.94447 2.4915 8.39447 1.9085 7.73847C1.18 6.91847 0.625 5.90147 0.625 4.56897C0.625 3.21297 1.3925 2.03697 2.5 1.53047C3.5495 1.05047 4.844 1.19547 6 2.22997Z"
+                                                        fill="black" />
+                                                </svg>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- time bottom box -->
+                                        <div
+                                            class="d-flex gap-3 align-items-center justify-content-between  py-1 mx-2 px-3 my-2 rounded-5 bg-white">
+                                            <!-- Days -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">125</p>
+                                                <p class="m-0 ByerCards-timeDescription">Days</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Hours -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">09</p>
+                                                <p class="m-0 ByerCards-timeDescription">Hours</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Minutes -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">54</p>
+                                                <p class="m-0 ByerCards-timeDescription">Mins</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Secs -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">41</p>
+                                                <p class="m-0 ByerCards-timeDescription">Secs</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Off-Road Beast 4x4 –
+                                    Adventure Ready</h5>
+                                <p class="card-text">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                    </div>
+                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="swiper-slide">
+                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 4.jpeg"
+                                    alt="Car img 4" />
+                                <!-- card inner icon and content -->
+                                <div class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                    <div
+                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                        <!-- card header live and heart icon -->
+                                        <div
+                                            class="d-flex justify-content-between align-items-center px-2 py-2">
+                                            <!-- live icon box -->
+                                            <div
+                                                class="BuyerCards-liveIcon d-flex gap-1 align-items-center p-1 rounded-5 px-2 py-1">
+                                                <svg width="13" height="13" viewBox="0 0 12 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_4947_410)">
+                                                        <path
+                                                            d="M4.9975 10.5015V11.5015H10.9975V10.5015H4.9975ZM4.705 0.844482L0.815998 4.73348L1.523 5.44048L2.0535 5.26398L3.291 6.50148L0.462498 9.32998L1.1695 10.037L3.998 7.20848L5.2 8.41048L5.0585 8.97648L5.766 9.68348L9.655 5.79448L8.948 5.08698L8.382 5.22848L5.2355 2.08198L5.412 1.55198L4.705 0.844482Z"
+                                                            fill="white" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4947_410">
+                                                            <rect width="12" height="12" fill="white"
+                                                                transform="matrix(-1 0 0 1 12 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <p class="m-0 BuyerCards-Live-title">Live</p>
+                                            </div>
+                                            <!-- white heart box -->
+                                            <div
+                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                <svg width="15" height="15" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M9.188 2.21197C10.0175 2.59097 10.625 3.49297 10.625 4.56847C10.625 5.66697 10.175 6.51397 9.531 7.23997C8.9995 7.83797 8.3565 8.33397 7.7295 8.81697C7.58017 8.93197 7.43267 9.04664 7.287 9.16097C7.024 9.36847 6.7895 9.54997 6.563 9.68247C6.3365 9.81497 6.155 9.87497 6 9.87497C5.845 9.87497 5.663 9.81497 5.437 9.68247C5.2105 9.54997 4.976 9.36847 4.713 9.16097C4.56733 9.04631 4.41983 8.93181 4.2705 8.81747C3.6435 8.33347 3.0005 7.83797 2.469 7.23997C1.8245 6.51397 1.375 5.66697 1.375 4.56847C1.375 3.49347 1.9825 2.59097 2.812 2.21197C3.618 1.84347 4.701 1.94097 5.73 3.01047C5.76498 3.04677 5.80692 3.07563 5.85331 3.09535C5.8997 3.11507 5.94959 3.12523 6 3.12523C6.05041 3.12523 6.1003 3.11507 6.14669 3.09535C6.19308 3.07563 6.23502 3.04677 6.27 3.01047C7.299 1.94097 8.382 1.84347 9.188 2.21197ZM6 2.22997C7.156 1.19497 8.4505 1.04997 9.5 1.52947C10.607 2.03697 11.375 3.21297 11.375 4.56897C11.375 5.90147 10.82 6.91847 10.0915 7.73847C9.5085 8.39497 8.795 8.94447 8.1645 9.42947C8.02117 9.53947 7.8835 9.64647 7.7515 9.75047C7.495 9.95247 7.22 10.1675 6.9415 10.3305C6.663 10.4935 6.345 10.6255 6 10.6255C5.655 10.6255 5.337 10.493 5.0585 10.3305C4.7795 10.1675 4.505 9.95247 4.2485 9.75047C4.1165 9.64647 3.97883 9.53947 3.8355 9.42947C3.2055 8.94447 2.4915 8.39447 1.9085 7.73847C1.18 6.91847 0.625 5.90147 0.625 4.56897C0.625 3.21297 1.3925 2.03697 2.5 1.53047C3.5495 1.05047 4.844 1.19547 6 2.22997Z"
+                                                        fill="black" />
+                                                </svg>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- time bottom box -->
+                                        <div
+                                            class="d-flex gap-3 align-items-center justify-content-between  py-1 mx-2 px-3 my-2 rounded-5 bg-white">
+                                            <!-- Days -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">125</p>
+                                                <p class="m-0 ByerCards-timeDescription">Days</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Hours -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">09</p>
+                                                <p class="m-0 ByerCards-timeDescription">Hours</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Minutes -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">54</p>
+                                                <p class="m-0 ByerCards-timeDescription">Mins</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Secs -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">41</p>
+                                                <p class="m-0 ByerCards-timeDescription">Secs</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Off-Road Beast 4x4 –
+                                    Adventure Ready</h5>
+                                <p class="card-text">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                    </div>
+                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="swiper-slide">
+                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 4.jpeg"
+                                    alt="Car img 4" />
+                                <!-- card inner icon and content -->
+                                <div class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                    <div
+                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                        <!-- card header live and heart icon -->
+                                        <div
+                                            class="d-flex justify-content-between align-items-center px-2 py-2">
+                                            <!-- live icon box -->
+                                            <div
+                                                class="BuyerCards-liveIcon d-flex gap-1 align-items-center p-1 rounded-5 px-2 py-1">
+                                                <svg width="13" height="13" viewBox="0 0 12 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_4947_410)">
+                                                        <path
+                                                            d="M4.9975 10.5015V11.5015H10.9975V10.5015H4.9975ZM4.705 0.844482L0.815998 4.73348L1.523 5.44048L2.0535 5.26398L3.291 6.50148L0.462498 9.32998L1.1695 10.037L3.998 7.20848L5.2 8.41048L5.0585 8.97648L5.766 9.68348L9.655 5.79448L8.948 5.08698L8.382 5.22848L5.2355 2.08198L5.412 1.55198L4.705 0.844482Z"
+                                                            fill="white" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4947_410">
+                                                            <rect width="12" height="12" fill="white"
+                                                                transform="matrix(-1 0 0 1 12 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <p class="m-0 BuyerCards-Live-title">Live</p>
+                                            </div>
+                                            <!-- white heart box -->
+                                            <div
+                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                <svg width="15" height="15" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M9.188 2.21197C10.0175 2.59097 10.625 3.49297 10.625 4.56847C10.625 5.66697 10.175 6.51397 9.531 7.23997C8.9995 7.83797 8.3565 8.33397 7.7295 8.81697C7.58017 8.93197 7.43267 9.04664 7.287 9.16097C7.024 9.36847 6.7895 9.54997 6.563 9.68247C6.3365 9.81497 6.155 9.87497 6 9.87497C5.845 9.87497 5.663 9.81497 5.437 9.68247C5.2105 9.54997 4.976 9.36847 4.713 9.16097C4.56733 9.04631 4.41983 8.93181 4.2705 8.81747C3.6435 8.33347 3.0005 7.83797 2.469 7.23997C1.8245 6.51397 1.375 5.66697 1.375 4.56847C1.375 3.49347 1.9825 2.59097 2.812 2.21197C3.618 1.84347 4.701 1.94097 5.73 3.01047C5.76498 3.04677 5.80692 3.07563 5.85331 3.09535C5.8997 3.11507 5.94959 3.12523 6 3.12523C6.05041 3.12523 6.1003 3.11507 6.14669 3.09535C6.19308 3.07563 6.23502 3.04677 6.27 3.01047C7.299 1.94097 8.382 1.84347 9.188 2.21197ZM6 2.22997C7.156 1.19497 8.4505 1.04997 9.5 1.52947C10.607 2.03697 11.375 3.21297 11.375 4.56897C11.375 5.90147 10.82 6.91847 10.0915 7.73847C9.5085 8.39497 8.795 8.94447 8.1645 9.42947C8.02117 9.53947 7.8835 9.64647 7.7515 9.75047C7.495 9.95247 7.22 10.1675 6.9415 10.3305C6.663 10.4935 6.345 10.6255 6 10.6255C5.655 10.6255 5.337 10.493 5.0585 10.3305C4.7795 10.1675 4.505 9.95247 4.2485 9.75047C4.1165 9.64647 3.97883 9.53947 3.8355 9.42947C3.2055 8.94447 2.4915 8.39447 1.9085 7.73847C1.18 6.91847 0.625 5.90147 0.625 4.56897C0.625 3.21297 1.3925 2.03697 2.5 1.53047C3.5495 1.05047 4.844 1.19547 6 2.22997Z"
+                                                        fill="black" />
+                                                </svg>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- time bottom box -->
+                                        <div
+                                            class="d-flex gap-3 align-items-center justify-content-between  py-1 mx-2 px-3 my-2 rounded-5 bg-white">
+                                            <!-- Days -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">125</p>
+                                                <p class="m-0 ByerCards-timeDescription">Days</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Hours -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">09</p>
+                                                <p class="m-0 ByerCards-timeDescription">Hours</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Minutes -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">54</p>
+                                                <p class="m-0 ByerCards-timeDescription">Mins</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Secs -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">41</p>
+                                                <p class="m-0 ByerCards-timeDescription">Secs</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Off-Road Beast 4x4 –
+                                    Adventure Ready</h5>
+                                <p class="card-text">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                    </div>
+                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="swiper-slide">
+                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 4.jpeg"
+                                    alt="Car img 4" />
+                                <!-- card inner icon and content -->
+                                <div class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                    <div
+                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                        <!-- card header live and heart icon -->
+                                        <div
+                                            class="d-flex justify-content-between align-items-center px-2 py-2">
+                                            <!-- live icon box -->
+                                            <div
+                                                class="BuyerCards-liveIcon d-flex gap-1 align-items-center p-1 rounded-5 px-2 py-1">
+                                                <svg width="13" height="13" viewBox="0 0 12 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_4947_410)">
+                                                        <path
+                                                            d="M4.9975 10.5015V11.5015H10.9975V10.5015H4.9975ZM4.705 0.844482L0.815998 4.73348L1.523 5.44048L2.0535 5.26398L3.291 6.50148L0.462498 9.32998L1.1695 10.037L3.998 7.20848L5.2 8.41048L5.0585 8.97648L5.766 9.68348L9.655 5.79448L8.948 5.08698L8.382 5.22848L5.2355 2.08198L5.412 1.55198L4.705 0.844482Z"
+                                                            fill="white" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4947_410">
+                                                            <rect width="12" height="12" fill="white"
+                                                                transform="matrix(-1 0 0 1 12 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <p class="m-0 BuyerCards-Live-title">Live</p>
+                                            </div>
+                                            <!-- white heart box -->
+                                            <div
+                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                <svg width="15" height="15" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M9.188 2.21197C10.0175 2.59097 10.625 3.49297 10.625 4.56847C10.625 5.66697 10.175 6.51397 9.531 7.23997C8.9995 7.83797 8.3565 8.33397 7.7295 8.81697C7.58017 8.93197 7.43267 9.04664 7.287 9.16097C7.024 9.36847 6.7895 9.54997 6.563 9.68247C6.3365 9.81497 6.155 9.87497 6 9.87497C5.845 9.87497 5.663 9.81497 5.437 9.68247C5.2105 9.54997 4.976 9.36847 4.713 9.16097C4.56733 9.04631 4.41983 8.93181 4.2705 8.81747C3.6435 8.33347 3.0005 7.83797 2.469 7.23997C1.8245 6.51397 1.375 5.66697 1.375 4.56847C1.375 3.49347 1.9825 2.59097 2.812 2.21197C3.618 1.84347 4.701 1.94097 5.73 3.01047C5.76498 3.04677 5.80692 3.07563 5.85331 3.09535C5.8997 3.11507 5.94959 3.12523 6 3.12523C6.05041 3.12523 6.1003 3.11507 6.14669 3.09535C6.19308 3.07563 6.23502 3.04677 6.27 3.01047C7.299 1.94097 8.382 1.84347 9.188 2.21197ZM6 2.22997C7.156 1.19497 8.4505 1.04997 9.5 1.52947C10.607 2.03697 11.375 3.21297 11.375 4.56897C11.375 5.90147 10.82 6.91847 10.0915 7.73847C9.5085 8.39497 8.795 8.94447 8.1645 9.42947C8.02117 9.53947 7.8835 9.64647 7.7515 9.75047C7.495 9.95247 7.22 10.1675 6.9415 10.3305C6.663 10.4935 6.345 10.6255 6 10.6255C5.655 10.6255 5.337 10.493 5.0585 10.3305C4.7795 10.1675 4.505 9.95247 4.2485 9.75047C4.1165 9.64647 3.97883 9.53947 3.8355 9.42947C3.2055 8.94447 2.4915 8.39447 1.9085 7.73847C1.18 6.91847 0.625 5.90147 0.625 4.56897C0.625 3.21297 1.3925 2.03697 2.5 1.53047C3.5495 1.05047 4.844 1.19547 6 2.22997Z"
+                                                        fill="black" />
+                                                </svg>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- time bottom box -->
+                                        <div
+                                            class="d-flex gap-3 align-items-center justify-content-between  py-1 mx-2 px-3 my-2 rounded-5 bg-white">
+                                            <!-- Days -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">125</p>
+                                                <p class="m-0 ByerCards-timeDescription">Days</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Hours -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">09</p>
+                                                <p class="m-0 ByerCards-timeDescription">Hours</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Minutes -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">54</p>
+                                                <p class="m-0 ByerCards-timeDescription">Mins</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Secs -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">41</p>
+                                                <p class="m-0 ByerCards-timeDescription">Secs</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Off-Road Beast 4x4 –
+                                    Adventure Ready</h5>
+                                <p class="card-text">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                    </div>
+                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="swiper-slide">
+                        <div class="card Buyer-Dashboard-cards" style="width: 18rem">
+                            <div class="Buyer-Dashboard-Cards-header position-relative">
+                                <img class="card-img-top Buyer-Cards-top-imgs"
+                                    src="../assets/images/Buyer Dashboard images/Live Auction images/card 4.jpeg"
+                                    alt="Car img 4" />
+                                <!-- card inner icon and content -->
+                                <div class="Buyer-Cards-inner-content position-absolute w-100 h-100 top-0">
+                                    <div
+                                        class="position-relative h-100 d-flex flex-column justify-content-between">
+                                        <!-- card header live and heart icon -->
+                                        <div
+                                            class="d-flex justify-content-between align-items-center px-2 py-2">
+                                            <!-- live icon box -->
+                                            <div
+                                                class="BuyerCards-liveIcon d-flex gap-1 align-items-center p-1 rounded-5 px-2 py-1">
+                                                <svg width="13" height="13" viewBox="0 0 12 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_4947_410)">
+                                                        <path
+                                                            d="M4.9975 10.5015V11.5015H10.9975V10.5015H4.9975ZM4.705 0.844482L0.815998 4.73348L1.523 5.44048L2.0535 5.26398L3.291 6.50148L0.462498 9.32998L1.1695 10.037L3.998 7.20848L5.2 8.41048L5.0585 8.97648L5.766 9.68348L9.655 5.79448L8.948 5.08698L8.382 5.22848L5.2355 2.08198L5.412 1.55198L4.705 0.844482Z"
+                                                            fill="white" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4947_410">
+                                                            <rect width="12" height="12" fill="white"
+                                                                transform="matrix(-1 0 0 1 12 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <p class="m-0 BuyerCards-Live-title">Live</p>
+                                            </div>
+                                            <!-- white heart box -->
+                                            <div
+                                                class="BuyerCards-heartsIcons d-flex justify-content-center align-items-center p-1 rounded-circle">
+                                                <svg width="15" height="15" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M9.188 2.21197C10.0175 2.59097 10.625 3.49297 10.625 4.56847C10.625 5.66697 10.175 6.51397 9.531 7.23997C8.9995 7.83797 8.3565 8.33397 7.7295 8.81697C7.58017 8.93197 7.43267 9.04664 7.287 9.16097C7.024 9.36847 6.7895 9.54997 6.563 9.68247C6.3365 9.81497 6.155 9.87497 6 9.87497C5.845 9.87497 5.663 9.81497 5.437 9.68247C5.2105 9.54997 4.976 9.36847 4.713 9.16097C4.56733 9.04631 4.41983 8.93181 4.2705 8.81747C3.6435 8.33347 3.0005 7.83797 2.469 7.23997C1.8245 6.51397 1.375 5.66697 1.375 4.56847C1.375 3.49347 1.9825 2.59097 2.812 2.21197C3.618 1.84347 4.701 1.94097 5.73 3.01047C5.76498 3.04677 5.80692 3.07563 5.85331 3.09535C5.8997 3.11507 5.94959 3.12523 6 3.12523C6.05041 3.12523 6.1003 3.11507 6.14669 3.09535C6.19308 3.07563 6.23502 3.04677 6.27 3.01047C7.299 1.94097 8.382 1.84347 9.188 2.21197ZM6 2.22997C7.156 1.19497 8.4505 1.04997 9.5 1.52947C10.607 2.03697 11.375 3.21297 11.375 4.56897C11.375 5.90147 10.82 6.91847 10.0915 7.73847C9.5085 8.39497 8.795 8.94447 8.1645 9.42947C8.02117 9.53947 7.8835 9.64647 7.7515 9.75047C7.495 9.95247 7.22 10.1675 6.9415 10.3305C6.663 10.4935 6.345 10.6255 6 10.6255C5.655 10.6255 5.337 10.493 5.0585 10.3305C4.7795 10.1675 4.505 9.95247 4.2485 9.75047C4.1165 9.64647 3.97883 9.53947 3.8355 9.42947C3.2055 8.94447 2.4915 8.39447 1.9085 7.73847C1.18 6.91847 0.625 5.90147 0.625 4.56897C0.625 3.21297 1.3925 2.03697 2.5 1.53047C3.5495 1.05047 4.844 1.19547 6 2.22997Z"
+                                                        fill="black" />
+                                                </svg>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- time bottom box -->
+                                        <div
+                                            class="d-flex gap-3 align-items-center justify-content-between  py-1 mx-2 px-3 my-2 rounded-5 bg-white">
+                                            <!-- Days -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">125</p>
+                                                <p class="m-0 ByerCards-timeDescription">Days</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Hours -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">09</p>
+                                                <p class="m-0 ByerCards-timeDescription">Hours</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Minutes -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">54</p>
+                                                <p class="m-0 ByerCards-timeDescription">Mins</p>
+                                            </div>
+
+                                            <!-- Double dots -->
+                                            <div>
+                                                <span class="BuyerCards-time-DoubleDots">&#8282;</span>
+                                            </div>
+
+                                            <!-- Secs -->
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <p class="m-0 BuyerCards-timeHeads">41</p>
+                                                <p class="m-0 ByerCards-timeDescription">Secs</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body Buyer-Dashboard-Cardbody">
+                                <h5 class="card-title Buyer-Dashboard-CardTitle m-0">Off-Road Beast 4x4 –
+                                    Adventure Ready</h5>
+                                <p class="card-text">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="m-0 Buyer-CurrentBid">Current Bid:</p>
+                                        <p class="m-0 Buyer-CurrentBidDollars">₹126.00</p>
+                                    </div>
+                                    <a href="#" class="btn buyer-primary-btn">Bid Now</a>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+
+
+        </div>
+    </div>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+      var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 4, // Default for large screens
+          spaceBetween: 0, // Adjust spacing between slides
+          navigation: {
+              nextEl: ".Live-Auction-Next-btn",
+              prevEl: ".Live-Auction-Prev-btn",
+          },
+          loop: true, // Enable looping if required
+          // Responsive breakpoints
+          breakpoints: {
+              // When window width is >= 1200px
+              1200: {
+                  slidesPerView: 4,
+                  spaceBetween: 20
+              },
+              // When window width is >= 992px
+              992: {
+                  slidesPerView: 3,
+                  spaceBetween: 15
+              },
+              // When window width is >= 768px
+              768: {
+                  slidesPerView: 1,
+              },
+              // When window width is < 768px (small screens)
+              0: {
+                  slidesPerView: 1,
+                  spaceBetween: 10
+              }
+          }
+      });
+  </script>
+  <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
