@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" href="/assets/images/fav-icon.svg" type="image/x-icon" />
     <link rel="shortcut icon" href="assets/images/fav-icon.svg" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,9 +29,132 @@
         rel="stylesheet">
     <!-- charts js link -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
 </head>
 
 <body>
+    <!-- #######################Right side ofcanvas start########################## -->
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="notificationOffcanvas"
+        aria-labelledby="notificationOffcanvasLabel">
+        <div class="offcanvas-header border-0" style="background-color: transparent;">
+            <h5 id="notificationOffcanvasLabel" class="buyer-notif-headr mb-0">Notifications</h5>
+            <button type="button" class="btn-close" style="font-size: 10px;" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body pt-1">
+            <p class="mb-0 text-end se-al-noti">See All</p>
+
+            <div class="notification-container mt-3">
+                <!-- Notification Items -->
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Your recent auction listing has been approved and is now live
+                    </div>
+                    <div class="buyer-notification-time just-now mb-2">Just Now</div>
+                </div>
+
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">System update scheduled for 12:00 AM - 2:00 AM. Platform may be
+                        temporarily unavailable.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Your account has been suspended due to multiple reported
+                        violations. Contact support for more details.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Your profile verification was successful. Welcome aboard!</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Auction for Toyota Corolla 2022 ends in 1 hour. Place your
+                        final bids.</div>
+                    <div class="buyer-notification-time just-now">Just Now</div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">New comment on your auction listing: Is this car still under
+                        warranty?</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Password changed successfully. If you did not perform this
+                        action, contact support immediately.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Congratulations. Your bid won the auction for Honda Civic 2023.
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Your post has been removed due to policy violations. Please
+                        review our community guidelines.</div>
+                    <div class="buyer-notification-time just-now">Just Now</div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">New auction listing available: Ford Mustang GT 2021. Check it
+                        out now.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Congratulations. Your bid won the auction for Honda Civic 2023.
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">Auction for Toyota Corolla 2022 ends in 1 hour. Place your
+                        final bids.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+
+                <div class="buyer-notification-item border-bottom mb-2">
+                    <div class="buyer-notification-text">System update scheduled for 12:00 AM - 2:00 AM. Platform may be
+                        temporarily unavailable.</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="buyer-notification-time just-now mb-2">11:41 am · 14-April-24</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #######################Right side ofcanvas end########################## -->
 
     <div class="carexpo-dashboard-container container-fluid">
         <div class="row">
@@ -40,18 +164,16 @@
                     <i class="bi bi-x-lg"></i>
                 </div>
                 <div class="carexpo-logo-container">
-                    <img src="assets/images/fav-icon.svg" alt="Car Expo Logo" class="carexpo-logo" />
+                    <img src="/assets/images/fav-icon.svg" alt="Car Expo Logo" class="carexpo-logo" />
                 </div>
                 <div class="carexpo-sidebar-menu">
-                    <a href="./index.html" class="carexpo-menu-item">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons" 
+                    <a href="index.html" class="carexpo-menu-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M8.23585 1.83913C8.63223 1.79242 9.03163 1.89713 9.35411 2.13231C9.67659 2.36748 9.89835 2.71577 9.97501 3.10747L9.99585 3.24663L10 3.3333V9.16663C10 9.37074 10.075 9.56775 10.2106 9.72028C10.3462 9.87281 10.5331 9.97025 10.7358 9.99413L10.8333 9.99997H16.5C16.942 9.99997 17.366 10.1756 17.6785 10.4881C17.9911 10.8007 18.1667 11.2246 18.1667 11.6666C18.1666 11.73 18.1594 11.7932 18.145 11.855C17.8115 13.2938 17.1016 14.6182 16.0879 15.6925C15.0742 16.7668 13.7932 17.5524 12.3761 17.9687C10.959 18.3851 9.45669 18.4174 8.023 18.0622C6.58931 17.707 5.27578 16.9772 4.21693 15.9474C3.15808 14.9177 2.39194 13.625 1.99699 12.2017C1.60204 10.7785 1.59246 9.27583 1.96923 7.84767C2.346 6.41951 3.09559 5.11714 4.14122 4.07395C5.18686 3.03076 6.49097 2.28423 7.92001 1.9108L8.14501 1.85497L8.23585 1.83913Z"
-                                />
+                                d="M8.23585 1.83913C8.63223 1.79242 9.03163 1.89713 9.35411 2.13231C9.67659 2.36748 9.89835 2.71577 9.97501 3.10747L9.99585 3.24663L10 3.3333V9.16663C10 9.37074 10.075 9.56775 10.2106 9.72028C10.3462 9.87281 10.5331 9.97025 10.7358 9.99413L10.8333 9.99997H16.5C16.942 9.99997 17.366 10.1756 17.6785 10.4881C17.9911 10.8007 18.1667 11.2246 18.1667 11.6666C18.1666 11.73 18.1594 11.7932 18.145 11.855C17.8115 13.2938 17.1016 14.6182 16.0879 15.6925C15.0742 16.7668 13.7932 17.5524 12.3761 17.9687C10.959 18.3851 9.45669 18.4174 8.023 18.0622C6.58931 17.707 5.27578 16.9772 4.21693 15.9474C3.15808 14.9177 2.39194 13.625 1.99699 12.2017C1.60204 10.7785 1.59246 9.27583 1.96923 7.84767C2.346 6.41951 3.09559 5.11714 4.14122 4.07395C5.18686 3.03076 6.49097 2.28423 7.92001 1.9108L8.14501 1.85497L8.23585 1.83913Z" />
                             <path
-                                d="M11.6667 2.91665V7.49998C11.6667 7.72099 11.7545 7.93295 11.9108 8.08924C12.067 8.24552 12.279 8.33331 12.5 8.33331H17.0834C17.2166 8.33328 17.3478 8.30131 17.4661 8.2401C17.5844 8.17888 17.6863 8.0902 17.7633 7.98149C17.8402 7.87278 17.89 7.7472 17.9084 7.61529C17.9269 7.48337 17.9134 7.34896 17.8692 7.22331C17.4553 6.04776 16.783 4.98001 15.9018 4.09868C15.0207 3.21735 13.953 2.54489 12.7775 2.13081C12.6518 2.08643 12.5173 2.07284 12.3853 2.09119C12.2533 2.10954 12.1276 2.15929 12.0188 2.23627C11.9099 2.31326 11.8212 2.41522 11.7599 2.53361C11.6986 2.65199 11.6667 2.78335 11.6667 2.91665Z"
-                                 />
+                                d="M11.6667 2.91665V7.49998C11.6667 7.72099 11.7545 7.93295 11.9108 8.08924C12.067 8.24552 12.279 8.33331 12.5 8.33331H17.0834C17.2166 8.33328 17.3478 8.30131 17.4661 8.2401C17.5844 8.17888 17.6863 8.0902 17.7633 7.98149C17.8402 7.87278 17.89 7.7472 17.9084 7.61529C17.9269 7.48337 17.9134 7.34896 17.8692 7.22331C17.4553 6.04776 16.783 4.98001 15.9018 4.09868C15.0207 3.21735 13.953 2.54489 12.7775 2.13081C12.6518 2.08643 12.5173 2.07284 12.3853 2.09119C12.2533 2.10954 12.1276 2.15929 12.0188 2.23627C11.9099 2.31326 11.8212 2.41522 11.7599 2.53361C11.6986 2.65199 11.6667 2.78335 11.6667 2.91665Z" />
                         </svg>
                         <span>Dashboard</span>
                     </a>
@@ -67,7 +189,7 @@
                         </svg>
                         <span>User Management</span>
                     </a>
-                    <a href="./auction-management.html" class="carexpo-menu-item">
+                    <a href="add-auction-form.html" class="carexpo-menu-item active">
                         <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -130,7 +252,7 @@
                         </svg>
                         <span>Car Listing</span>
                     </a>
-                    <a href="#" class="carexpo-menu-item">
+                    <a href="seller-notifications.html" class="carexpo-menu-item">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -144,8 +266,8 @@
 
             <!-- Main Content -->
             <div class="carexpo-main-content col-lg-9 col-xl-10 px-0" id="carexpo-main-content">
-                <!-- Top bar  -->
-                <div class="carexpo-top-bar">
+                <!-- Top bar start  -->
+                <div class="carexpo-top-bar border-bottom-0  ">
                     <div class="d-flex align-items-center gap-2">
                         <div class="carexpo-toggle-btn" id="carexpo-toggle-btn">
                             <i class="bi bi-list"></i>
@@ -155,38 +277,62 @@
                             <i class="bi bi-search carexpo-search-icon"></i>
                         </div>
                     </div>
+
+
                     <div class="carexpo-user-actions">
-                        <div class="carexpo-notification" data-bs-toggle="offcanvas"
-                            data-bs-target="#notificationsOffcanvas">
-                            <svg width="40" height="40" viewBox="0 0 44 44" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="44" height="44" rx="22" fill="#F5F5F5" />
-                                <g clip-path="url(#clip0_4748_289)">
-                                    <path
-                                        d="M29.9161 23.2465L28.4911 18.1195C28.0734 16.6175 27.1657 15.2982 25.9121 14.3714C24.6586 13.4445 23.1312 12.9633 21.5727 13.0041C20.0143 13.045 18.5142 13.6056 17.3109 14.5969C16.1077 15.5881 15.2703 16.9532 14.9319 18.475L13.8286 23.4363C13.7068 23.9845 13.7096 24.553 13.8369 25.1C13.9641 25.647 14.2127 26.1584 14.5641 26.5964C14.9154 27.0345 15.3607 27.388 15.867 27.631C16.3734 27.8739 16.9278 28 17.4894 28H18.3249C18.497 28.8477 18.9569 29.6099 19.6267 30.1573C20.2964 30.7047 21.1348 31.0038 21.9999 31.0038C22.8649 31.0038 23.7033 30.7047 24.3731 30.1573C25.0428 29.6099 25.5027 28.8477 25.6749 28H26.3034C26.8815 28.0001 27.4518 27.8664 27.9697 27.6096C28.4876 27.3527 28.9391 26.9796 29.289 26.5194C29.6388 26.0592 29.8775 25.5243 29.9865 24.9565C30.0954 24.3888 30.0716 23.8035 29.9169 23.2465H29.9161ZM21.9999 29.5C21.5362 29.4981 21.0844 29.3529 20.7063 29.0844C20.3283 28.8159 20.0424 28.4372 19.8879 28H24.1119C23.9573 28.4372 23.6714 28.8159 23.2934 29.0844C22.9153 29.3529 22.4636 29.4981 21.9999 29.5ZM28.0944 25.6113C27.8854 25.8885 27.6146 26.1132 27.3036 26.2675C26.9925 26.4218 26.6498 26.5014 26.3026 26.5H17.4894C17.1525 26.5 16.8199 26.4242 16.5161 26.2784C16.2124 26.1327 15.9453 25.9205 15.7345 25.6577C15.5237 25.3949 15.3746 25.088 15.2983 24.7599C15.2219 24.4317 15.2203 24.0906 15.2934 23.7618L16.3959 18.7998C16.6616 17.6044 17.3193 16.5322 18.2645 15.7536C19.2096 14.975 20.3878 14.5346 21.6119 14.5026C22.8361 14.4705 24.0358 14.8485 25.0203 15.5766C26.0049 16.3047 26.7179 17.341 27.0459 18.5208L28.4709 23.6478C28.565 23.9818 28.58 24.3332 28.5147 24.674C28.4493 25.0148 28.3054 25.3358 28.0944 25.6113Z"
-                                        fill="#666666" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_4748_289">
-                                        <rect width="18" height="18" fill="white" transform="translate(13 13)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
+                        <button
+                            class="btn d-flex justify-content-center align-items-center switch-by-btn gap-2 mt-0 me-4"
+                            type="button">
+                            Switch to Buying
+                        </button>
+
+
+                        <!-- Notification Icon with Offcanvas Trigger -->
+                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#notificationOffcanvas">
+                            <div class="bell-bg d-flex align-items-center justify-content-center me-4">
+                                <img src="/assets/images/solar_bell-linear.svg" alt="Notification" width="18">
+                            </div>
+                        </a>
+
                         <div class="carexpo-user-profile">
-                            <img src="assets/images/profile.JPG" alt="User Profile" class="carexpo-profile-img" />
+                            <div class="container d-flex justify-content-end">
+                                <div class="dropdown">
+                                    <a href="seller-profile.html" class="d-block text-decoration-none"
+                                        id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="/assets/images/buyer-progile-ing.png" alt="Profile" width="45"
+                                            class="rounded-circle">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end shadow-sm rounded">
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                                href="seller-profile.html">
+                                                <i class="fas fa-user-circle me-2 text-primary"></i> My Account
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center text-danger" href="#">
+                                                <i class="fas fa-sign-out-alt me-2"></i> Logout
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <img src="/assets/images/profile.JPG" alt="User Profile" class="carexpo-profile-img" /> -->
                         </div>
                     </div>
                 </div>
+                <!-- Top bar end  -->
+
+
 
                 <div class="carexpo-content-area">
                     <div class="user-heading  mt-4 mb-3">
-                        <a href="./auction-management.html" class="car-infoo">
+                        <a href="" class="car-infoo">
                             <button class="pg-txtt1 d-flex gap-2 align-items-center ms-3 mb-5">
                                 <img src="/assets/images/bak-arow-icon.svg" class="more-size2">
-                                 Back</button>
+                                Back</button>
                         </a>
-                       
+
                     </div>
                     <!-- Dashboard content -->
                     <!-- ################ hero-section start ####################### -->
@@ -196,33 +342,45 @@
                                 <div class="row">
                                     <div class="rounded-2">
                                         <div class="ad-auction-hd fw-bold mb-2">Add Auction</div>
-                                        <div class="ad-auction-p fw-semibold mb-4" >Fill the details to add new
+                                        <div class="ad-auction-p fw-semibold mb-4">Fill the details to add new
                                             Auction</div>
                                         <!-- <div class="image-container-upload mt-4 mb-4" type="file">
                                             <img src="/assets/images/tabler_photo-up.png" alt="Uploaded Image"
                                                 onerror="this.onerror=null; this.src='placeholder.png';">
                                         </div> -->
                                         <form>
-                    
+
                                             <div class="form-group-heading d-flex flex-column gap-3 mt-2 px-0">
                                                 <div class="row g-3">
                                                     <div class="col-md-6">
-                                                        <input type="text" id="car" name="car" class="seller-ad-action-input fw-semibold" placeholder="Auction Name">
+                                                        <input type="text" id="car" name="car"
+                                                            class="seller-ad-action-input fw-semibold"
+                                                            placeholder="Auction Name">
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <input type="text" id="seller" name="seller" class="seller-ad-action-input fw-semibold" placeholder="Brand">
+                                                        <input type="text" id="seller" name="seller"
+                                                            class="seller-ad-action-input fw-semibold"
+                                                            placeholder="Brand">
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <input type="text" id="car" name="car" class="seller-ad-action-input fw-semibold" placeholder="Model">
+                                                        <input type="text" id="car" name="car"
+                                                            class="seller-ad-action-input fw-semibold"
+                                                            placeholder="Model">
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <input type="text" id="seller" name="seller" class="seller-ad-action-input fw-semibold" placeholder="Year">
+                                                        <input type="text" id="seller" name="seller"
+                                                            class="seller-ad-action-input fw-semibold"
+                                                            placeholder="Year">
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <input type="text" id="car" name="car" class="seller-ad-action-input fw-semibold" placeholder="Condition">
+                                                        <input type="text" id="car" name="car"
+                                                            class="seller-ad-action-input fw-semibold"
+                                                            placeholder="Condition">
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <input type="text" id="seller" name="seller" class="seller-ad-action-input fw-semibold" placeholder="Mileage">
+                                                        <input type="text" id="seller" name="seller"
+                                                            class="seller-ad-action-input fw-semibold"
+                                                            placeholder="Mileage">
                                                     </div>
                                                 </div>
                                             </div>
@@ -236,74 +394,86 @@
                                                                 <option>Heading 2</option>
                                                                 <option>Heading 3</option>
                                                             </select>
-                                                            
-                                                            <button class="seller-button" data-command="bold" title="Bold">
+
+                                                            <button class="seller-button" data-command="bold"
+                                                                title="Bold">
                                                                 <i class="bi bi-type-bold"></i>
                                                             </button>
-                                                            
-                                                            <button class="seller-button" data-command="italic" title="Italic">
+
+                                                            <button class="seller-button" data-command="italic"
+                                                                title="Italic">
                                                                 <i class="bi bi-type-italic"></i>
                                                             </button>
-                                                            
-                                                            <button class="seller-button" data-command="underline" title="Underline">
+
+                                                            <button class="seller-button" data-command="underline"
+                                                                title="Underline">
                                                                 <i class="bi bi-type-underline"></i>
                                                             </button>
-                                                            
-                                                            <button class="seller-button" data-command="strikeThrough" title="Strike Through">
+
+                                                            <button class="seller-button" data-command="strikeThrough"
+                                                                title="Strike Through">
                                                                 <i class="bi bi-type-strikethrough"></i>
                                                             </button>
-                                                            
+
                                                             <div class="seller-divider"></div>
-                                                            
-                                                            <button class="seller-button" data-command="insertUnorderedList" title="Bullet List">
+
+                                                            <button class="seller-button"
+                                                                data-command="insertUnorderedList" title="Bullet List">
                                                                 <i class="bi bi-list-ul"></i>
                                                             </button>
-                                                            
-                                                            <button class="seller-button" data-command="insertOrderedList" title="Numbered List">
+
+                                                            <button class="seller-button"
+                                                                data-command="insertOrderedList" title="Numbered List">
                                                                 <i class="bi bi-list-ol"></i>
                                                             </button>
-                                                            
+
                                                             <div class="seller-divider"></div>
-                                                            
-                                                            <button class="seller-button" data-command="justifyLeft" title="Align Left">
+
+                                                            <button class="seller-button" data-command="justifyLeft"
+                                                                title="Align Left">
                                                                 <i class="bi bi-text-left"></i>
                                                             </button>
-                                                            
-                                                            <button class="seller-button" data-command="justifyCenter" title="Align Center">
+
+                                                            <button class="seller-button" data-command="justifyCenter"
+                                                                title="Align Center">
                                                                 <i class="bi bi-text-center"></i>
                                                             </button>
-                                                            
-                                                            <button class="seller-button" data-command="justifyRight" title="Align Right">
+
+                                                            <button class="seller-button" data-command="justifyRight"
+                                                                title="Align Right">
                                                                 <i class="bi bi-text-right"></i>
                                                             </button>
-                                                            
-                                                            <button class="seller-button" data-command="justifyFull" title="Justify">
+
+                                                            <button class="seller-button" data-command="justifyFull"
+                                                                title="Justify">
                                                                 <i class="bi bi-justify"></i>
                                                             </button>
-                                                            
-                                                            <button class="seller-button seller-fullscreen-btn" id="sellerFullscreenBtn" title="Fullscreen">
+
+                                                            <button class="seller-button seller-fullscreen-btn"
+                                                                id="sellerFullscreenBtn" title="Fullscreen">
                                                                 <i class="bi bi-arrows-fullscreen"></i>
                                                             </button>
                                                         </div>
-                                                        
-                                                        <div class="seller-content-area" id="sellerEditor" contenteditable="true"></div>
+
+                                                        <div class="seller-content-area" id="sellerEditor"
+                                                            contenteditable="true"></div>
                                                     </div>
-                                                
-    
+
+
                                                     <!-- <input type="text" id="seller" name="seller" class="seller-ad-action-input fw-semibold" placeholder="Add Description"> -->
                                                 </div>
                                             </div>
 
-                                            <div class="ad-auction-p fw-semibold text-black mb-3" >Bidding Settings</div>
+                                            <div class="ad-auction-p fw-semibold text-black mb-3">Bidding Settings</div>
 
                                             <div class="row">
                                                 <style>
-
                                                     .auction-form {
                                                         max-width: 800px;
                                                         margin: 0 auto;
                                                         /* padding: 20px; */
                                                     }
+
                                                     .form-control {
                                                         background-color: #f5f5f5;
                                                         /* border: none; */
@@ -312,11 +482,13 @@
                                                         height: 60px;
                                                         color: #6c757d;
                                                     }
+
                                                     .form-control:focus {
                                                         background-color: #f5f5f5;
                                                         box-shadow: none;
                                                         border: 1px solid #ced4da;
                                                     }
+
                                                     .input-group-text {
                                                         background-color: transparent;
                                                         border: none;
@@ -328,12 +500,15 @@
                                                         padding-left: 15px;
                                                         color: #6c757d;
                                                     }
+
                                                     .price-input {
                                                         padding-left: 30px;
                                                     }
+
                                                     .date-input-container {
                                                         position: relative;
                                                     }
+
                                                     .date-icon {
                                                         position: absolute;
                                                         right: 15px;
@@ -343,40 +518,45 @@
                                                         z-index: 10;
                                                         pointer-events: none;
                                                     }
-                                                   
                                                 </style>
                                                 <div class="container auction-form">
                                                     <div class="row">
                                                         <div class="col-md-6 mb-4">
                                                             <div class="position-relative">
                                                                 <span class="input-group-text">$</span>
-                                                                <input type="number" class="form-control price-input" placeholder="Start Bidding Price">
+                                                                <input type="number" class="form-control price-input"
+                                                                    placeholder="Start Bidding Price">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 mb-4">
                                                             <div class="position-relative">
                                                                 <span class="input-group-text">$</span>
-                                                                <input type="number" class="form-control price-input" placeholder="Start Reserve Price">
+                                                                <input type="number" class="form-control price-input"
+                                                                    placeholder="Start Reserve Price">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 mb-4">
                                                             <div class="date-input-container">
-                                                                <input type="text" class="form-control datepicker" placeholder="Auction Start Date">
+                                                                <input type="text" class="form-control datepicker"
+                                                                    placeholder="Auction Start Date">
                                                                 <div class="date-icon">
                                                                     <!-- <i class="bi bi-calendar3"></i> -->
-                                                                     <i class="">
-                                                                        <img src="/assets/images/solar_calendar-date-linear.svg" >
+                                                                    <i class="">
+                                                                        <img
+                                                                            src="/assets/images/solar_calendar-date-linear.svg">
                                                                     </i>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 mb-4">
                                                             <div class="date-input-container">
-                                                                <input type="text" class="form-control datepicker" placeholder="Auction End Date">
+                                                                <input type="text" class="form-control datepicker"
+                                                                    placeholder="Auction End Date">
                                                                 <div class="date-icon">
                                                                     <!-- <i class="bi bi-calendar3"></i> -->
                                                                     <i class="">
-                                                                        <img src="/assets/images/solar_calendar-date-linear.svg" >
+                                                                        <img
+                                                                            src="/assets/images/solar_calendar-date-linear.svg">
                                                                     </i>
 
                                                                 </div>
@@ -386,28 +566,35 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="ad-auction-p fw-semibold mb-2" ><span class="text-black">Auction Media</span> (Max 8)</div>
-                                                <div class="ad-auction-p1 fw-semibold mb-2">Only <span class="ad-auction-p fw-semibold">png</span>  and <span class="ad-auction-p fw-semibold">jpg</span>  formats are allowed.</div>
-                                                
+                                                <div class="ad-auction-p fw-semibold mb-2"><span
+                                                        class="text-black">Auction Media</span> (Max 8)</div>
+                                                <div class="ad-auction-p1 fw-semibold mb-2">Only <span
+                                                        class="ad-auction-p fw-semibold">png</span> and <span
+                                                        class="ad-auction-p fw-semibold">jpg</span> formats are allowed.
+                                                </div>
+
                                                 <div class="px-3">
-                                                    <div class="camera-container seller-ad-action-input fw-semibold px-2" >
-                                                        <div class="camera-inner-container seller-ad-action-input fw-semibold d-flex align-items-center justify-content-center">
-                                                            <img src="/assets/images/solar_camera-outline.svg" class="img-fluid" alt="camera-icon">
+                                                    <div
+                                                        class="camera-container seller-ad-action-input fw-semibold px-2">
+                                                        <div
+                                                            class="camera-inner-container seller-ad-action-input fw-semibold d-flex align-items-center justify-content-center">
+                                                            <img src="/assets/images/solar_camera-outline.svg"
+                                                                class="img-fluid" alt="camera-icon">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+
                                             </div>
 
-                                           
 
-                                            
+
+
                                         </form>
-                    
+
                                     </div>
-                                    
+
                                 </div>
-                                
+
                             </div>
 
 
@@ -416,13 +603,15 @@
                                     <div class="col-lg-7 col-md-11 col-sm-12 col-xs-12">
                                         <div class="row">
                                             <div class="d-flex justify-content-end mt-4 pe-0">
-                                                <button class="btn d-flex justify-content-center align-items-center switch-by-btn gap-2 mt-0">Submit for Admin Approval</button>
+                                                <button
+                                                    class="btn d-flex justify-content-center align-items-center switch-by-btn gap-2 mt-0">Submit
+                                                    for Admin Approval</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                     <!-- ################ hero-section end ####################### -->
@@ -499,42 +688,42 @@
 
     <script src="./assets/js/dashboard script.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const buttons = document.querySelectorAll('.seller-button[data-command]');
             const editor = document.getElementById('sellerEditor');
             const fullscreenBtn = document.getElementById('sellerFullscreenBtn');
             const dropdown = document.querySelector('.seller-dropdown');
-            
+
             // Initialize the editor
             editor.focus();
-            
+
             // Handle formatting buttons
             buttons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const command = this.dataset.command;
                     document.execCommand(command, false, null);
                     editor.focus();
                 });
             });
-            
+
             // Handle paragraph style dropdown
-            dropdown.addEventListener('change', function() {
+            dropdown.addEventListener('change', function () {
                 const value = this.value;
                 let command = 'formatBlock';
                 let tag = 'p';
-                
+
                 if (value === 'Heading 1') tag = 'h1';
                 else if (value === 'Heading 2') tag = 'h2';
                 else if (value === 'Heading 3') tag = 'h3';
-                
+
                 document.execCommand(command, false, '<' + tag + '>');
                 editor.focus();
             });
-            
+
             // Handle fullscreen toggle
-            fullscreenBtn.addEventListener('click', function() {
+            fullscreenBtn.addEventListener('click', function () {
                 const container = document.querySelector('.seller-editor-container');
-                
+
                 if (!document.fullscreenElement) {
                     if (container.requestFullscreen) {
                         container.requestFullscreen();
@@ -566,19 +755,19 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         // Initialize date pickers
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             flatpickr(".datepicker", {
                 dateFormat: "Y-m-d",
                 allowInput: true,
                 disableMobile: true
             });
-            
+
             // Add functionality to make the form work
             const form = document.querySelector('.auction-form');
             const inputs = form.querySelectorAll('input');
-            
+
             inputs.forEach(input => {
-                input.addEventListener('input', function() {
+                input.addEventListener('input', function () {
                     // You can add validation logic here
                     console.log(`${this.placeholder}: ${this.value}`);
                 });

@@ -82,3 +82,19 @@ window.onclick = function (event) {
                 icon.classList.add('fa-eye');
             }
         });
+
+
+        function togglePassword(id, eyeIcon) {
+          let passwordInput = document.getElementById(id);
+          if (passwordInput.type === "password") {
+              passwordInput.type = "text";
+              eyeIcon.src = "/assets/images/seller-pasword-icon11.svg"; // Change to open-eye icon
+          } else {
+              passwordInput.type = "password";
+              eyeIcon.src = "/assets/images/seller-pasword-icon.svg"; // Change back to closed-eye icon
+          }
+      }
+
+
+
+      
