@@ -22,8 +22,7 @@
 </head>
 
 <body>
-    <!-- header start -->
-    <!-- Navbar -->
+
 
 
     <!-- Offcanvas Sidebar -->
@@ -141,6 +140,7 @@
         </div>
     </div>
 
+    <!-- Navbar -->
     <!-- header start -->
     <nav class="navbar navbar-expand-lg buyer-custom-navbar px-lg-5 ">
         <div class="container-fluid px-lg-5">
@@ -1186,23 +1186,82 @@
 
 
         <!-- Popular Car Brands start -->
-        <section class="mt-5 p-5 border border-danger border-2 Buyer-Popular-Brands">
+        <section class="mt-5 p-0 p-md-5 Buyer-Popular-Brands">
             <h3 class="text-center BuyerPopular-main-title">Popular Car Brands</h3>
             <p class="text-center mt-2">Lorem ipsum is a dummy or placeholder text</p>
+
+
             <!-- cards starts -->
-            <div class="d-flex">
-                <div class="card position-relative" style="width: 320px;">
-                    <img class="card-img-top popularBrand-topimgs " src="../assets/images/Buyer Dashboard images/Popular Car Brands/img 1.jpeg" alt="Card image 1">
-                    <!-- logo -->
-                    <div class="position-absolute rounded-circle Cars-brands-logos">
-                        <img src="../assets/images/Buyer Dashboard images/Popular Car Brands/logo 1.png" alt="logo 1" class="img-fluid Buyer-Popular-Brands-Logo rounded-circle">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center justify-content-between">
+                    <!-- Card 1 -->
+                    <div class="col-12 col-md-3">
+                        <div class="card Popularbrands-card position-relative">
+                            <img src="../assets/images/Buyer Dashboard images/Popular Car Brands/img 1.jpeg"
+                                class="card-img-top Popularbrands-card-image" alt="Car Image">
+                            <!-- logo container -->
+                            <div class="position-absolute brands-logo-box">
+                                <img src="../assets/images/Buyer Dashboard images/Popular Car Brands/logo 1.png"
+                                    alt="Audi logo" class="img-fluid popular-brandslogo">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Audi</h5>
+                                <p class="card-text">Ongoing Auctions: <strong>57</strong></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+                    <!-- Card 2 -->
+                    <div class="col-12 col-md-3 mt-3 mt-md-0">
+                        <div class="card Popularbrands-card position-relative">
+                            <img src="../assets/images/Buyer Dashboard images/Popular Car Brands/img 2.jpeg"
+                                class="card-img-top Popularbrands-card-image" alt="Toyota Image">
+                            <!-- logo container -->
+                            <div class="position-absolute brands-logo-box">
+                                <img src="../assets/images/Buyer Dashboard images/Popular Car Brands/logo 2.png"
+                                    alt="Toyota logo" class="img-fluid popular-brandslogo">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Toyota</h5>
+                                <p class="card-text">Ongoing Auctions: <strong>57</strong></p>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-12 col-md-3 mt-3 mt-md-0">
+                        <div class="card Popularbrands-card position-relative">
+                            <img src="../assets/images/Buyer Dashboard images/Popular Car Brands/img 3.jpeg"
+                                class="card-img-top Popularbrands-card-image" alt="Lamborghini Image">
+                            <!-- logo container -->
+                            <div class="position-absolute brands-logo-box">
+                                <img src="../assets/images/Buyer Dashboard images/Popular Car Brands/logo 3.png"
+                                    alt="Lamborghini logo" class="img-fluid popular-brandslogo">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Lamborghini</h5>
+                                <p class="card-text">Ongoing Auctions: <strong>57</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="col-12 col-md-3 mt-3 mt-md-0">
+                        <div class="card Popularbrands-card position-relative">
+                            <img src="../assets/images/Buyer Dashboard images/Popular Car Brands/img 4.jpeg"
+                                class="card-img-top Popularbrands-card-image" alt="Nissan Image">
+                            <!-- logo container -->
+                            <div class="position-absolute brands-logo-box">
+                                <img src="../assets/images/Buyer Dashboard images/Popular Car Brands/logo 4.png"
+                                    alt="Nissan logo" class="img-fluid popular-brandslogo">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Nissan</h5>
+                                <p class="card-text">Ongoing Auctions: <strong>57</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -2687,7 +2746,7 @@
     <!-- main end -->
 
     <!-- footer start -->
-    <footer class="p-5 mt-5">
+    <footer class="p-md-5 p-3 mt-5">
         <div class="row d-flex justify-content-around">
             <div class="col-12 col-md-4">
                 <div class="d-flex flex-column justify-content-center">
@@ -2796,7 +2855,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5">
+            <div class="col-12 col-md-5 mt-3 mt-md-0">
                 <div class="form-container">
                     <h2 class="form-title">Drop Your Message</h2>
 
