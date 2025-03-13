@@ -4,17 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Responsive Navbar</title>
+    <title>My bids</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- buyer css -->
+    <link rel="stylesheet" href="../assets/css/buyer.css" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="../assets/images/logo.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="/assets/css/buyer.css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/buyer-db-logo.png" type="image/x-icon" />
+    <!-- Bootstrap cdns -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
 </head>
 
 <body>
@@ -134,34 +139,31 @@
         </div>
     </div>
 
-    <!-- header start -->
-    <nav class="navbar navbar-expand-lg buyer-custom-navbar px-lg-5 ">
+    <!-- navbar starts here -->
+    <nav class="navbar navbar-expand-lg buyer-custom-navbar px-lg-5">
         <div class="container-fluid px-lg-5">
             <!-- Left: Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="/assets/images/buyer-db-logo.png" class="buyerr-logo" alt="Logo" />
+            <a class="navbar-brand" href="./index.html">
+                <img src="/assets/images/buyer-db-logo.png" class="buyerr-logo" alt="Logo">
             </a>
+
             <!-- Right: Menu Icon for Mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#buyer-navbarContent">
                 <span class="buyer-menu-icon">☰</span>
             </button>
+
             <!-- Center & Right Items -->
             <div class="collapse navbar-collapse buyer-navbar-collapse" id="buyer-navbarContent">
                 <!-- Center: Navigation Items -->
                 <ul class="navbar-nav mx-auto buyer-navbar-nav gap-lg-5 gap-2">
-                    <li class="nav-item buyer-nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item buyer-nav-item">
-                        <a class="nav-link" href="#">Explore Auction</a>
-                    </li>
-                    <li class="nav-item buyer-nav-item">
-                        <a class="nav-link" href="#">My Bids</a>
-                    </li>
-                    <li class="nav-item buyer-nav-item">
-                        <a class="nav-link" href="#">Favorite</a>
-                    </li>
+                    <li class="nav-item buyer-nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item buyer-nav-item"><a class="nav-link" href="./auction_details.html">Explore
+                            Auction</a></li>
+                    <li class="nav-item buyer-nav-item"><a class="nav-link active" href="./my-account-bids.html">My
+                            Bids</a></li>
+                    <li class="nav-item buyer-nav-item"><a class="nav-link"
+                            href="./my-account-favorite.html">Favorite</a></li>
                 </ul>
 
                 <!-- Right: Icons (Visible on Large Screens, Appear Below on Small Screens) -->
@@ -201,7 +203,7 @@
             </div>
         </div>
     </nav>
-    <!-- header end -->
+    <!-- navbar ends here -->
 
     <section>
         <div class="container">
@@ -218,35 +220,39 @@
                 <div class="container-fluid">
                     <!-- Sidebar -->
                     <div class="row mt-5">
-                            <div class="col-md-3 col-lg-3 sidebar-buyer-profil px-0">
-                                <div class="d-flex flex-column">
-                                    <a href="my-account.html"
-                                        class="sidebar-item sidebar-item-buyr-profil1  ">Profile</a>
-                                    <a href="my-account-bids.html" class="sidebar-item  sidebar-item-buyr-profil active">My Bids</a>
-                                    <a href="my-account-favorite.html" class="sidebar-item sidebar-item-buyr-profil1 ">Favorite</a>
-                                    <a href="#" class="sidebar-item sidebar-item-buyr-profil1">Logout</a>
-                                </div>
+                        <div class="col-md-3 col-lg-3 sidebar-buyer-profil px-0">
+                            <div class="d-flex flex-column">
+                                <a href="my-account.html" class="sidebar-item sidebar-item-buyr-profil1  ">Profile</a>
+                                <a href="my-account-bids.html" class="sidebar-item  sidebar-item-buyr-profil active">My
+                                    Bids</a>
+                                <a href="my-account-favorite.html"
+                                    class="sidebar-item sidebar-item-buyr-profil1 ">Favorite</a>
+                                <a href="#" class="sidebar-item sidebar-item-buyr-profil1">Logout</a>
                             </div>
+                        </div>
 
                         <!-- Main Content -->
                         <div class="col-md-9 col-lg-9 ">
                             <div class="lh-sm bg-light text-dark rounded">
-                                
+
                                 <div class="container">
                                     <div class="acont-byer-container border-bottom">
                                         <!-- Navigation Tabs -->
                                         <ul class="nav acont-byer-nav" id="acont-byer-tabs">
                                             <li class="nav-item">
-                                                <a class="nav-link active" href="#all" data-bs-toggle="tab" onclick="switchTab(event, 'all')">All</a>
+                                                <a class="nav-link active" href="#all" data-bs-toggle="tab"
+                                                    onclick="switchTab(event, 'all')">All</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#ongoing" data-bs-toggle="tab" onclick="switchTab(event, 'ongoing')">Ongoing</a>
+                                                <a class="nav-link" href="#ongoing" data-bs-toggle="tab"
+                                                    onclick="switchTab(event, 'ongoing')">Ongoing</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#completed" data-bs-toggle="tab" onclick="switchTab(event, 'completed')">Completed</a>
+                                                <a class="nav-link" href="#completed" data-bs-toggle="tab"
+                                                    onclick="switchTab(event, 'completed')">Completed</a>
                                             </li>
                                         </ul>
-                                        
+
                                         <!-- Tab Content -->
                                         <!-- <div class="acont-byer-content">
                                             <div id="all" class="acont-byer-pane active">
@@ -283,35 +289,47 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <a href="#" class="text-dark acont-id-auction-name ps-3">Elite Sedan 2021 – Executive Class</a>
+                                                    <a href="#" class="text-dark acont-id-auction-name ps-3">Elite Sedan
+                                                        2021 – Executive Class</a>
                                                 </td>
                                                 <td class="acont-id-date">February 28, 2025 8:12 am</td>
                                                 <td class="acont-id-bid-amount">$5,778.00</td>
-                                                <td><span class="acont-id-status-badge acont-id-status-ongoing">Ongoing</span></td>
+                                                <td><span
+                                                        class="acont-id-status-badge acont-id-status-ongoing">Ongoing</span>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td><a href="#" class="text-dark acont-id-auction-name ps-3">Speedster 2022 – Midnight Black Edition</a></td>
+                                                <td><a href="#" class="text-dark acont-id-auction-name ps-3">Speedster
+                                                        2022 – Midnight Black Edition</a></td>
                                                 <td class="acont-id-date">February 25, 2025 8:12 am</td>
                                                 <td class="acont-id-bid-amount">$5,678.00</td>
-                                                <td><span class="acont-id-status-badge acont-id-status-ongoing">Ongoing</span></td>
+                                                <td><span
+                                                        class="acont-id-status-badge acont-id-status-ongoing">Ongoing</span>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td><a href="#" class="text-dark acont-id-auction-name ps-3">Off-Road Beast 4×4 – Adventure Ready</a></td>
+                                                <td><a href="#" class="text-dark acont-id-auction-name ps-3">Off-Road
+                                                        Beast 4×4 – Adventure Ready</a></td>
                                                 <td class="acont-id-date">December 4, 2024 7:06 pm</td>
                                                 <td class="acont-id-bid-amount">$5,578.00</td>
-                                                <td><span class="acont-id-status-badge acont-id-status-ongoing">Ongoing</span></td>
+                                                <td><span
+                                                        class="acont-id-status-badge acont-id-status-ongoing">Ongoing</span>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td><a href="#" class="text-dark acont-id-auction-name ps-3">Elite Sedan 2021 – Executive Class</a></td>
+                                                <td><a href="#" class="text-dark acont-id-auction-name ps-3">Elite Sedan
+                                                        2021 – Executive Class</a></td>
                                                 <td class="acont-id-date">September 4, 2024 7:06 pm</td>
                                                 <td class="acont-id-bid-amount">$5,578.00</td>
-                                                <td><span class="acont-id-status-badge acont-id-status-completed">Completed</span></td>
+                                                <td><span
+                                                        class="acont-id-status-badge acont-id-status-completed">Completed</span>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
 
