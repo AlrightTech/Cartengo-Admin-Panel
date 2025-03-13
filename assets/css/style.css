@@ -7,10 +7,14 @@
   margin: 0%;
   padding: 0%;
   /* height: auto; */
-  overflow: scroll !important;
+  
 }
 ::-webkit-scrollbar {
   display: none;
+}
+
+.scorll-resolve {
+  overflow: scroll !important;
 }
 
 :root {
@@ -1641,6 +1645,8 @@ body {
   background-color: #f9f9f9;
 }
 
+
+
 .image-container-upload {
   width: 120px;
   height: 120px;
@@ -2977,3 +2983,50 @@ color:  #666666 !important;
 }
 /* buyer-panel my account end */
 
+.switch-by-btn{
+font-weight: 600;
+font-size: 12.5px;
+vertical-align: middle;
+border-radius: 10px;
+
+padding: 9px 16px;
+
+
+}
+
+.actv-auct{
+font-weight: 600;
+font-size: 16px;
+vertical-align: middle;
+
+}
+
+.add-auction-bg {
+  background: #F5F5F5;
+  border-radius: 10px;
+}
+
+.ad-auction-hd {
+font-size: 18.5px;
+}
+
+.ad-auction-p{
+   color: #666666;
+   font-size: 12.5px;
+
+}
+
+.seller-ad-action-input {
+  border: 1px solid #DEE2E6;
+  border-radius: 10px;
+  padding: 15px 14px;
+  border-width: 1px;
+  background: #F5F5F5;
+
+}
+
+.seller-ad-action-input::placeholder {
+  color:  #999999;
+  font-size: 14px; 
+  opacity: 1; 
+}
