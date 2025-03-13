@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- style.css link -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- buyer.css link -->
+    <link rel="stylesheet" href="../assets/css/buyer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/images/buyer-db-logo.png" type="image/x-icon" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="loginpage-body">
+    <div class="container">
+        <div class="login-container mt-2 mb-5">
+            <div class="login-logo-container">
+                <!-- Placeholder for logo -->
+                <img src="../assets/images/logo.svg" alt="Cartengo Logo" class="login-logo">
+            </div>
+            
+            <h4 class="fw-semibold">Login</h4>
+            <p>Don't have an account? <a href="./CreateAccount2.html" class="login-register-link">Register</a></p>
+            
+            <form class="login-form">
+                <div class="mb-2">
+                    <label for="login-email" class="login-form-label">Email</label>
+                    <input type="email" class="form-control login-form-control mt-2" id="login-email" placeholder="Email Address">
+                </div>
+                
+                <div class="mb-2">
+                    <label for="login-password" class="login-form-label">Password</label>
+                    <div class="login-password-field">
+                        <input type="password" class="form-control login-form-control mt-2" id="login-password" placeholder="Password">
+                        <span class="login-password-toggle">
+                            <i class="far fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn buyer-primary-btn w-100">Sign in</button>
+            </form>
+            
+            <!-- OR CONTINUE WITH  -->
+            <div class="container-fluid mt-4">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-3 social-divider-lines"></div>
+                    <div class="col-6 text-muted">OR CONTINUE WITH</div>
+                    <div class="col-3 social-divider-lines "></div>
+                </div>
+            </div>
+            
+            <!-- social icons -->
+            <div class="d-flex justify-content-center gap-2 login-social-login">
+                <!-- Google Icon -->
+                <div class="Login-socials-boxes rounded-2 py-2 px-3 d-flex justify-content-between gap-1 align-items-center">
+                    <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_5350_952)">
+                        <path d="M19.9924 13.0595C19.9924 12.3886 19.9379 11.899 19.8201 11.3913H12.1594V14.4193H16.656C16.5654 15.1718 16.0759 16.3051 14.9879 17.0666L14.9727 17.168L17.3949 19.0444L17.5627 19.0611C19.1039 17.6378 19.9924 15.5435 19.9924 13.0595Z" fill="#4285F4"/>
+                        <path d="M12.1594 21.0375C14.3624 21.0375 16.2118 20.3122 17.5627 19.0611L14.9879 17.0666C14.2989 17.5471 13.3742 17.8825 12.1594 17.8825C10.0017 17.8825 8.17036 16.4592 7.51755 14.4919L7.42186 14.5L4.90324 16.4492L4.8703 16.5408C6.21205 19.2061 8.96811 21.0375 12.1594 21.0375Z" fill="#34A853"/>
+                        <path d="M7.51756 14.4919C7.34531 13.9842 7.24562 13.4402 7.24562 12.8781C7.24562 12.316 7.34531 11.7721 7.5085 11.2644L7.50394 11.1563L4.95375 9.17575L4.87031 9.21544C4.31731 10.3215 4 11.5636 4 12.8781C4 14.1927 4.31731 15.4347 4.87031 16.5408L7.51756 14.4919Z" fill="#FBBC05"/>
+                        <path d="M12.1594 7.87369C13.6915 7.87369 14.725 8.5355 15.3143 9.08856L17.6171 6.84019C16.2028 5.52562 14.3624 4.71875 12.1594 4.71875C8.96811 4.71875 6.21205 6.55006 4.8703 9.21544L7.50849 11.2644C8.17036 9.29706 10.0017 7.87369 12.1594 7.87369Z" fill="#EB4335"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_5350_952">
+                        <rect width="16" height="16.375" fill="white" transform="translate(4 4.71875)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                    <span>Google</span>                        
+                </div>
+
+                <!-- Facebook Icon -->
+                <div class="Login-socials-boxes rounded-2 py-2 px-3 d-flex justify-content-between gap-1 align-items-center">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.5 12C22.5 6.48 18.02 2 12.5 2C6.98 2 2.5 6.48 2.5 12C2.5 16.84 5.94 20.87 10.5 21.8V15H8.5V12H10.5V9.5C10.5 7.57 12.07 6 14 6H16.5V9H14.5C13.95 9 13.5 9.45 13.5 10V12H16.5V15H13.5V21.95C18.55 21.45 22.5 17.19 22.5 12Z" fill="#0078F6"/>
+                        </svg>
+                        
+                    <span>Facebook</span>                        
+                </div>
+
+                <!-- Apple Icon -->
+                <div class="Login-socials-boxes rounded-2 py-2 px-3 d-flex justify-content-between gap-1 align-items-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.05 20.28C16.07 21.23 15 21.08 13.97 20.63C12.88 20.17 11.88 20.15 10.73 20.63C9.28998 21.25 8.52998 21.07 7.66998 20.28C2.78998 15.25 3.50998 7.59 9.04998 7.31C10.4 7.38 11.34 8.05 12.13 8.11C13.31 7.87 14.44 7.18 15.7 7.27C17.21 7.39 18.35 7.99 19.1 9.07C15.98 10.94 16.72 15.05 19.58 16.2C19.01 17.7 18.27 19.19 17.04 20.29L17.05 20.28ZM12.03 7.25C11.88 5.02 13.69 3.18 15.77 3C16.06 5.58 13.43 7.5 12.03 7.25Z" fill="#2C2C2C"/>
+                        </svg>
+                        
+                        
+                    <span>Apple</span>                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Password visibility toggle
+        document.querySelector('.login-password-toggle').addEventListener('click', function() {
+            const passwordInput = document.getElementById('login-password');
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    </script>
+</body>
+</html>
