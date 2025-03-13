@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --carexpo-sidebar-bg: #004d33;
+    --carexpo-sidebar-active: #e67e22;
+    --carexpo-sidebar-hover: #006644;
+    --carexpo-sidebar-width: 250px;
+    --carexpo-sidebar-collapsed-width: 80px;
+    --carexpo-topbar-height: 60px;
+    --carexpo-scrollbar-color: #006644;
+    --sidebar-bg: #004225;
+    --sidebar-hover: #ff6f0033;
+    --sidebar-active: #ff6f00;
+    --sidebar-active-bg: #ff6f0033;
+    --input-field-bg-color: #f5f5f5;
+    --metric-card-title-color: #666666;
+
+    --font-family: "Urbanist", sans-serif;
+    --nav-items-light-color: #333333CC;
+}
+
+* {
+    font-family: var(--font-family);
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+/* Buyer Dashboard styling starts here */
+
+/* Buyer header starts */
+.buyer-custom-navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.buyer-navbar-brand img {
+    height: 40px;
+}
+
+.buyer-navbar-nav {
+    margin: auto;
+}
+
+.buyer-nav-item a {
+
+    color: var(--nav-items-light-color);
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+
+
+}
+
+.buyer-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.buyer-menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .buyer-icons {
+        display: none;
+    }
+
+    .buyer-navbar-nav {
+        text-align: center;
+    }
+
+    .buyer-navbar-collapse.show .buyer-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+.buyerr-logo {
+    width: 62px;
+    height: 60px;
+
+}
+
+/* Buyer header ends */
+
+/* Buyer hero section starts */
+.buyer-heroSection {
+    background-image: url("../images/Buyer Dashboard images/hero-section-images/bg-car.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: 100% 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.Buyer-Hero-mainRow {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    /* Ensure the parent container has a height */
+}
+
+.Buyer-hero-Heading {
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 50px;
+}
+
+.Buyer-highlight-text {
+    color: var(--sidebar-active);
+}
+
+.Buyer-hero-description {
+    font-weight: 200;
+    font-size: 17px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.Buyerhero-search-input {
+    padding-block: 13px !important;
+    font-weight: 400;
+    font-size: 16px;
+    padding-right: 3rem !important;
+    border: 1px solid green;
+}
+
+.Buyerhero-search-input:focus {
+    box-shadow: none !important;
+    border: 1px solid white !important;
+}
+
+.Buyerhero-SearchIcon {
+    position: absolute;
+    right: 18px;
+    top: 6px;
+    background-color: #1C1B4B;
+    height: 40px;
+    width: 40px;
+}
+
+.Buyerhero-SearchIcon:hover {
+    cursor: pointer;
+}
+
+/* Buyer hero section ends */
+
+
+/* Live Auction Section Starts */
+
+
+.Buyer-LiveAuction-Description {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: start;
+    vertical-align: middle;
+    text-transform: capitalize;
+    color: #666666dc;
+}
+
+.Live-Auction-Prev-btn,
+.Live-Auction-Next-btn {
+    width: 32px;
+    height: 32px;
+}
+
+.Live-Auction-Next-btn:hover,
+.Live-Auction-Prev-btn:hover {
+    cursor: pointer;
+    background-color: rgba(211, 211, 211, 0.215);
+}
+
+.Buyer-Hero-main {
+    height: 100vh;
+}
+
+.Buyer-Cards-top-imgs {
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+    height: 270px !important;
+    object-fit: cover !important;
+}
+
+.Buyer-Dashboard-cards {
+    border-radius: 12px !important;
+    border: 0px !important;
+    width: 16rem !important;
+}
+
+.Buyer-Dashboard-Cardbody {
+    background-color: #F5F5F5;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 8px !important;
+}
+
+.Buyer-Dashboard-CardTitle {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.Buyer-CurrentBid {
+    color: #666666;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.Buyer-CurrentBidDollars {
+    font-family: Urbanist;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.buyer-primary-btn {
+    background-color: var(--sidebar-active) !important;
+    color: #ffffff !important;
+}
+
+.buyer-primary-btn:hover {
+    background-color: transparent !important;
+    color: var(--sidebar-active) !important;
+    border: 1px solid var(--sidebar-active) !important;
+}
+
+.Buyercard-inner-content {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid #CF0303;
+}
+
+.BuyerCard-live-box {
+    background-color: #CF0303;
+}
+
+.BuyerCards-Live-title {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.BuyerCards-liveIcon {
+    background: #CF0303;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.BuyerCards-heartsIcons {
+    background-color: white;
+}
+
+.BuyerCards-timeHeads {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.ByerCards-timeDescription {
+    font-weight: 500;
+    font-size: 10px;
+    color: #666666;
+}
+
+.BuyerCards-time-DoubleDots {
+    color: #666666;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Buyerdashboard-Cards {
+    position: relative;
+    height: 100%;
+}
+
+/* Live Auction Section ends */
+
+/* Buyer-Popular-Brands starts*/
+.Buyer-Popular-Brands{
+    background-color: #fcf7ea;
+
+}
+.BuyerPopular-main-title{
+font-weight: 700;
+font-size: 30px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+text-transform: capitalize;
+}
+
+.Popularbrands-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px !important;
+    text-align: left !important;
+}
+
+.Popularbrands-card-image {
+    height: 180px;
+    object-fit: cover;
+}
+
+.brands-logo-box{
+    bottom: 90px;
+    left: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: white;
+
+}
+.popular-brandslogo{
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
+.Popularbrands-card .card-body {
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+/* Buyer-Popular-Brands ends*/
+
+/* Highest Bidding Auctions starts */
+.brand-filter {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+}
+
+.brand-btn {
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-size: 13px;
+    border: 1px solid #dee2e6;
+    background-color: white;
+    color: #495057;
+    transition: all 0.2s ease;
+}
+
+.brand-btn.active {
+    background-color: #FF6F00;
+    color: white;
+    border-color: #FF6F00;
+}
+
+.brand-btn:hover:not(.active) {
+    background-color: #f8f9fa;
+}
+
+@media (min-width:320px) and (max-width:768px) {
+    .Buyer-Dashboard-cards {
+        width: 100% !important;
+    }
+
+}
+
+/* Highest Bidding Auctions ends*/
+
+/* Footer starts */
+footer {
+    background: linear-gradient(135deg, #c9f5f5 0%, #d9e7ff 100%);;
+}
+
+.Footer-needHelp-Description {
+    /* text-align: justify; */
+    font-family: Urbanist;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding-right:20px;
+}
+.buyerFoter-social-icons{
+    transition: all 0.5s ease-in-out;
+}
+.buyerFoter-social-icons:hover{
+    transform: scale(1.1);
+}
+.Footer-Need-Help{
+    font-family: Urbanist;
+font-weight: 700;
+font-size: 36px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+text-transform: capitalize;
+
+}
+.Footer-Contact-info{
+    font-family: Urbanist;
+font-weight: 500;
+font-size: 22px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+text-transform: capitalize;
+}
+
+.footer-contact-info-description{
+    font-family: Urbanist;
+font-weight: 500;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: capitalize;
+color: #666666;
+}
+footer .a{
+    color: #ffffff;
+}
+footer a{
+    text-decoration: none;    
+}
+
+/* footer form starts */
+.form-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 500;
+}
+
+.Buyer-dropmsg-formcontrol {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.Buyer-dropmsg-formcontrol:focus {
+    box-shadow: none !important;
+    border:1px solid black !important;
+}
+
+textarea.Buyer-dropmsg-formcontrol {
+    min-height: 150px;
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #1a1b4b;
+    color: white;
+    border: 2px solid #1a1b4b;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    float: right;
+}
+
+.submit-btn:hover {
+    background-color: transparent;
+    color: #1a1b4b;
+}
+
+
+/* footer form ends */
+/* Footer ends */
+/* Buyer Dashboard styling starts here */

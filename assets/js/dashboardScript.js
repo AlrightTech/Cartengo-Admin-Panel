@@ -102,3 +102,6 @@ new Chart(circularChart, {
 
 
 // script for circular chart in Analytics and Reports
+
+
+// script for tabs in Buyer Dashboard index page
