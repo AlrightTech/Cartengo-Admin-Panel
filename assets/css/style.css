@@ -759,6 +759,12 @@ padding-left: 14px; */
   color: #dc3545;
 }
 
+.status-pnding {
+  background: #919EAB29;
+  color: #637381;
+
+}
+
 .action-btn {
   background: none;
   border: none;
@@ -1662,8 +1668,8 @@ body {
 
 
 .image-container-upload {
-  width: 120px;
-  height: 120px;
+  width: 109px;
+  height: 109px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1674,8 +1680,8 @@ body {
 }
 
 .image-container-upload img {
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   cursor: pointer;
 }
 
@@ -3395,6 +3401,15 @@ font-size: 18.5px;
 
 }
 
+.ad-auction-p1{
+font-weight: 600;
+font-size: 12.5px;
+
+color: #999999;
+
+
+}
+
 .seller-ad-action-input {
   border: 1px solid #DEE2E6;
   border-radius: 10px;
@@ -3409,3 +3424,156 @@ font-size: 18.5px;
   font-size: 14px; 
   opacity: 1; 
 }
+
+.seller-editor-container {
+  max-width: 800px;
+  margin: 20px auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.seller-toolbar {
+  background: #F5F5F5;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.seller-dropdown {
+  background: #F5F5F5;
+
+  height: 36px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0 10px;
+  /* background-color: white; */
+  font-size: 14px;
+  color: #6c757d;
+  cursor: pointer;
+}
+.seller-content-area:empty::before {
+  content: "Add Description" !important;
+  color:  #999999 !important;
+  font-size: 14px !important; 
+  opacity: 1; 
+  font-weight: 600 Im !important;
+}
+.seller-button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.seller-button:hover {
+  background-color: #e9ecef;
+}
+
+.seller-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #e0e0e0;
+  margin: 0 5px;
+}
+
+.seller-content-area {
+  min-height: 220px;
+  padding: 15px;
+  outline: none;
+  color: #6c757d;
+}
+
+.seller-content-area:empty:before {
+  content: 'Add Description';
+  color: #adb5bd;
+}
+
+.seller-fullscreen-btn {
+  margin-left: auto;
+}
+
+.camera-inner-container {
+  width: 100px;
+height: 100px;
+
+}
+
+.orng-clrr {
+
+}
+
+/* .nav-link .orng-clrr .active {
+color:  #FF6F00 !important;
+border-bottom: 2px solid #FF6F00 !important;
+;
+} */
+
+.userr-nav-tabs .seller-nav-link {
+  border: none;
+  padding: 10px 15px;
+  margin-right: 5px;
+  border-radius: 0;
+  position: relative;
+  color: #666666;
+  /* font-family: "Urbanist"; */
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.userr-nav-tabs .seller-nav-link.active {
+  color:  #FF6F00 !important;
+border-bottom: 2px solid #FF6F00 !important;
+  font-weight: 500;
+  background-color: transparent;
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 13px;
+}
+.total-trasacion-icon {
+  width: 32px;
+height: 32px;
+
+}
+.earning-card {
+  background-color: var(--input-field-bg-color);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.earning-number {
+  color: #999999;
+  
+  font-weight: 600;
+  font-size: 10.6px;
+  vertical-align: middle;
+  
+}
+
+.earning-value {
+font-weight: 600;
+font-size: 14.5px;
+vertical-align: middle;
+}
+
+.earning-transaction{
+font-weight: 700;
+font-size: 17px;
+
+
+}
+
+.upload-p{
+  color: #333333 !important;
+
+}
+
