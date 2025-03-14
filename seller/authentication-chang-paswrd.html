@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Change Password</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/images/buyer-db-logo.png" type="image/x-icon" />
+    <!-- buyer.css link -->
+    <link rel="stylesheet" href="../assets/css/buyer.css">
+</head>
+<body class="Change-Password-Body">
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card password-card">
+        <div class="card-body">
+            <h4 class="fw-bold">Change Password</h4>
+            <p class="text-new">Create a New Password</p>
+
+            <form>
+                <div class="mb-2">
+                    <label for="New-Password" class="login-form-label mb-2">New Password</label>
+                        <div class="seller-password-group">
+                            <input type="password" id="seller-new-password"
+                                class="seller-password-input" placeholder="New Password">
+                            <img src="/assets/images/seller-pasword-icon.svg"
+                                class="seller-password-toggle"
+                                onclick="togglePassword('seller-new-password', this)">
+                        </div>                              
+                </div>
+
+                <div class="mb-2">
+                    <label for="Confirm-Password" class="login-form-label mb-2">Confirm Password</label>
+                    <div class="seller-password-group">
+                        <input type="password" id="seller-confirm-password"
+                            class="seller-password-input"
+                            placeholder="Confirm New Password">
+                        <img src="/assets/images/seller-pasword-icon.svg"
+                            class="seller-password-toggle"
+                            onclick="togglePassword('seller-confirm-password', this)">
+                    </div>
+                </div>
+
+                <button class="btn buyer-primary-btn py-2 w-100">Reset Password</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- script file -->
+<script src="../assets/main.js"></script>
+</body>
+</html>
