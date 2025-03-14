@@ -301,7 +301,7 @@
                                         </p>
                                     </div>
                                     <button
-                                        class="btn d-flex justify-content-center align-items-center switch-by-btn gap-2 mt-0 me-4"
+                                        class="btn d-flex justify-content-center align-items-center switch-by-btn gap-2 mt-0"
                                         type="button">
                                         <img src="/assets/images/ph_hand-withdraw.svg">
                                         Withdraw
@@ -317,7 +317,7 @@
                                 <!-- metric cards -->
                                 <div class="row g-4 mt-2" data-aos="fade-down">
                                     <!-- Total Users Card -->
-                                    <div class="col-12 col-md-6 col-lg-4 mb-2">
+                                    <div class="col-12 col-md-6 col-lg-4 mb-2 mt-2">
                                         <div class="earning-card d-flex gap-3 align-items-center">
                                             <img src="/assets/images/total-transactions.svg"
                                                 class="total-trasacion-icon" alt="total transactions"
@@ -331,7 +331,7 @@
                                     </div>
 
                                     <!-- Pending Approvals Card -->
-                                    <div class="col-12 col-md-6 col-lg-4 mb-2">
+                                    <div class="col-12 col-md-6 col-lg-4 mb-2 mt-2">
                                         <div class="earning-card d-flex gap-3 align-items-center">
                                             <img src="/assets/images/pending-payouts.svg" class="total-trasacion-icon"
                                                 alt="total transactions" class="img-fluid chartGraph-img">
@@ -344,7 +344,7 @@
                                     </div>
 
                                     <!-- Completed Sales Card -->
-                                    <div class="col-12 col-md-6 col-lg-4 mb-2">
+                                    <div class="col-12 col-md-6 col-lg-4 mb-2 mt-2">
                                         <div class="earning-card d-flex gap-3 align-items-center">
                                             <img src="/assets/images/completed-payouts.svg" class="total-trasacion-icon"
                                                 alt="total transactions" class="img-fluid chartGraph-img">
@@ -358,348 +358,386 @@
 
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
-                </div>
+                    <div class="earning-table">
 
-                <div class="container earning-table">
-                    <div class="row mt-4  mb-5">
-                        <div class="container user-mngmnt-table">
+                        <div class="row mt-4 mb-5">
+                            <div class="col-md-12">
 
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="userr-scroll-container">
-                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                                            <!-- Scrollable Tabs -->
-                                            <div class="earning-transaction">
-                                                Transaction History
-                                            </div>
+                                <div class="container user-mngmnt-table1">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="userr-scroll-container">
+                                                <div
+                                                    class="d-flex flex-wrap justify-content-between align-items-center">
+                                                    <!-- Scrollable Tabs -->
+                                                    <div class="earning-transaction">
+                                                        Transaction History
+                                                    </div>
 
-                                            <!-- Search and Filter -->
-                                            <div class="search-filter-container">
-                                                <div class="search-container">
-                                                    <i class="user-bi-search">
-                                                        <img src="/assets/images/fi-rr-search.svg" class="img-fluid">
-                                                    </i>
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Search Transaction">
+                                                    <!-- Search and Filter -->
+                                                    <div class="search-filter-container">
+                                                        <div class="search-container">
+                                                            <i class="user-bi-search">
+                                                                <img src="/assets/images/fi-rr-search.svg"
+                                                                    class="img-fluid">
+                                                            </i>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Search Transaction">
+                                                        </div>
+                                                        <button class="filter-btn">
+                                                            <i class="bi bi-funnel" style="font-size: 17px;"></i>
+                                                            Filter
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                                <button class="filter-btn">
-                                                    <i class="bi bi-funnel" style="font-size: 17px;"></i>
-                                                    Filter
-                                                </button>
                                             </div>
+
+
+
                                         </div>
                                     </div>
 
+                                    <!-- User Table -->
+                                    <div class="table-responsive ">
+                                        <table class="table user-mngmnt-table-bg"
+                                            style="background-color: #F5F5F5 !important;">
+                                            <thead>
+                                                <tr class="align-middle">
+                                                    <th>Transaction ID</th>
+                                                    <th>Date</th>
+                                                    <th>Amount</th>
+                                                    <th>Payment Status</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
 
+                                                <tr class="align-middle">
+                                                    <td class="usermngmnt-tale-col">ORD-1562792771583</td>
+                                                    <td class="usermngmnt-tale-col">27/02/2020</td>
+                                                    <td class="usermngmnt-tale-col">₹ 3500</td>
+                                                    <td><span class="status-badge status-active">Paid</span></td>
+                                                    <td>
+                                                        <div class="user-dropdown">
+                                                            <button class="btn user-dropdown-toggle border-0"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <div class="dd-btn">
+                                                                    <img class="dd-icon-sizzz"
+                                                                        src="/assets/images/mage_dots.svg">
+                                                                </div>
+                                                                <!-- Three-dot vertical icon -->
+                                                            </button>
+                                                            <ul
+                                                                class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                <li><a class="dropdown-item"
+                                                                        href="./create-aution-form.html"><span><img
+                                                                                src="./assets/images/carbon_view.svg"
+                                                                                class="me-3 dd-icon-size"></span> Update
+                                                                        Role</a></li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/clarity_edit-line.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Edit</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/delete-dd-icon.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Delete</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="align-middle">
+                                                    <td class="usermngmnt-tale-col">ORD-1562792771583</td>
+                                                    <td class="usermngmnt-tale-col">27/02/2020</td>
+                                                    <td class="usermngmnt-tale-col">₹ 3500</td>
+                                                    <td><span class="status-badge status-suspended">Unpaid</span></td>
+                                                    <td>
+                                                        <div class="user-dropdown">
+                                                            <button class="btn user-dropdown-toggle border-0"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <div class="dd-btn">
+                                                                    <img class="dd-icon-sizzz"
+                                                                        src="/assets/images/mage_dots.svg">
+                                                                </div>
+                                                                <!-- Three-dot vertical icon -->
+                                                            </button>
+                                                            <ul
+                                                                class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                <li><a class="dropdown-item"
+                                                                        href="./create-aution-form.html"><span><img
+                                                                                src="./assets/images/carbon_view.svg"
+                                                                                class="me-3 dd-icon-size"></span> Update
+                                                                        Role</a></li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/clarity_edit-line.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Edit</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/delete-dd-icon.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Delete</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="align-middle">
+                                                    <td class="usermngmnt-tale-col">ORD-1562792771583</td>
+                                                    <td class="usermngmnt-tale-col">27/02/2020</td>
+                                                    <td class="usermngmnt-tale-col">₹ 3500</td>
+                                                    <td><span class="status-badge status-pnding">Pending</span></td>
+                                                    <td>
+                                                        <div class="user-dropdown">
+                                                            <button class="btn user-dropdown-toggle border-0"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <div class="dd-btn">
+                                                                    <img class="dd-icon-sizzz"
+                                                                        src="/assets/images/mage_dots.svg">
+                                                                </div>
+                                                                <!-- Three-dot vertical icon -->
+                                                            </button>
+                                                            <ul
+                                                                class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                <li><a class="dropdown-item"
+                                                                        href="./create-aution-form.html"><span><img
+                                                                                src="./assets/images/carbon_view.svg"
+                                                                                class="me-3 dd-icon-size"></span> Update
+                                                                        Role</a></li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/clarity_edit-line.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Edit</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/delete-dd-icon.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Delete</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="align-middle">
+                                                    <td class="usermngmnt-tale-col">ORD-1562792771583</td>
+                                                    <td class="usermngmnt-tale-col">27/02/2020</td>
+                                                    <td class="usermngmnt-tale-col">₹ 3500</td>
+                                                    <td><span class="status-badge status-active">Paid</span></td>
+                                                    <td>
+                                                        <div class="user-dropdown">
+                                                            <button class="btn user-dropdown-toggle border-0"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <div class="dd-btn">
+                                                                    <img class="dd-icon-sizzz"
+                                                                        src="/assets/images/mage_dots.svg">
+                                                                </div>
+                                                                <!-- Three-dot vertical icon -->
+                                                            </button>
+                                                            <ul
+                                                                class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                <li><a class="dropdown-item"
+                                                                        href="./create-aution-form.html"><span><img
+                                                                                src="./assets/images/carbon_view.svg"
+                                                                                class="me-3 dd-icon-size"></span> Update
+                                                                        Role</a></li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/clarity_edit-line.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Edit</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/delete-dd-icon.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Delete</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="align-middle">
+                                                    <td class="usermngmnt-tale-col">ORD-1562792771583</td>
+                                                    <td class="usermngmnt-tale-col">27/02/2020</td>
+                                                    <td class="usermngmnt-tale-col">₹ 3500</td>
+                                                    <td><span class="status-badge status-suspended">Unpaid</span></td>
+                                                    <td>
+                                                        <div class="user-dropdown">
+                                                            <button class="btn user-dropdown-toggle border-0"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <div class="dd-btn">
+                                                                    <img class="dd-icon-sizzz"
+                                                                        src="/assets/images/mage_dots.svg">
+                                                                </div>
+                                                                <!-- Three-dot vertical icon -->
+                                                            </button>
+                                                            <ul
+                                                                class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                <li><a class="dropdown-item"
+                                                                        href="./create-aution-form.html"><span><img
+                                                                                src="./assets/images/carbon_view.svg"
+                                                                                class="me-3 dd-icon-size"></span> Update
+                                                                        Role</a></li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/clarity_edit-line.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Edit</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/delete-dd-icon.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Delete</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="align-middle">
+                                                    <td class="usermngmnt-tale-col">ORD-1562792771583</td>
+                                                    <td class="usermngmnt-tale-col">27/02/2020</td>
+                                                    <td class="usermngmnt-tale-col">₹ 3500</td>
+                                                    <td><span class="status-badge status-pnding">Pending</span></td>
+                                                    <td>
+                                                        <div class="user-dropdown">
+                                                            <button class="btn user-dropdown-toggle border-0"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <div class="dd-btn">
+                                                                    <img class="dd-icon-sizzz"
+                                                                        src="/assets/images/mage_dots.svg">
+                                                                </div>
+                                                                <!-- Three-dot vertical icon -->
+                                                            </button>
+                                                            <ul
+                                                                class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                <li><a class="dropdown-item"
+                                                                        href="./create-aution-form.html"><span><img
+                                                                                src="./assets/images/carbon_view.svg"
+                                                                                class="me-3 dd-icon-size"></span> Update
+                                                                        Role</a></li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/clarity_edit-line.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Edit</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item" href="#"><span><img
+                                                                                src="./assets/images/delete-dd-icon.svg"
+                                                                                class="me-3 dd-icon-size"></span>
+                                                                        Delete</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <nav aria-label="User Page Navigation">
+                                        <ul class="user-pagination">
+                                            <li class="user-page-item user-disabled hide-pg">
+                                                <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
+                                                    href="#" aria-label="First">
+                                                    <span aria-hidden="true" class="d-flex align-items-center">
+                                                        <img src="/assets/images/double-first-icon.svg"
+                                                            class="more-size1">
+                                                    </span>
+                                                    <p class="pg-txtt mb-0 d-flex align-items-center">First</p>
+                                                </a>
+                                            </li>
+
+                                            <li class="user-page-item user-disabled">
+                                                <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
+                                                    href="#" aria-label="Previous">
+                                                    <span aria-hidden="true" class="d-flex align-items-center">
+                                                        <img src="/assets/images/bak-arow-icon.svg" class="more-size2">
+                                                    </span>
+                                                    <p class="pg-txtt mb-0 d-flex align-items-center">Back</p>
+                                                </a>
+                                            </li>
+
+                                            <li class="user-page-item d-flex align-items-center justify-content-center">
+                                                <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
+                                                    href="#">1</a>
+                                            </li>
+
+                                            <li
+                                                class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
+                                                <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
+                                                    href="#">2</a>
+                                            </li>
+
+
+                                            <li
+                                                class="user-page-item user-disabled d-flex align-items-center justify-content-center">
+                                                <a class="user-page-link d-flex align-items-center justify-content-center"
+                                                    style="padding: 10.5px 13px;" href="#">
+                                                    <img src="/assets/images/• • •.svg">
+
+                                                </a>
+                                            </li>
+
+                                            <li class="user-page-item d-flex align-items-center justify-content-center">
+                                                <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
+                                                    href="#">7</a>
+                                            </li>
+
+                                            <li
+                                                class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
+                                                <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
+                                                    href="#">8</a>
+                                            </li>
+
+                                            <li class="user-page-item">
+                                                <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
+                                                    href="#" aria-label="Next">
+                                                    <p class="pg-txtt mb-0 d-flex align-items-center">Next</p>
+                                                    <span aria-hidden="true" class="d-flex align-items-center">
+                                                        <img src="/assets/images/last-pg1.svg" class="more-size2">
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="user-page-item hide-pg">
+                                                <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
+                                                    href="#" aria-label="Last">
+                                                    <p class="pg-txtt mb-0 d-flex align-items-center">Last</p>
+                                                    <span aria-hidden="true" class="d-flex align-items-center">
+                                                        <img src="/assets/images/last-pg2.svg" class="more-size1">
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </nav>
 
                                 </div>
+
                             </div>
-
-                            <!-- User Table -->
-                            <div class="table-responsive ">
-                                <table class="table user-mngmnt-table-bg" style="background-color: #F5F5F5 !important;">
-                                    <thead>
-                                        <tr class="align-middle">
-                                            <th>Transaction ID</th>
-                                            <th>Date</th>
-                                            <th>Amount</th>
-                                            <th>Payment Status</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                        <tr class="align-middle">
-                                            <td class="usermngmnt-tale-col">ORD-1562792771583</td>
-                                            <td class="usermngmnt-tale-col">27/02/2020</td>
-                                            <td class="usermngmnt-tale-col">₹ 3500</td>
-                                            <td><span class="status-badge status-active">Paid</span></td>
-                                            <td>
-                                                <div class="user-dropdown">
-                                                    <button class="btn user-dropdown-toggle border-0" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <div class="dd-btn">
-                                                            <img class="dd-icon-sizzz"
-                                                                src="/assets/images/mage_dots.svg">
-                                                        </div>
-                                                        <!-- Three-dot vertical icon -->
-                                                    </button>
-                                                    <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                        <li><a class="dropdown-item"
-                                                                href="./create-aution-form.html"><span><img
-                                                                        src="./assets/images/carbon_view.svg"
-                                                                        class="me-3 dd-icon-size"></span> Update
-                                                                Role</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/clarity_edit-line.svg"
-                                                                        class="me-3 dd-icon-size"></span> Edit</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/delete-dd-icon.svg"
-                                                                        class="me-3 dd-icon-size"></span> Delete</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="align-middle">
-                                            <td class="usermngmnt-tale-col">ORD-1562792771583</td>
-                                            <td class="usermngmnt-tale-col">27/02/2020</td>
-                                            <td class="usermngmnt-tale-col">₹ 3500</td>
-                                            <td><span class="status-badge status-suspended">Unpaid</span></td>
-                                            <td>
-                                                <div class="user-dropdown">
-                                                    <button class="btn user-dropdown-toggle border-0" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <div class="dd-btn">
-                                                            <img class="dd-icon-sizzz"
-                                                                src="/assets/images/mage_dots.svg">
-                                                        </div>
-                                                        <!-- Three-dot vertical icon -->
-                                                    </button>
-                                                    <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                        <li><a class="dropdown-item"
-                                                                href="./create-aution-form.html"><span><img
-                                                                        src="./assets/images/carbon_view.svg"
-                                                                        class="me-3 dd-icon-size"></span> Update
-                                                                Role</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/clarity_edit-line.svg"
-                                                                        class="me-3 dd-icon-size"></span> Edit</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/delete-dd-icon.svg"
-                                                                        class="me-3 dd-icon-size"></span> Delete</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="align-middle">
-                                            <td class="usermngmnt-tale-col">ORD-1562792771583</td>
-                                            <td class="usermngmnt-tale-col">27/02/2020</td>
-                                            <td class="usermngmnt-tale-col">₹ 3500</td>
-                                            <td><span class="status-badge status-pnding">Pending</span></td>
-                                            <td>
-                                                <div class="user-dropdown">
-                                                    <button class="btn user-dropdown-toggle border-0" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <div class="dd-btn">
-                                                            <img class="dd-icon-sizzz"
-                                                                src="/assets/images/mage_dots.svg">
-                                                        </div>
-                                                        <!-- Three-dot vertical icon -->
-                                                    </button>
-                                                    <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                        <li><a class="dropdown-item"
-                                                                href="./create-aution-form.html"><span><img
-                                                                        src="./assets/images/carbon_view.svg"
-                                                                        class="me-3 dd-icon-size"></span> Update
-                                                                Role</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/clarity_edit-line.svg"
-                                                                        class="me-3 dd-icon-size"></span> Edit</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/delete-dd-icon.svg"
-                                                                        class="me-3 dd-icon-size"></span> Delete</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="align-middle">
-                                            <td class="usermngmnt-tale-col">ORD-1562792771583</td>
-                                            <td class="usermngmnt-tale-col">27/02/2020</td>
-                                            <td class="usermngmnt-tale-col">₹ 3500</td>
-                                            <td><span class="status-badge status-active">Paid</span></td>
-                                            <td>
-                                                <div class="user-dropdown">
-                                                    <button class="btn user-dropdown-toggle border-0" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <div class="dd-btn">
-                                                            <img class="dd-icon-sizzz"
-                                                                src="/assets/images/mage_dots.svg">
-                                                        </div>
-                                                        <!-- Three-dot vertical icon -->
-                                                    </button>
-                                                    <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                        <li><a class="dropdown-item"
-                                                                href="./create-aution-form.html"><span><img
-                                                                        src="./assets/images/carbon_view.svg"
-                                                                        class="me-3 dd-icon-size"></span> Update
-                                                                Role</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/clarity_edit-line.svg"
-                                                                        class="me-3 dd-icon-size"></span> Edit</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/delete-dd-icon.svg"
-                                                                        class="me-3 dd-icon-size"></span> Delete</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="align-middle">
-                                            <td class="usermngmnt-tale-col">ORD-1562792771583</td>
-                                            <td class="usermngmnt-tale-col">27/02/2020</td>
-                                            <td class="usermngmnt-tale-col">₹ 3500</td>
-                                            <td><span class="status-badge status-suspended">Unpaid</span></td>
-                                            <td>
-                                                <div class="user-dropdown">
-                                                    <button class="btn user-dropdown-toggle border-0" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <div class="dd-btn">
-                                                            <img class="dd-icon-sizzz"
-                                                                src="/assets/images/mage_dots.svg">
-                                                        </div>
-                                                        <!-- Three-dot vertical icon -->
-                                                    </button>
-                                                    <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                        <li><a class="dropdown-item"
-                                                                href="./create-aution-form.html"><span><img
-                                                                        src="./assets/images/carbon_view.svg"
-                                                                        class="me-3 dd-icon-size"></span> Update
-                                                                Role</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/clarity_edit-line.svg"
-                                                                        class="me-3 dd-icon-size"></span> Edit</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/delete-dd-icon.svg"
-                                                                        class="me-3 dd-icon-size"></span> Delete</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="align-middle">
-                                            <td class="usermngmnt-tale-col">ORD-1562792771583</td>
-                                            <td class="usermngmnt-tale-col">27/02/2020</td>
-                                            <td class="usermngmnt-tale-col">₹ 3500</td>
-                                            <td><span class="status-badge status-pnding">Pending</span></td>
-                                            <td>
-                                                <div class="user-dropdown">
-                                                    <button class="btn user-dropdown-toggle border-0" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <div class="dd-btn">
-                                                            <img class="dd-icon-sizzz"
-                                                                src="/assets/images/mage_dots.svg">
-                                                        </div>
-                                                        <!-- Three-dot vertical icon -->
-                                                    </button>
-                                                    <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                        <li><a class="dropdown-item"
-                                                                href="./create-aution-form.html"><span><img
-                                                                        src="./assets/images/carbon_view.svg"
-                                                                        class="me-3 dd-icon-size"></span> Update
-                                                                Role</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/clarity_edit-line.svg"
-                                                                        class="me-3 dd-icon-size"></span> Edit</a></li>
-                                                        <li><a class="dropdown-item" href="#"><span><img
-                                                                        src="./assets/images/delete-dd-icon.svg"
-                                                                        class="me-3 dd-icon-size"></span> Delete</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-- Pagination -->
-                            <nav aria-label="User Page Navigation">
-                                <ul class="user-pagination">
-                                    <li class="user-page-item user-disabled hide-pg">
-                                        <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                            href="#" aria-label="First">
-                                            <span aria-hidden="true" class="d-flex align-items-center">
-                                                <img src="/assets/images/double-first-icon.svg" class="more-size1">
-                                            </span>
-                                            <p class="pg-txtt mb-0 d-flex align-items-center">First</p>
-                                        </a>
-                                    </li>
-
-                                    <li class="user-page-item user-disabled">
-                                        <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                            href="#" aria-label="Previous">
-                                            <span aria-hidden="true" class="d-flex align-items-center">
-                                                <img src="/assets/images/bak-arow-icon.svg" class="more-size2">
-                                            </span>
-                                            <p class="pg-txtt mb-0 d-flex align-items-center">Back</p>
-                                        </a>
-                                    </li>
-
-                                    <li class="user-page-item d-flex align-items-center justify-content-center">
-                                        <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                            href="#">1</a>
-                                    </li>
-
-                                    <li
-                                        class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
-                                        <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                            href="#">2</a>
-                                    </li>
-
-
-                                    <li
-                                        class="user-page-item user-disabled d-flex align-items-center justify-content-center">
-                                        <a class="user-page-link d-flex align-items-center justify-content-center"
-                                            style="padding: 10.5px 13px;" href="#">
-                                            <img src="/assets/images/• • •.svg">
-
-                                        </a>
-                                    </li>
-
-                                    <li class="user-page-item d-flex align-items-center justify-content-center">
-                                        <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                            href="#">7</a>
-                                    </li>
-
-                                    <li
-                                        class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
-                                        <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                            href="#">8</a>
-                                    </li>
-
-                                    <li class="user-page-item">
-                                        <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                            href="#" aria-label="Next">
-                                            <p class="pg-txtt mb-0 d-flex align-items-center">Next</p>
-                                            <span aria-hidden="true" class="d-flex align-items-center">
-                                                <img src="/assets/images/last-pg1.svg" class="more-size2">
-                                            </span>
-                                        </a>
-                                    </li>
-
-                                    <li class="user-page-item hide-pg">
-                                        <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                            href="#" aria-label="Last">
-                                            <p class="pg-txtt mb-0 d-flex align-items-center">Last</p>
-                                            <span aria-hidden="true" class="d-flex align-items-center">
-                                                <img src="/assets/images/last-pg2.svg" class="more-size1">
-                                            </span>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </nav>
 
                         </div>
-
 
                     </div>
 
                 </div>
+
+
 
 
             </div>
