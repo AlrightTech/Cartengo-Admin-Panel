@@ -2,19 +2,25 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" href="assets/images/fav-icon.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/images/fav-icon.svg" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auciton Management</title>
+    <title>Role Management</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <!-- Montserrat font imported -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bootstrap CSS (Already Required) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Bundle (Includes Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Merriweather:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Sofia+Sans:wght@1..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -27,6 +33,38 @@
 </head>
 
 <body>
+    <!-- modal start -->
+    <div class="modal fade" id="updateRoleModal" tabindex="-1" aria-labelledby="updateRoleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <div class="hp ">
+                    <h5 class="modal-title mb-3">Update Role</h5>
+                    <p class="hpp">Assign a New Role to user</p>
+                  </div>
+                  <button type="button" class="custom-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+      
+                </div>
+                <div class="modal-body">
+                
+                    <div class="mb">
+                        <select class="form-select">
+                            <option selected>Seller</option>
+                            <option>Admin</option>
+                            <option>Editor</option>
+                            <option>User</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning text-dark">Update</button>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <!-- modal end -->
+
     <div class="carexpo-dashboard-container container-fluid">
         <div class="row">
             <!-- Sidebar -->
@@ -35,7 +73,7 @@
                     <i class="bi bi-x-lg"></i>
                 </div>
                 <div class="carexpo-logo-container">
-                    <img src="assets/images/fav-icon.svg" alt="Car Expo Logo" class="carexpo-logo" />
+                    <img src="/assets/images/fav-icon.svg" alt="Car Expo Logo" class="carexpo-logo" />
                 </div>
                 <div class="carexpo-sidebar-menu">
                     <a href="./index.html" class="carexpo-menu-item">
@@ -62,7 +100,7 @@
                         </svg>
                         <span>User Management</span>
                     </a>
-                    <a href="./auction-management.html" class="carexpo-menu-item active">
+                    <a href="./auction-management.html" class="carexpo-menu-item ">
                         <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -95,7 +133,7 @@
                         </svg>
                         <span>Analytics and Reports</span>
                     </a>
-                    <a href="./role-management.html" class="carexpo-menu-item">
+                    <a href="./role-management.html" class="carexpo-menu-item active">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -151,8 +189,7 @@
                     </div>
                     <div class="carexpo-user-actions">
                         <div class="carexpo-notification">
-                            <svg width="40" height="40" viewBox="0 0 44 44" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg width="40" height="40" viewBox="0 0 44 44" fill="none"    xmlns="http://www.w3.org/2000/svg">
                                 <rect width="44" height="44" rx="22" fill="#F5F5F5" />
                                 <g clip-path="url(#clip0_4748_289)">
                                     <path
@@ -167,7 +204,7 @@
                             </svg>
                         </div>
                         <div class="carexpo-user-profile">
-                            <img src="assets/images/profile.JPG" alt="User Profile" class="carexpo-profile-img" />
+                            <img src="/assets/images/profile.JPG" alt="User Profile" class="carexpo-profile-img" />
                         </div>
                     </div>
                 </div>
@@ -177,8 +214,8 @@
                     <div class="row mt-4">
                         <div class="col-md-12">
                             <div class="container">
-                                <h1 class="user-h">Auction</h1>
-                                <p class="user-p">Dashboard <span class="user-p1"> • Auction </span> </p>
+                                <h1 class="user-h">Roles</h1>
+                                <p class="user-p">Dashboard <span class="user-p1"> • Roles </span> </p>
 
                                 <div class="row mt-4  mb-5">
                                     <div class="container user-mngmnt-table">
@@ -207,37 +244,29 @@
                                                                     <li class="nav-item" role="presentation">
                                                                         <a class="nav-link userr-nav-link"
                                                                             id="userr-active-tab" data-bs-toggle="tab"
-                                                                            href="#userr-active" role="tab">Active
+                                                                            href="#userr-active" role="tab">Seller
                                                                             <span
                                                                                 class="badge userr-badge-count userr-badge-active">44</span></a>
                                                                     </li>
                                                                     <li class="nav-item" role="presentation">
                                                                         <a class="nav-link userr-nav-link"
                                                                             id="userr-pending-tab" data-bs-toggle="tab"
-                                                                            href="#userr-pending" role="tab">Pending
-                                                                            Approval <span
+                                                                            href="#userr-pending" role="tab">Buyer <span
                                                                                 class="badge userr-badge-count userr-badge-pending">16</span></a>
                                                                     </li>
-                                                                    <li class="nav-item" role="presentation">
-                                                                        <a class="nav-link userr-nav-link"
-                                                                            id="userr-suspended-tab"
-                                                                            data-bs-toggle="tab" href="#userr-suspended"
-                                                                            role="tab">Completed <span
-                                                                                class="badge userr-badge-count userr-badge-suspended">3</span></a>
-                                                                    </li>
+                                                                    
                                                                 </ul>
                                                             </div>
                                                         </div>
-
                                                         <!-- Search and Filter -->
                                                         <div class="search-filter-container">
                                                             <div class="search-container">
                                                                 <i class="user-bi-search">
-                                                                    <img src="./assets/images/fi-rr-search.svg"
+                                                                    <img src="../assets/images/fi-rr-search.svg"
                                                                         class="img-fluid">
                                                                 </i>
                                                                 <input type="text" class="form-control"
-                                                                    placeholder="Search Auction">
+                                                                    placeholder="Search User">
                                                             </div>
                                                             <button class="filter-btn">
                                                                 <i class="bi bi-funnel" style="font-size: 17px;"></i>
@@ -246,9 +275,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
-
                                             </div>
                                         </div>
 
@@ -262,6 +288,7 @@
                                                         <th>Seller</th>
                                                         <th>Start Date</th>
                                                         <th>End Date</th>
+                                                        <th>Date Registered</th>
                                                         <th>Status</th>
                                                         <th></th>
                                                     </tr>
@@ -270,287 +297,269 @@
                                                     <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
-                                                                <img src="./assets/images/car-name1.png"
+                                                                <img src="../assets/images/active-user-img.png"
                                                                     alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Volkwagen
-                                                                    Poloi</a>
+                                                                <span>Jayshn Tiwari</span>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Theresa Webb</td>
-                                                        <td class="usermngmnt-tale-col">September 9, 2013</td>
+                                                        <td class="usermngmnt-tale-col">tim.jennings@example.com</td>
+                                                        <td class="usermngmnt-tale-col">Buyer</td>
+                                                        <td class="usermngmnt-tale-col">May 20, 2015</td>
+                                                        <td><span class="status-badge status-pending">Pending</span>
+                                                        </td>                                                       
+                                                        <td>
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <div class="dd-btn">
+                                                                        <img class="dd-icon-sizzz" src="../assets/images/mage_dots.svg">
+                                                                    </div>
+                                                                </button>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="../assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                </ul>
+                                                            </div>                                                            
+                                                            
+                                                        </td>
+
+
+
+                                                    </tr>
+                                                    <tr class="align-middle">
+                                                        <td>
+                                                            <div class="user-info">
+                                                                <img src="../assets/images/active-user-img.png"
+                                                                    alt="Jayshn Tiwari" class="user-avatar">
+                                                                <span>Jayshn Tiwari</span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="usermngmnt-tale-col">tim.jennings@example.com</td>
+                                                        <td class="usermngmnt-tale-col">Buyer</td>
+                                                        <td class="usermngmnt-tale-col">May 20, 2015</td>
+                                                        <td><span class="status-badge status-active">Active</span></td>
+                                                        <td>
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <div class="dd-btn">
+                                                                        <img class="dd-icon-sizzz" src="../assets/images/mage_dots.svg">
+                                                                    </div>
+                                                                </button>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="../assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                </ul>
+                                                            </div> 
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="align-middle">
+                                                        <td>
+                                                            <div class="user-info">
+                                                                <img src="../assets/images/active-user-img.png"
+                                                                    alt="Jayshn Tiwari" class="user-avatar">
+                                                                <span>Jayshn Tiwari</span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="usermngmnt-tale-col">tim.jennings@example.com</td>
+                                                        <td class="usermngmnt-tale-col">Buyer</td>
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-pending">Pending</span>
                                                         </td>
                                                         <td>
-                                                            <div class="user-dropdown">
-                                                                <button class="btn user-dropdown-toggle border-0" type="button"
-                                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <div class="user-dropdown"> 
+                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                                     <div class="dd-btn">
-                                                                        <img class="dd-icon-sizzz"
-                                                                            src="./assets/images/mage_dots.svg">
+                                                                        <img class="dd-icon-sizzz" src="../assets/images/mage_dots.svg">
                                                                     </div>
                                                                 </button>
-                                                                <ul
-                                                                    class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                                    <li><a class="dropdown-item"
-                                                                            href="./create-aution-form.html">
-                                                                            <img src="./assets/images/carbon_view.svg"
-                                                                                class="me-3 dd-icon-size"> Update Role
-                                                                        </a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img
-                                                                                src="./assets/images/clarity_edit-line.svg"
-                                                                                class="me-3 dd-icon-size"> Edit</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img
-                                                                                src="./assets/images/delete-dd-icon.svg"
-                                                                                class="me-3 dd-icon-size"> Delete</a>
-                                                                    </li>
+                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="../assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    </a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
                                                                 </ul>
-                                                            </div>
+                                                            </div> 
                                                         </td>
                                                     </tr>
                                                     <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
-                                                                <img src="./assets/images/active-user-img.png"
+                                                                <img src="../assets/images/active-user-img.png"
                                                                     alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Jayshn
-                                                                    Tiwari</a>
+                                                                <span>Jayshn Tiwari</span>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Ronald Richards</td>
-                                                        <td class="usermngmnt-tale-col">August 7, 2017</td>
+                                                        <td class="usermngmnt-tale-col">tim.jennings@example.com</td>
+                                                        <td class="usermngmnt-tale-col">Buyer</td>
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
-                                                            <!-- <button class="action-btn">
-                                                                <i class="bi bi-three-dots-vertical"></i>
-                                                            </button> -->
-                                                                                                                        <div class="user-dropdown"> 
+                                                            <div class="user-dropdown"> 
                                                                 <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                                     <div class="dd-btn">
-                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                        <img class="dd-icon-sizzz" src="../assets/images/mage_dots.svg">
                                                                     </div>
                                                                 </button>
                                                                 <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                                    <li><a class="dropdown-item" href="./create-aution-form.html">
-                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="../assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
                                                                     </a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
                                                                 </ul>
-                                                            </div>        
+                                                            </div> 
                                                         </td>
                                                     </tr>
                                                     <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
-                                                                <img src="./assets/images/active-user-img.png"
+                                                                <img src="../assets/images/active-user-img.png"
                                                                     alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Jayshn
-                                                                    Tiwari</a>
+                                                                <span>Jayshn Tiwari</span>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td class="usermngmnt-tale-col">February 11, 2014</td>
-                                                        <td class="usermngmnt-tale-col">May 20, 2015</td>
-                                                        <td><span class="status-badge status-pending">Pending</span>
-                                                        </td>
-                                                        <td>
-                                                                                                                        <div class="user-dropdown"> 
-                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                    <div class="dd-btn">
-                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
-                                                                    </div>
-                                                                </button>
-                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                                    <li><a class="dropdown-item" href="./create-aution-form.html">
-                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
-                                                                    </a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
-                                                                </ul>
-                                                            </div>        
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="align-middle">
-                                                        <td>
-                                                            <div class="user-info">
-                                                                <img src="./assets/images/active-user-img.png"
-                                                                    alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Jayshn
-                                                                    Tiwari</a>
-                                                            </div>
-                                                        </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td class="usermngmnt-tale-col">September 15, 2014</td>
+                                                        <td class="usermngmnt-tale-col">tim.jennings@example.com</td>
+                                                        <td class="usermngmnt-tale-col">Buyer</td>
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
-                                                                                                                        <div class="user-dropdown"> 
+                                                            <div class="user-dropdown"> 
                                                                 <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                                     <div class="dd-btn">
-                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                        <img class="dd-icon-sizzz" src="../assets/images/mage_dots.svg">
                                                                     </div>
                                                                 </button>
                                                                 <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                                    <li><a class="dropdown-item" href="./create-aution-form.html">
-                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="../assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
                                                                     </a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
                                                                 </ul>
-                                                            </div>        
+                                                            </div> 
                                                         </td>
                                                     </tr>
                                                     <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
-                                                                <img src="./assets/images/active-user-img.png"
+                                                                <img src="../assets/images/active-user-img.png"
                                                                     alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Jayshn
-                                                                    Tiwari</a>
+                                                                <span>Jayshn Tiwari</span>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td class="usermngmnt-tale-col">September 15, 2014</td>
+                                                        <td class="usermngmnt-tale-col">tim.jennings@example.com</td>
+                                                        <td class="usermngmnt-tale-col">Buyer</td>
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
-                                                                                                                        <div class="user-dropdown"> 
+                                                            <div class="user-dropdown"> 
                                                                 <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                                     <div class="dd-btn">
-                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                        <img class="dd-icon-sizzz" src="../assets/images/mage_dots.svg">
                                                                     </div>
                                                                 </button>
                                                                 <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                                    <li><a class="dropdown-item" href="./create-aution-form.html">
-                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="../assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
                                                                     </a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
                                                                 </ul>
-                                                            </div>        
+                                                            </div> 
                                                         </td>
                                                     </tr>
                                                     <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
-                                                                <img src="./assets/images/active-user-img.png"
+                                                                <img src="../assets/images/active-user-img.png"
                                                                     alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Jayshn
-                                                                    Tiwari</a>
+                                                                <span>Jayshn Tiwari</span>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td class="usermngmnt-tale-col">September 15, 2014</td>
+                                                        <td class="usermngmnt-tale-col">tim.jennings@example.com</td>
+                                                        <td class="usermngmnt-tale-col">Buyer</td>
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
-                                                                                                                        <div class="user-dropdown"> 
+                                                            <div class="user-dropdown"> 
                                                                 <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                                     <div class="dd-btn">
-                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                        <img class="dd-icon-sizzz" src="../assets/images/mage_dots.svg">
                                                                     </div>
                                                                 </button>
                                                                 <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                                    <li><a class="dropdown-item" href="./create-aution-form.html">
-                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="../assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
                                                                     </a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
                                                                 </ul>
-                                                            </div>        
+                                                            </div> 
                                                         </td>
                                                     </tr>
                                                     <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
-                                                                <img src="./assets/images/active-user-img.png"
+                                                                <img src="../assets/images/active-user-img.png"
                                                                     alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Jayshn
-                                                                    Tiwari</a>
+                                                                <span>Jayshn Tiwari</span>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td class="usermngmnt-tale-col">September 15, 2014</td>
+                                                        <td class="usermngmnt-tale-col">tim.jennings@example.com</td>
+                                                        <td class="usermngmnt-tale-col">Buyer</td>
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-active">Active</span></td>
                                                         <td>
-                                                                                                                        <div class="user-dropdown"> 
+                                                            <div class="user-dropdown"> 
                                                                 <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                                     <div class="dd-btn">
-                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                        <img class="dd-icon-sizzz" src="../assets/images/mage_dots.svg">
                                                                     </div>
                                                                 </button>
                                                                 <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                                    <li><a class="dropdown-item" href="./create-aution-form.html">
-                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="../assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
                                                                     </a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
                                                                 </ul>
-                                                            </div>        
+                                                            </div> 
                                                         </td>
                                                     </tr>
                                                     <tr class="align-middle">
                                                         <td>
                                                             <div class="user-info">
-                                                                <img src="./assets/images/active-user-img.png"
+                                                                <img src="../assets/images/active-user-img.png"
                                                                     alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Jayshn
-                                                                    Tiwari</a>
+                                                                <span>Jayshn Tiwari</span>
                                                             </div>
                                                         </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td class="usermngmnt-tale-col">September 15, 2014</td>
-                                                        <td class="usermngmnt-tale-col">May 20, 2015</td>
-                                                        <td><span class="status-badge status-active">Active</span></td>
-                                                        <td>
-                                                                                                                        <div class="user-dropdown"> 
-                                                                <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                    <div class="dd-btn">
-                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
-                                                                    </div>
-                                                                </button>
-                                                                <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                                    <li><a class="dropdown-item" href="./create-aution-form.html">
-                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
-                                                                    </a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
-                                                                </ul>
-                                                            </div>        
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="align-middle">
-                                                        <td>
-                                                            <div class="user-info">
-                                                                <img src="./assets/images/active-user-img.png"
-                                                                    alt="Jayshn Tiwari" class="user-avatar">
-                                                                <a href="./car-info.html" class="car-infoo">Jayshn
-                                                                    Tiwari</a>
-                                                            </div>
-                                                        </td>
-                                                        <td class="usermngmnt-tale-col">Bessie Cooper</td>
-                                                        <td class="usermngmnt-tale-col">September 15, 2014</td>
+                                                        <td class="usermngmnt-tale-col">tim.jennings@example.com</td>
+                                                        <td class="usermngmnt-tale-col">Buyer</td>
                                                         <td class="usermngmnt-tale-col">May 20, 2015</td>
                                                         <td><span class="status-badge status-suspended">Suspended</span>
                                                         </td>
                                                         <td>
-                                                                                                                        <div class="user-dropdown"> 
+                                                            <div class="user-dropdown"> 
                                                                 <button class="btn user-dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                                     <div class="dd-btn">
-                                                                        <img class="dd-icon-sizzz" src="./assets/images/mage_dots.svg">
+                                                                        <img class="dd-icon-sizzz" src="../assets/images/mage_dots.svg">
                                                                     </div>
                                                                 </button>
                                                                 <ul class="dropdown-menu user-dropdown-menu user-dropdown-content">
-                                                                    <li><a class="dropdown-item" href="./create-aution-form.html">
-                                                                        <img src="./assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
+                                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateRoleModal">
+                                                                        <img src="../assets/images/carbon_view.svg" class="me-3 dd-icon-size"> Update Role
                                                                     </a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
-                                                                    <li><a class="dropdown-item" href="#"><img src="./assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/clarity_edit-line.svg" class="me-3 dd-icon-size"> Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><img src="../assets/images/delete-dd-icon.svg" class="me-3 dd-icon-size"> Delete</a></li>
                                                                 </ul>
-                                                            </div>        
+                                                            </div> 
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -561,81 +570,70 @@
                                         <nav aria-label="User Page Navigation">
                                             <ul class="user-pagination">
                                                 <li class="user-page-item user-disabled hide-pg">
-                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                                        href="#" aria-label="First">
+                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center" href="#" aria-label="First">
                                                         <span aria-hidden="true" class="d-flex align-items-center">
-                                                            <img src="./assets/images/double-first-icon.svg"
-                                                                class="more-size1">
+                                                            <img src="../assets/images/double-first-icon.svg" class="more-size1">
                                                         </span>
                                                         <p class="pg-txtt mb-0 d-flex align-items-center">First</p>
                                                     </a>
                                                 </li>
-
+                                                
                                                 <li class="user-page-item user-disabled">
-                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                                        href="#" aria-label="Previous">
+                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center" href="#" aria-label="Previous">
                                                         <span aria-hidden="true" class="d-flex align-items-center">
-                                                            <img src="./assets/images/bak-arow-icon.svg"
-                                                                class="more-size2">
+                                                            <img src="../assets/images/bak-arow-icon.svg" class="more-size2">
                                                         </span>
                                                         <p class="pg-txtt mb-0 d-flex align-items-center">Back</p>
                                                     </a>
                                                 </li>
-
-                                                <li
-                                                    class="user-page-item d-flex align-items-center justify-content-center">
-                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                                        href="#">1</a>
+                                                
+                                                <li class="user-page-item d-flex align-items-center justify-content-center">
+                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt" href="#">1</a>
                                                 </li>
-
-                                                <li
-                                                    class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
-                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                                        href="#">2</a>
+                                                
+                                                <li class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
+                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt" href="#">2</a>
                                                 </li>
+                                                
+                                                <!-- <li class="user-page-item">
+                                        <a class="user-page-link" href="#">3</a>
+                                    </li>
+                                    <li class="user-page-item">
+                                        <a class="user-page-link" href="#">4</a>
+                                    </li> -->
+                                    <li class="user-page-item user-disabled d-flex align-items-center justify-content-center">
+                                        <a class="user-page-link d-flex align-items-center justify-content-center" style="padding: 10.5px 13px;" href="#">
+                                            <img src="../assets/images/• • •.svg">
 
-
-                                                <li
-                                                    class="user-page-item user-disabled d-flex align-items-center justify-content-center">
-                                                    <a class="user-page-link d-flex align-items-center justify-content-center"
-                                                        style="padding: 10.5px 13px;" href="#">
-                                                        <img src="./assets/images/• • •.svg">
-
-                                                    </a>
-                                                </li>
-
-                                                <li
-                                                    class="user-page-item d-flex align-items-center justify-content-center">
-                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                                        href="#">7</a>
-                                                </li>
-
-                                                <li
-                                                    class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
-                                                    <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt"
-                                                        href="#">8</a>
-                                                </li>
-
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="user-page-item d-flex align-items-center justify-content-center">
+                                        <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt" href="#">7</a>
+                                    </li>
+                                    
+                                    <li class="user-page-item user-active hide-pg d-flex align-items-center justify-content-center">
+                                        <a class="user-page-link d-flex align-items-center justify-content-center pg-txtt" href="#">8</a>
+                                    </li>
+                                    
                                                 <li class="user-page-item">
-                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                                        href="#" aria-label="Next">
+                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center" href="#" aria-label="Next">
                                                         <p class="pg-txtt mb-0 d-flex align-items-center">Next</p>
                                                         <span aria-hidden="true" class="d-flex align-items-center">
-                                                            <img src="./assets/images/last-pg1.svg" class="more-size2">
+                                                            <img src="../assets/images/last-pg1.svg" class="more-size2">
                                                         </span>
                                                     </a>
                                                 </li>
-
+                                                
                                                 <li class="user-page-item hide-pg">
-                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center"
-                                                        href="#" aria-label="Last">
+                                                    <a class="user-page-link d-flex gap-2 align-items-center justify-content-center" href="#" aria-label="Last">
                                                         <p class="pg-txtt mb-0 d-flex align-items-center">Last</p>
                                                         <span aria-hidden="true" class="d-flex align-items-center">
-                                                            <img src="./assets/images/last-pg2.svg" class="more-size1">
+                                                            <img src="../assets/images/last-pg2.svg" class="more-size1">
                                                         </span>
                                                     </a>
                                                 </li>
-
+                                                
                                             </ul>
                                         </nav>
 
@@ -657,6 +655,7 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Custom JS -->
     <script src="assets/main.js"></script>
 
