@@ -177,7 +177,7 @@
 
   <div class="carexpo-dashboard-container container-fluid">
     <div class="row">
-      <!-- Sidebar -->
+      <!-- Sidebar start -->
       <div class="carexpo-sidebar col-lg-3 col-xl-2 px-0" id="carexpo-sidebar">
         <div class="carexpo-close-sidebar" id="carexpo-close-sidebar">
           <i class="bi bi-x-lg"></i>
@@ -197,18 +197,15 @@
             <span>Dashboard</span>
           </a>
           <a href="add-auction-form.html" class="carexpo-menu-item">
-            <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M9.99986 8.49996C11.6567 8.49996 12.9999 7.1568 12.9999 5.49992C12.9999 3.84304 11.6567 2.49988 9.99986 2.49988C8.34298 2.49988 6.99982 3.84304 6.99982 5.49992C6.99982 7.1568 8.34298 8.49996 9.99986 8.49996Z"
-                stroke-width="1.25" />
-              <path
-                d="M16 14.125C16 15.9888 16 17.5001 9.99993 17.5001C3.99985 17.5001 3.99985 15.9888 3.99985 14.125C3.99985 12.2613 6.68638 10.75 9.99993 10.75C13.3135 10.75 16 12.2613 16 14.125Z"
-                stroke-width="1.25" />
+            <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="none" 
+            xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.9998 7.50008C8.65667 7.50008 9.99984 6.15692 9.99984 4.50004C9.99984 2.84316 8.65667 1.5 6.9998 1.5C5.34292 1.5 3.99976 2.84316 3.99976 4.50004C3.99976 6.15692 5.34292 7.50008 6.9998 7.50008Z" stroke="white" stroke-width="1.25"/>
+              <path d="M13 13.125C13 14.9888 13 16.5001 6.9999 16.5001C0.999817 16.5001 0.999817 14.9888 0.999817 13.125C0.999817 11.2613 3.68635 9.75 6.9999 9.75C10.3134 9.75 13 11.2613 13 13.125Z" stroke="white" stroke-width="1.25"/>
             </svg>
+              
             <span>Create Auction</span>
           </a>
-          <a href="./auction-management.html" class="carexpo-menu-item">
+          <a href="auction.html" class="carexpo-menu-item">
             <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -220,7 +217,7 @@
             </svg>
             <span> My Auction </span>
           </a>
-          <a href="./content-moderation.html" class="carexpo-menu-item">
+          <a href="earning-&-payouts.html" class="carexpo-menu-item">
             <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -241,7 +238,7 @@
             </svg>
             <span>Notifications</span>
           </a>
-          <a href="earning-&-payouts.html" class="carexpo-menu-item">
+          <!-- <a href="earning-&-payouts.html" class="carexpo-menu-item">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -250,15 +247,15 @@
                 d="M11.9937 10.2188C12.3386 9.88207 12.5752 9.45022 12.6735 8.97839C12.7717 8.50655 12.7271 8.01614 12.5453 7.56978C12.3635 7.12342 12.0528 6.74137 11.6529 6.47242C11.253 6.20346 10.7819 6.05981 10.3 6.05981C9.81804 6.05981 9.34702 6.20346 8.94708 6.47242C8.54715 6.74137 8.23646 7.12342 8.05467 7.56978C7.87289 8.01614 7.82828 8.50655 7.92652 8.97839C8.02476 9.45022 8.26141 9.88207 8.60624 10.2188C8.19588 10.4962 7.85974 10.8699 7.62723 11.3072C7.39472 11.7446 7.27292 12.2322 7.27249 12.7275V13.9394H13.3331V12.7269C13.3321 12.2311 13.2094 11.7431 12.9759 11.3057C12.7424 10.8683 12.4051 10.4955 11.9937 10.2188ZM9.09062 8.48441C9.09062 8.32518 9.12198 8.16751 9.18291 8.0204C9.24385 7.87329 9.33316 7.73963 9.44575 7.62704C9.55834 7.51445 9.69201 7.42514 9.83911 7.3642C9.98622 7.30327 10.1439 7.27191 10.3031 7.27191C10.4623 7.27191 10.62 7.30327 10.7671 7.3642C10.9142 7.42514 11.0479 7.51445 11.1605 7.62704C11.2731 7.73963 11.3624 7.87329 11.4233 8.0204C11.4843 8.16751 11.5156 8.32518 11.5156 8.48441C11.5156 8.80598 11.3879 9.11438 11.1605 9.34177C10.9331 9.56916 10.6247 9.69691 10.3031 9.69691C9.98154 9.69691 9.67314 9.56916 9.44575 9.34177C9.21836 9.11438 9.09062 8.80598 9.09062 8.48441ZM8.48437 12.7269C8.47989 12.4853 8.52361 12.2452 8.61298 12.0206C8.70236 11.7961 8.83559 11.5916 9.00489 11.4191C9.17419 11.2466 9.37617 11.1097 9.59902 11.0161C9.82187 10.9226 10.0611 10.8744 10.3028 10.8744C10.5445 10.8744 10.7837 10.9226 11.0066 11.0161C11.2294 11.1097 11.4314 11.2466 11.6007 11.4191C11.77 11.5916 11.9033 11.7961 11.9926 12.0206C12.082 12.2452 12.1257 12.4853 12.1212 12.7269H8.48437Z" />
             </svg>
             <span>Earnings & Payouts</span>
-          </a>
-
-
+          </a> -->
         </div>
       </div>
+      <!-- Sidebar end -->
+
 
       <!-- Main Content -->
       <div class="carexpo-main-content col-lg-9 col-xl-10 px-0" id="carexpo-main-content">
-        <!-- Top bar  -->
+        <!-- Top bar start  -->
         <div class="carexpo-top-bar border-bottom-0  ">
           <div class="d-flex align-items-center gap-2">
             <div class="carexpo-toggle-btn" id="carexpo-toggle-btn">
@@ -277,39 +274,27 @@
               Switch to Buying
             </button>
 
+
             <!-- Notification Icon with Offcanvas Trigger -->
             <a href="#" data-bs-toggle="offcanvas" data-bs-target="#notificationOffcanvas">
               <div class="bell-bg d-flex align-items-center justify-content-center me-4">
                 <img src="/assets/images/solar_bell-linear.svg" alt="Notification" width="18">
               </div>
             </a>
-            <!-- <div class="carexpo-notification" data-bs-toggle="offcanvas" data-bs-target="#notificationsOffcanvas">
-              <svg width="40" height="40" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="44" height="44" rx="22" fill="#F5F5F5" />
-                <g clip-path="url(#clip0_4748_289)">
-                  <path
-                    d="M29.9161 23.2465L28.4911 18.1195C28.0734 16.6175 27.1657 15.2982 25.9121 14.3714C24.6586 13.4445 23.1312 12.9633 21.5727 13.0041C20.0143 13.045 18.5142 13.6056 17.3109 14.5969C16.1077 15.5881 15.2703 16.9532 14.9319 18.475L13.8286 23.4363C13.7068 23.9845 13.7096 24.553 13.8369 25.1C13.9641 25.647 14.2127 26.1584 14.5641 26.5964C14.9154 27.0345 15.3607 27.388 15.867 27.631C16.3734 27.8739 16.9278 28 17.4894 28H18.3249C18.497 28.8477 18.9569 29.6099 19.6267 30.1573C20.2964 30.7047 21.1348 31.0038 21.9999 31.0038C22.8649 31.0038 23.7033 30.7047 24.3731 30.1573C25.0428 29.6099 25.5027 28.8477 25.6749 28H26.3034C26.8815 28.0001 27.4518 27.8664 27.9697 27.6096C28.4876 27.3527 28.9391 26.9796 29.289 26.5194C29.6388 26.0592 29.8775 25.5243 29.9865 24.9565C30.0954 24.3888 30.0716 23.8035 29.9169 23.2465H29.9161ZM21.9999 29.5C21.5362 29.4981 21.0844 29.3529 20.7063 29.0844C20.3283 28.8159 20.0424 28.4372 19.8879 28H24.1119C23.9573 28.4372 23.6714 28.8159 23.2934 29.0844C22.9153 29.3529 22.4636 29.4981 21.9999 29.5ZM28.0944 25.6113C27.8854 25.8885 27.6146 26.1132 27.3036 26.2675C26.9925 26.4218 26.6498 26.5014 26.3026 26.5H17.4894C17.1525 26.5 16.8199 26.4242 16.5161 26.2784C16.2124 26.1327 15.9453 25.9205 15.7345 25.6577C15.5237 25.3949 15.3746 25.088 15.2983 24.7599C15.2219 24.4317 15.2203 24.0906 15.2934 23.7618L16.3959 18.7998C16.6616 17.6044 17.3193 16.5322 18.2645 15.7536C19.2096 14.975 20.3878 14.5346 21.6119 14.5026C22.8361 14.4705 24.0358 14.8485 25.0203 15.5766C26.0049 16.3047 26.7179 17.341 27.0459 18.5208L28.4709 23.6478C28.565 23.9818 28.58 24.3332 28.5147 24.674C28.4493 25.0148 28.3054 25.3358 28.0944 25.6113Z"
-                    fill="#666666" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_4748_289">
-                    <rect width="18" height="18" fill="white" transform="translate(13 13)" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </div> -->
+
             <div class="carexpo-user-profile">
               <div class="container d-flex justify-content-end">
                 <div class="dropdown">
-                  <a href="#" class="d-block text-decoration-none" id="profileDropdown" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <img src="/assets/images/buyer-progile-ing.png" alt="Profile" width="45" class="rounded-circle">
+                  <a href="seller-profile.html" class="d-block text-decoration-none" id="profileDropdown" 
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="/assets/images/profile.JPG" alt="User Profile" class="carexpo-profile-img" alt="Profile"
+                      width="45" class="rounded-circle">
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end shadow-sm rounded">
                     <li>
-                      <a class="dropdown-item d-flex align-items-center" href="seller-profile.html">
+                        <a href="seller-profile.html" class="dropdown-item d-flex align-items-center">
                         <i class="fas fa-user-circle me-2 text-primary"></i> My Account
-                      </a>
+                        </a>
                     </li>
                     <li>
                       <a class="dropdown-item d-flex align-items-center text-danger" href="#">
@@ -323,6 +308,7 @@
             </div>
           </div>
         </div>
+        <!-- Top bar end  -->
 
         <div class="carexpo-content-area">
           <!-- Dashboard content -->
