@@ -3883,7 +3883,7 @@ border-bottom: 2px solid #FF6F00 !important;
 /* $$$$$$$$$$$$$$$$$Notifications page$$$$$$$$$$$$$$ */
 
 
-.notifications .alert {
+.notifications1 .alert {
   border-bottom: 1px solid #ddd;
   margin-bottom: 2px; 
 }
@@ -3935,4 +3935,13 @@ border-bottom: 2px solid #FF6F00 !important;
 }
 .logout-btn:hover {
   background-color: #e66a1d;
+}
+
+.alert-admin{
+font-weight: 400;
+font-size: 11.5px;
+}
+
+.alert-hr {
+  border-bottom: 0.98px solid rgba(0, 0, 0, 0.05) !important;
 }
