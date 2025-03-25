@@ -557,50 +557,50 @@ body {
 }
 
 .userr-nav-tabs .userr-nav-link {
-  border: none;
-  padding: 10px 15px;
-  margin-right: 5px;
-  border-radius: 0;
-  position: relative;
-  color: #666666;
+  border: none !important;
+  padding: 10px 15px !important;
+  margin-right: 5px !important;
+  border-radius: 0 !important;
+  position: relative !important;
+  color: #666666 !important;
   /* font-family: "Urbanist"; */
-  font-weight: 600;
-  font-size: 13px;
+  font-weight: 600 !important;
+  font-size: 13px !important;
 }
 
 .userr-nav-tabs .userr-nav-link.active {
-  color: #000;
-  font-weight: 500;
-  border-bottom: 2px solid #000;
-  background-color: transparent;
-  font-family: "Urbanist";
-  font-weight: 600;
-  font-size: 13px;
+  color: #000 !important;
+  /* font-weight: 500 !important; */
+  border-bottom: 2px solid #000 !important;
+  background-color: transparent !important;
+  font-family: "Urbanist" !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
 }
 
 .userr-badge-count {
-  font-size: 12px;
-  padding: 6px;
-  margin-left: 5px;
+  font-size: 12px !important;
+  padding: 6px !important;
+  margin-left: 5px !important;
   font-family: "Urbanist";
   font-weight: 700;
   border-radius: 8px;
 }
 
 .userr-badge-all {
-  background-color: #212529;
-  color: white;
+  background-color: #212529 !important;
+  color: white !important;
 }
 
 .userr-badge-active {
-  background: #22c55e29;
-  color: #118d57;
+  background: #22c55e29 !important;
+  color: #118d57 !important;
 }
 
 .userr-badge-pending {
-  background-color: #fff2d6;
+  background-color: #fff2d6 !important;
 
-  color: #b76e00;
+  color: #b76e00 !important;
 }
 
 .userr-badge-suspended {
