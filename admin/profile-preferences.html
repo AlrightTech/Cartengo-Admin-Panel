@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" href="../assets/images/fav-icon.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/images/fav-icon.svg" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Auction Form</title>
+    <title>Dashboard</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Bootstrap Icons -->
@@ -24,8 +24,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <!-- charts js link -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+
 </head>
 
 <body>
@@ -42,14 +48,12 @@
                 </div>
                 <div class="carexpo-sidebar-menu">
                     <a href="./index.html" class="carexpo-menu-item">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons" 
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M8.23585 1.83913C8.63223 1.79242 9.03163 1.89713 9.35411 2.13231C9.67659 2.36748 9.89835 2.71577 9.97501 3.10747L9.99585 3.24663L10 3.3333V9.16663C10 9.37074 10.075 9.56775 10.2106 9.72028C10.3462 9.87281 10.5331 9.97025 10.7358 9.99413L10.8333 9.99997H16.5C16.942 9.99997 17.366 10.1756 17.6785 10.4881C17.9911 10.8007 18.1667 11.2246 18.1667 11.6666C18.1666 11.73 18.1594 11.7932 18.145 11.855C17.8115 13.2938 17.1016 14.6182 16.0879 15.6925C15.0742 16.7668 13.7932 17.5524 12.3761 17.9687C10.959 18.3851 9.45669 18.4174 8.023 18.0622C6.58931 17.707 5.27578 16.9772 4.21693 15.9474C3.15808 14.9177 2.39194 13.625 1.99699 12.2017C1.60204 10.7785 1.59246 9.27583 1.96923 7.84767C2.346 6.41951 3.09559 5.11714 4.14122 4.07395C5.18686 3.03076 6.49097 2.28423 7.92001 1.9108L8.14501 1.85497L8.23585 1.83913Z"
-                                />
+                                d="M8.23585 1.83913C8.63223 1.79242 9.03163 1.89713 9.35411 2.13231C9.67659 2.36748 9.89835 2.71577 9.97501 3.10747L9.99585 3.24663L10 3.3333V9.16663C10 9.37074 10.075 9.56775 10.2106 9.72028C10.3462 9.87281 10.5331 9.97025 10.7358 9.99413L10.8333 9.99997H16.5C16.942 9.99997 17.366 10.1756 17.6785 10.4881C17.9911 10.8007 18.1667 11.2246 18.1667 11.6666C18.1666 11.73 18.1594 11.7932 18.145 11.855C17.8115 13.2938 17.1016 14.6182 16.0879 15.6925C15.0742 16.7668 13.7932 17.5524 12.3761 17.9687C10.959 18.3851 9.45669 18.4174 8.023 18.0622C6.58931 17.707 5.27578 16.9772 4.21693 15.9474C3.15808 14.9177 2.39194 13.625 1.99699 12.2017C1.60204 10.7785 1.59246 9.27583 1.96923 7.84767C2.346 6.41951 3.09559 5.11714 4.14122 4.07395C5.18686 3.03076 6.49097 2.28423 7.92001 1.9108L8.14501 1.85497L8.23585 1.83913Z" />
                             <path
-                                d="M11.6667 2.91665V7.49998C11.6667 7.72099 11.7545 7.93295 11.9108 8.08924C12.067 8.24552 12.279 8.33331 12.5 8.33331H17.0834C17.2166 8.33328 17.3478 8.30131 17.4661 8.2401C17.5844 8.17888 17.6863 8.0902 17.7633 7.98149C17.8402 7.87278 17.89 7.7472 17.9084 7.61529C17.9269 7.48337 17.9134 7.34896 17.8692 7.22331C17.4553 6.04776 16.783 4.98001 15.9018 4.09868C15.0207 3.21735 13.953 2.54489 12.7775 2.13081C12.6518 2.08643 12.5173 2.07284 12.3853 2.09119C12.2533 2.10954 12.1276 2.15929 12.0188 2.23627C11.9099 2.31326 11.8212 2.41522 11.7599 2.53361C11.6986 2.65199 11.6667 2.78335 11.6667 2.91665Z"
-                                 />
+                                d="M11.6667 2.91665V7.49998C11.6667 7.72099 11.7545 7.93295 11.9108 8.08924C12.067 8.24552 12.279 8.33331 12.5 8.33331H17.0834C17.2166 8.33328 17.3478 8.30131 17.4661 8.2401C17.5844 8.17888 17.6863 8.0902 17.7633 7.98149C17.8402 7.87278 17.89 7.7472 17.9084 7.61529C17.9269 7.48337 17.9134 7.34896 17.8692 7.22331C17.4553 6.04776 16.783 4.98001 15.9018 4.09868C15.0207 3.21735 13.953 2.54489 12.7775 2.13081C12.6518 2.08643 12.5173 2.07284 12.3853 2.09119C12.2533 2.10954 12.1276 2.15929 12.0188 2.23627C11.9099 2.31326 11.8212 2.41522 11.7599 2.53361C11.6986 2.65199 11.6667 2.78335 11.6667 2.91665Z" />
                         </svg>
                         <span>Dashboard</span>
                     </a>
@@ -77,7 +81,7 @@
                         </svg>
                         <span>Auction Management</span>
                     </a>
-                    <a href="#" class="carexpo-menu-item">
+                    <a href="./content-moderation.html" class="carexpo-menu-item">
                         <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -86,7 +90,7 @@
 
                         <span>Content Moderation</span>
                     </a>
-                    <a href="#" class="carexpo-menu-item">
+                    <a href="./Analytics and Reports.html" class="carexpo-menu-item">
                         <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -98,7 +102,7 @@
                         </svg>
                         <span>Analytics and Reports</span>
                     </a>
-                    <a href="#" class="carexpo-menu-item">
+                    <a href="./role-management.html" class="carexpo-menu-item">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -108,7 +112,7 @@
                         </svg>
                         <span>Role Management</span>
                     </a>
-                    <a href="#" class="carexpo-menu-item">
+                    <a href="./car-listing.html" class="carexpo-menu-item">
                         <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -128,15 +132,27 @@
                         </svg>
                         <span>Car Listing</span>
                     </a>
-                    <a href="#" class="carexpo-menu-item">
+                    <!-- <a href="./notification.html" class="carexpo-menu-item">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.16667 15H15.8333V9.19246C15.8333 5.95663 13.2217 3.33329 10 3.33329C6.77833 3.33329 4.16667 5.95663 4.16667 9.19246V15ZM10 1.66663C14.1417 1.66663 17.5 5.03579 17.5 9.19246V16.6666H2.5V9.19246C2.5 5.03579 5.85833 1.66663 10 1.66663ZM7.91667 17.5H12.0833C12.0833 18.0525 11.8638 18.5824 11.4731 18.9731C11.0824 19.3638 10.5525 19.5833 10 19.5833C9.44747 19.5833 8.91756 19.3638 8.52686 18.9731C8.13616 18.5824 7.91667 18.0525 7.91667 17.5Z" />
+            </svg>
+
+            <span>Notifications</span>
+          </a> -->
+
+                    <a href="./profile-setting.html" class="carexpo-menu-item active">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M4.16667 15H15.8333V9.19246C15.8333 5.95663 13.2217 3.33329 10 3.33329C6.77833 3.33329 4.16667 5.95663 4.16667 9.19246V15ZM10 1.66663C14.1417 1.66663 17.5 5.03579 17.5 9.19246V16.6666H2.5V9.19246C2.5 5.03579 5.85833 1.66663 10 1.66663ZM7.91667 17.5H12.0833C12.0833 18.0525 11.8638 18.5824 11.4731 18.9731C11.0824 19.3638 10.5525 19.5833 10 19.5833C9.44747 19.5833 8.91756 19.3638 8.52686 18.9731C8.13616 18.5824 7.91667 18.0525 7.91667 17.5Z" />
                         </svg>
 
-                        <span>Notifications</span>
+                        <span>Setting</span>
                     </a>
+
+
                 </div>
             </div>
 
@@ -171,115 +187,115 @@
                                 </defs>
                             </svg>
                         </div>
+
                         <div class="carexpo-user-profile">
-                            <img src="../assets/images/profile.JPG" alt="User Profile" class="carexpo-profile-img" />
+                            <div class="container d-flex justify-content-end">
+                                <div class="dropdown">
+                                    <a href="seller-profile.html" class="d-block text-decoration-none"
+                                        id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="../assets/images/profile.JPG" alt="User Profile"
+                                            class="carexpo-profile-img" alt="Profile" width="45" class="rounded-circle">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end shadow-sm rounded">
+                                        <li>
+                                            <a href="profile-setting.html"
+                                                class="dropdown-item d-flex align-items-center">
+                                                <i class="fas fa-user-circle me-2 text-primary"></i> My Account
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center text-danger" href="#">
+                                                <i class="fas fa-sign-out-alt me-2"></i> Logout
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
+
+
                     </div>
                 </div>
 
                 <div class="carexpo-content-area">
-                    <div class="user-heading  mt-4 mb-3">
-                        <a href="./auction-management.html" class="car-infoo">
-                            <button class="pg-txtt1 d-flex gap-2 align-items-center">
-                                <img src="./../assets/images/bak-arow-icon.svg" class="more-size2">
-                                 Back</button>
-                        </a>
-                       
-                    </div>
-                    <!-- Dashboard content -->
-                    <!-- ################ hero-section start ####################### -->
-                    <div class="container">
-                        <div class="row d-flex justify-content-center align-items-center">
-                            <div class=" container-main col-lg-8  col-md-11 col-sm-12 col-xs-12 ">
-                                <div class="row">
-                                    <div class="">
-                                        <h1 class="" style="font-weight: 700;padding: 4px 5px; font-size: 24px;">Create Auction</h1>
-                                        <h6 class="" style="font-weight: 600; color: #666666; padding: 0px 8px;">Fill the details to add new
-                                            customer</h6>
-                                        <div class="image-container-upload mt-4 mb-4" type="file">
-                                            <img src="/../assets/images/tabler_photo-up.png" alt="Uploaded Image"
-                                                onerror="this.onerror=null; this.src='placeholder.png';">
+
+                    <div class="container-fluid prof-set">
+                        <div class="profile-text prof-set mt-5">
+                            <h4>Profile Setting</h4>
+                            <small>Dashboard • Setting</small>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="container-fluid">
+                                    <div class="row mt-5">
+                                        <!-- Sidebar -->
+                                        <div class="col-md-3 col-lg-2 d-md-block sidebar1 p-0">
+                                            <a href="profile-setting.html" class="prof-set">Information</a>
+                                            <a href="profile-notification.html" class="prof-set">Notification</a>
+                                            <a href="profile-preferences.html" class="active prof-set">Account Preferences</a>
+                                            <a href="profile-twofactor.html" class="prof-set">Security Settings</a>
                                         </div>
-                                        <form>
-                    
-                                            <div class="form-group-heading d-flex flex-column gap-3 mt-2">
-                                                <input type="text" id="car" name="car" placeholder="Car Name">
-                                                <input type="text" id="seller" name="seller" placeholder=" Seller ">
-                                            </div>
-                                            <div class="model-main mt-2">
-                                                <!-- Model Dropdown -->
-                                                <div class="form-group ">
-                                                    <label for="model"></label>
-                                                    <select id="model" name="model">
-                                                        <option value=""> Model</option>
-                                                        <option value="sedan">Sedan</option>
-                                                        <option value="suv">SUV</option>
-                                                        <option value="hatchback">Hatchback</option>
-                                                        <option value="truck">Truck</option>
-                                                    </select>
+
+                                        <!-- Main Content -->
+                                        <main class="col-12 col-md-9 col-lg-10 px-4 py-2">
+                                            <!-- Prefrences -->
+                                            <div class="settings-container">
+                                                <div class="row">
+                                                    <!-- Dark Mode & Language -->
+                                                    <div class="col-md-6">
+                                                        <div class="settings-item">
+                                                            <span>Dark Mode / Light Mode</span>
+                                                            <!-- <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    id="darkModeToggle" />
+                                                            </div> -->
+                                                            <input type="checkbox" id="seller-toggle-bids"
+                                                            class="seller-toggle-input">
+                                                        <label for="seller-toggle-bids"
+                                                            class="seller-toggle-label"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="settings-item">
+                                                            <select class="form-select" style="border: none;">
+                                                                <option disabled selected>Language</option>
+                                                                <option value="en">English</option>
+                                                                <option value="fr">French</option>
+                                                                <option value="es">Spanish</option>
+                                                            </select>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Time Zone -->
+                                                    <div class="col-12">
+                                                        <div class="settings-item">
+                                                            <select class="form-select" style="border: none;">
+                                                                <option disabled selected>Time Zone</option>
+                                                                <option value="gmt">GMT</option>
+                                                                <option value="pst">PST</option>
+                                                                <option value="est">EST</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                    
-                                                <!-- Year Dropdown -->
-                                                <div class="form-group">
-                                                    <label for="year"></label>
-                                                    <select id="year" name="year">
-                                                        <option value="">Year</option>
-                                                        <option value="2025">2025</option>
-                                                        <option value="2024">2024</option>
-                                                        <option value="2023">2023</option>
-                                                        <option value="2022">2022</option>
-                                                    </select>
-                                                </div>
-                    
-                                                <!-- Condition Dropdown -->
-                                                <div class="form-group">
-                                                    <label for="condition"></label>
-                                                    <select id="condition" name="condition">
-                                                        <option value="">Condition</option>
-                                                        <option value="new">New</option>
-                                                        <option value="used">Used</option>
-                                                    </select>
-                                                </div>
-                    
-                                                <!-- Mileage Input -->
-                                                <div class="form-group">
-                                                    <label for="mileage"></label>
-                                                    <input type="text" id="mileage" name="mileage" placeholder="Enter Mileage">
-                                                </div>
-                    
-                                                <!-- Start Date Dropdown -->
-                                                <div class="form-group">
-                                                    <label for="start_date"></label>
-                                                    <select id="start_date" name="start_date">
-                                                        <option value="">Start Date</option>
-                                                        <option value="jan">January</option>
-                                                        <option value="feb">February</option>
-                                                        <option value="mar">March</option>
-                                                    </select>
-                                                </div>
-                    
-                                                <!-- End Date Dropdown -->
-                                                <div class="form-group">
-                                                    <label for="end_date"></label>
-                                                    <select id="end_date" name="end_date">
-                                                        <option value=""> End Date</option>
-                                                        <option value="jun">June</option>
-                                                        <option value="jul">July</option>
-                                                        <option value="aug">August</option>
-                                                    </select>
+
+                                                <!-- Save Preferences Button -->
+                                                <div class="text-end">
+                                                    <button class="save-btn mt-2">Save Preferences</button>
                                                 </div>
                                             </div>
-                                        </form>
-                    
-                                    </div>
-                                    <div class="div-button mt-2">
-                                        <button class="publish-auction">Publish Auction</button>
+                                        </main>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
-                    <!-- ################ hero-section end ####################### -->
+
+
                 </div>
             </div>
         </div>
@@ -346,12 +362,24 @@
         </div>
     </div>
     <!-- #######################Right side ofcanvas end########################## -->
+
+    <!-- aos animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            disable: "mobile", // Remove this line if present
+            once: true, // Animation happens only once
+            duration: 1000, // Adjust duration
+        });
+    </script>
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-    <script src="assets/main.js"></script>
+    <script src="../assets/main.js"></script>
 
-    <script src="./assets/js/dashboard script.js"></script>
+    <!-- charts js link -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/js/dashboardScript.js"></script>
 </body>
 
 </html>

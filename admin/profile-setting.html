@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <link rel="shortcut icon" href="assets/images/fav-icon.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="/assets/images/fav-icon.svg" type="image/x-icon" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
@@ -11,7 +11,7 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
   <!-- Montserrat font imported -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +28,8 @@
   <!-- aos animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
 
 </head>
@@ -44,10 +44,10 @@
           <i class="bi bi-x-lg"></i>
         </div>
         <div class="carexpo-logo-container">
-          <img src="..assets/images/fav-icon.svg" alt="Car Expo Logo" class="carexpo-logo" />
+          <img src="../assets/images/fav-icon.svg" alt="Car Expo Logo" class="carexpo-logo" />
         </div>
         <div class="carexpo-sidebar-menu">
-          <a href="./admin/index.html" class="carexpo-menu-item active">
+          <a href="./index.html" class="carexpo-menu-item">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -57,7 +57,7 @@
             </svg>
             <span>Dashboard</span>
           </a>
-          <a href="./admin/user-management.html" class="carexpo-menu-item">
+          <a href="./user-management.html" class="carexpo-menu-item">
             <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -69,7 +69,7 @@
             </svg>
             <span>User Management</span>
           </a>
-          <a href="./admin/auction-management.html" class="carexpo-menu-item">
+          <a href="./auction-management.html" class="carexpo-menu-item">
             <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -81,7 +81,7 @@
             </svg>
             <span>Auction Management</span>
           </a>
-          <a href="./admin/content-moderation.html" class="carexpo-menu-item">
+          <a href="./content-moderation.html" class="carexpo-menu-item">
             <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="white"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -90,7 +90,7 @@
 
             <span>Content Moderation</span>
           </a>
-          <a href="./admin/Analytics and Reports.html" class="carexpo-menu-item">
+          <a href="./Analytics and Reports.html" class="carexpo-menu-item">
             <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -102,7 +102,7 @@
             </svg>
             <span>Analytics and Reports</span>
           </a>
-          <a href="./admin/role-management.html" class="carexpo-menu-item">
+          <a href="./role-management.html" class="carexpo-menu-item">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -112,7 +112,7 @@
             </svg>
             <span>Role Management</span>
           </a>
-          <a href="./admin/car-listing.html" class="carexpo-menu-item">
+          <a href="./car-listing.html" class="carexpo-menu-item">
             <svg width="20" height="20" viewBox="0 0 20 20" class="sidebar-icons" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -132,7 +132,7 @@
             </svg>
             <span>Car Listing</span>
           </a>
-          <a href="./admin/notification.html" class="carexpo-menu-item">
+          <!-- <a href="./notification.html" class="carexpo-menu-item">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -140,7 +140,19 @@
             </svg>
 
             <span>Notifications</span>
+          </a> -->
+
+          <a href="./profile-setting.html" class="carexpo-menu-item active">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="white" class="sidebar-icons"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.16667 15H15.8333V9.19246C15.8333 5.95663 13.2217 3.33329 10 3.33329C6.77833 3.33329 4.16667 5.95663 4.16667 9.19246V15ZM10 1.66663C14.1417 1.66663 17.5 5.03579 17.5 9.19246V16.6666H2.5V9.19246C2.5 5.03579 5.85833 1.66663 10 1.66663ZM7.91667 17.5H12.0833C12.0833 18.0525 11.8638 18.5824 11.4731 18.9731C11.0824 19.3638 10.5525 19.5833 10 19.5833C9.44747 19.5833 8.91756 19.3638 8.52686 18.9731C8.13616 18.5824 7.91667 18.0525 7.91667 17.5Z" />
+            </svg>
+
+            <span>Setting</span>
           </a>
+
+
         </div>
       </div>
 
@@ -177,16 +189,16 @@
             <div class="carexpo-user-profile">
               <div class="container d-flex justify-content-end">
                 <div class="dropdown">
-                  <a href="seller-profile.html" class="d-block text-decoration-none" id="profileDropdown" 
+                  <a href="seller-profile.html" class="d-block text-decoration-none" id="profileDropdown"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="../assets/images/profile.JPG" alt="User Profile" class="carexpo-profile-img" alt="Profile"
                       width="45" class="rounded-circle">
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end shadow-sm rounded">
                     <li>
-                        <a href="profile-setting.html" class="dropdown-item d-flex align-items-center">
+                      <a href="profile-setting.html" class="dropdown-item d-flex align-items-center">
                         <i class="fas fa-user-circle me-2 text-primary"></i> My Account
-                        </a>
+                      </a>
                     </li>
                     <li>
                       <a class="dropdown-item d-flex align-items-center text-danger" href="#">
@@ -196,348 +208,157 @@
                   </ul>
                 </div>
               </div>
-              <!-- <img src="/assets/images/profile.JPG" alt="User Profile" class="carexpo-profile-img" /> -->
             </div>
-            <!-- <div class="carexpo-user-profile">
-              <img src="/assets/images/profile.JPG" alt="User Profile" class="carexpo-profile-img" />
-            </div> -->
+
 
           </div>
         </div>
 
         <div class="carexpo-content-area">
-          <!-- Dashboard content -->
-          <div class="row mt-4">
-            <div class="col-md-12">
-              <!-- metric cards -->
-              <div class="row g-4 mt-2" data-aos="fade-down">
-                <!-- Total Users Card -->
-                <div class="col-12 col-md-3 col-lg-3">
-                  <div class="metric-card">
-                    <div class="metric-content">
-                      <div class="metric-title">Total Users</div>
-                      <div class="metric-value mt-3">21.2k</div>
-                    </div>
-                    <img src="./assets/images/Dashboard images/Total Users.png" alt="total users graph"
-                      class="img-fluid chartGraph-img">
-                  </div>
-                </div>
 
-                <!-- Active Auctions Card -->
-                <div class="col-12 col-md-3 col-lg-3">
-                  <div class="metric-card">
-                    <div class="metric-content">
-                      <div class="metric-title">Active Auctions</div>
-                      <div class="metric-value mt-3">36</div>
-                    </div>
-                    <img src="./assets/images/Dashboard images/Active Auctions.png" alt="Active Auctions"
-                      class="img-fluid chartGraph-img">
-                  </div>
-                </div>
 
-                <!-- Pending Approvals Card -->
-                <div class="col-12 col-md-3 col-lg-3">
-                  <div class="metric-card">
-                    <div class="metric-content">
-                      <div class="metric-title">Pending Approvals</div>
-                      <div class="metric-value mt-3">12</div>
-                    </div>
-                    <img src="./assets/images/Dashboard images/Pending Approvals.png" alt="Pending Approvals"
-                      class="img-fluid chartGraph-img">
-                  </div>
-                </div>
+          <div class="container-fluid prof-set">
+            <div class="profile-text prof-set mt-5">
+              <h4>Profile Setting</h4>
+              <small>Dashboard • Setting</small>
+            </div>
 
-                <!-- Total Sales Card -->
-                <div class="col-12 col-md-3 col-lg-3">
-                  <div class="metric-card">
-                    <div class="metric-content">
-                      <div class="metric-title">Total Sales</div>
-                      <div class="metric-value mt-3">$4.2k</div>
-                    </div>
-                    <img src="./assets/images/Dashboard images/Total Sales.png" alt="Total Sales"
-                      class="img-fluid chartGraph-img">
-
-                  </div>
-                </div>
-              </div>
-
-              <!-- Recent Auctions -->
-              <div class="row mt-4" data-aos="fade-up">
-                <h6 class="fw-semibold">Recent Auctions</h6>
-
-                <!-- car card 1 -->
-                <div class="col-12 col-md-3 mt-3">
-                  <div class="carCards p-3">
-                    <!-- card header -->
-                    <div class="d-flex align-items-start justify-content-between gap-2">
-                      <div class="d-flex align-items-center gap-2">
-                        <!-- arrow up icon -->
-                        <div class="p-2 ArrowUp-icon-box rounded-3 d-flex justify-content-center align-items-center">
-                          <svg width="13" height="13" viewBox="0 0 13 15" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.5 1V14M6.5 1L12 6.57143M6.5 1L1 6.57143" stroke="white" stroke-width="2"
-                              stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-                        </div>
-                        <!-- cars price -->
-                        <div class="d-flex flex-column">
-                          <!-- text -->
-                          <span class="cars-prices">$63,440</span>
-                          <span class="bidders-text">10 Bidders</span>
-                        </div>
-                      </div>
-
-                      <!-- 3 dots -->
-                      <i class="bi bi-three-dots-vertical three-dots-dashboard"></i>
-                    </div>
-                    <!-- car img -->
-                    <div class="mt-2">
-                      <img src="./assets/images/Dashboard images/cards images/car 1 img.jpeg" alt="car 1 img"
-                        class="img-fluid rounded-2 car-imgs">
+            <div class="container">
+              <div class="row">
+                <div class="container-fluid">
+                  <div class="row mt-5">
+                    <!-- Sidebar -->
+                    <div class="col-md-3 col-lg-2 d-md-block sidebar1 p-0">
+                      <a href="profile-setting.html" class="active prof-set">Information</a>
+                      <a href="profile-notification.html" class="prof-set">Notification</a>
+                      <a href="profile-preferences.html" class="prof-set">Account Preferences</a>
+                      <a href="profile-twofactor.html" class="prof-set">Security Settings</a>
                     </div>
 
-                    <!-- card body -->
-                    <div class="mt-2">
-                      <h6 class="car-title">Luxury Sedan Auction</h6>
-                      <span class="car-modal">2020 Toyota</span>
+                    <!-- Main Content -->
+                    <div class="col-md-9 col-lg-9 ">
+                      <div class="bg-light text-dark px-3 pt-lg-3 pt-2  pb-4 rounded">
 
-                      <!-- start and end date -->
-                      <div class="mt-2 d-flex align-items-center gap-4">
-                        <!-- start date -->
-                        <div class="d-flex flex-column justify-content-center gap-2">
-                          <span class="car-dates">Start Date:</span>
-                          <span class="car-date">2025-02-20</span>
+                        <div class="ad-auction-hd fw-bold mb-2">General Settings</div>
+                        <div class="ad-auction-p fw-semibold mb-3">Update your Profile.</div>
+                        <div class="ad-auction-p upload-p fw-semibold mb-3">Upload Store Logo</div>
+
+                        <div class="image-container-upload mb-4 upload-box prof-set" type="file">
+                          <label for="file-upload" class="prof-set">
+                            <img src="../assets/images/tabler_photo-up.png" class="prof-set" id="preview-image"
+                              alt="Uploaded Image" onerror="this.onerror=null; this.src='placeholder.png';">
+                          </label>
+                          <input type="file" id="file-upload" accept="image/*" style="display: none" class="prof-set" />
                         </div>
 
-                        <!-- end date -->
-                        <div class="d-flex flex-column justify-content-center gap-2">
-                          <span class="car-dates">End Date:</span>
-                          <span class="car-date">2025-02-27</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                        <!-- <div class="upload-box prof-set">
+                                    <label for="file-upload" class="prof-set">
+                                      <img
+                                        id="preview-image"
+                                        
+                                        src="../assets/image/picture_upload.svg"
+                                        alt="Upload"
+                                        class="prof-set"
+                                      />
+                                    </label>
+                                    <input
+                                      type="file"
+                                      id="file-upload"
+                                      accept="image/*"
+                                      style="display: none"
+                                      class="prof-set"
+                                    />
+                                  </div> -->
 
-                <!-- car card 2 -->
-                <div class="col-12 col-md-3 mt-3">
-                  <div class="carCards p-3">
+                        <div class="ad-auction-p upload-p fw-semibold mb-3">Name</div>
 
-                    <!-- card header -->
-                    <div class="d-flex align-items-start justify-content-between gap-2">
-                      <div class="d-flex align-items-center gap-2">
-                        <!-- arrow up icon -->
-                        <div class="p-2 ArrowUp-icon-box rounded-3 d-flex justify-content-center align-items-center">
-                          <svg width="13" height="13" viewBox="0 0 13 15" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.5 1V14M6.5 1L12 6.57143M6.5 1L1 6.57143" stroke="white" stroke-width="2"
-                              stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-                        </div>
-                        <!-- cars price -->
-                        <div class="d-flex flex-column">
-                          <!-- text -->
-                          <span class="cars-prices">$63,440</span>
-                          <span class="bidders-text">10 Bidders</span>
+                        <div class="form-group-heading d-flex flex-column gap-3 mt-2 px-0">
+                          <div class="row g-3">
+                            <div class="col-lg-12 col-md-6">
+                              <input type="text" id="car" name="car" class="seller-ad-action-input fw-semibold"
+                                placeholder="Enter Name">
+                            </div>
+                            <div class="col-md-6">
+                              <div class="ad-auction-p upload-p fw-semibold mb-3">Email Address</div>
+
+                              <input type="email" id="seller" name="seller" class="seller-ad-action-input fw-semibold"
+                                placeholder="Seller Email">
+                            </div>
+                            <div class="col-md-6">
+                              <div class="ad-auction-p upload-p fw-semibold mb-3">Contact Number</div>
+                              <input type="number" id="number" name="number" class="seller-ad-action-input fw-semibold"
+                                placeholder="Seller Phone Number">
+                            </div>
+                            <div class="mb-0 prof-set">
+                              <label class="form-label ad-auction-p upload-p fw-semibold mb-3">Role</label>
+                              <select class="form-select prof-set seller-ad-action-input bg-light">
+                                <option disabled selected class="prof-set">Select Role</option>
+                                <option value="admin" class="prof-set">Admin</option>
+                                <option value="user" class="prof-set">User</option>
+                                <option value="editor" class="prof-set">Editor</option>
+                              </select>
+                            </div>
+                            <div class="ad-auction-p upload-p fw-semibold mb-3">Password</div>
+                            <div class="seller-password-group my-0">
+                              <input type="password" id="seller-current-password" class="seller-password-input"
+                                placeholder="Current Password">
+                              <img src="../assets/images/seller-pasword-icon.svg" class="seller-password-toggle"
+                                onclick="togglePassword('seller-current-password', this)">
+                            </div>
+                          </div>
                         </div>
                       </div>
 
-                      <!-- 3 dots -->
-                      <i class="bi bi-three-dots-vertical three-dots-dashboard"></i>
-                    </div>
-                    <!-- car img -->
-                    <div class="mt-2">
-                      <img src="./assets/images/Dashboard images/cards images/car 2 img.jpeg" alt="car 2 img"
-                        class="img-fluid rounded-2 car-imgs">
-                    </div>
-
-                    <!-- card body -->
-                    <div class="mt-2">
-                      <h6 class="car-title">Classic Sports Car Auction</h6>
-                      <span class="car-modal">2020 Toyota</span>
-
-                      <!-- start and end date -->
-                      <div class="mt-2 d-flex align-items-center gap-4">
-                        <!-- start date -->
-                        <div class="d-flex flex-column justify-content-center gap-2">
-                          <span class="car-dates">Start Date:</span>
-                          <span class="car-date">2025-02-20</span>
-                        </div>
-
-                        <!-- end date -->
-                        <div class="d-flex flex-column justify-content-center gap-2">
-                          <span class="car-dates">End Date:</span>
-                          <span class="car-date">2025-02-27</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-                <!-- car card 3 -->
-                <div class="col-12 col-md-3 mt-3">
-                  <div class="carCards p-3">
-
-                    <!-- card header -->
-                    <div class="d-flex align-items-start justify-content-between gap-2">
-                      <div class="d-flex align-items-center gap-2">
-                        <!-- arrow up icon -->
-                        <div
-                          class="p-2 ArrowUp-icon-box-third rounded-3 d-flex justify-content-center align-items-center">
-                          <svg width="13" height="13" viewBox="0 0 13 15" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.5 14V1M6.5 14L12 8.42857M6.5 14L1 8.42857" stroke="white" stroke-width="2"
-                              stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-
-                        </div>
-                        <!-- cars price -->
-                        <div class="d-flex flex-column">
-                          <!-- text -->
-                          <span class="cars-prices">$63,440</span>
-                          <span class="bidders-text">14 Bidders</span>
-                        </div>
+                      <div class="d-flex justify-content-between align-items-center mt-4 pe-0">
+                        <a href="#" class="text-dlet prof-set">Delete My Account</a>
+                        <button
+                          class="btn d-flex justify-content-center align-items-center switch-by-btn gap-2 mt-0">Save
+                          Changes</button>
                       </div>
 
-                      <!-- 3 dots -->
-                      <i class="bi bi-three-dots-vertical three-dots-dashboard"></i>
-                    </div>
-                    <!-- car img -->
-                    <div class="mt-2">
-                      <img src="./assets/images/Dashboard images/cards images/car 3 img.jpeg" alt="car 3 img"
-                        class="img-fluid rounded-2 car-imgs">
-                    </div>
-
-                    <!-- card body -->
-                    <div class="mt-2">
-                      <h6 class="car-title">Eco-Friendly Car Auction</h6>
-                      <span class="car-modal">2020 Toyota</span>
-
-                      <!-- start and end date -->
-                      <div class="mt-2 d-flex align-items-center gap-4">
-                        <!-- start date -->
-                        <div class="d-flex flex-column justify-content-center gap-2">
-                          <span class="car-dates">Start Date:</span>
-                          <span class="car-date">2025-02-20</span>
-                        </div>
-
-                        <!-- end date -->
-                        <div class="d-flex flex-column justify-content-center gap-2">
-                          <span class="car-dates">End Date:</span>
-                          <span class="car-date">2025-02-27</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- car card 4 -->
-                <div class="col-12 col-md-3 mt-3">
-                  <div class="carCards p-3">
-
-                    <!-- card header -->
-                    <div class="d-flex align-items-start justify-content-between gap-2">
-                      <div class="d-flex align-items-center gap-2">
-                        <!-- arrow up icon -->
-                        <div class="p-2 ArrowUp-icon-box rounded-3 d-flex justify-content-center align-items-center">
-                          <svg width="13" height="13" viewBox="0 0 13 15" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.5 1V14M6.5 1L12 6.57143M6.5 1L1 6.57143" stroke="white" stroke-width="2"
-                              stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-                        </div>
-                        <!-- cars price -->
-                        <div class="d-flex flex-column">
-                          <!-- text -->
-                          <span class="cars-prices">$63,440</span>
-                          <span class="bidders-text">10 Bidders</span>
-                        </div>
-                      </div>
-
-                      <!-- 3 dots -->
-                      <i class="bi bi-three-dots-vertical three-dots-dashboard"></i>
-                    </div>
-                    <!-- car img -->
-                    <div class="mt-2">
-                      <img src="./assets/images/Dashboard images/cards images/car 4 img.jpeg" alt="car 4 img"
-                        class="img-fluid rounded-2 car-imgs">
-                    </div>
-
-                    <!-- card body -->
-                    <div class="mt-2">
-                      <h6 class="car-title">Luxury Sedan Auction</h6>
-                      <span class="car-modal">2020 Toyota</span>
-
-                      <!-- start and end date -->
-                      <div class="mt-2 d-flex align-items-center gap-4">
-                        <!-- start date -->
-                        <div class="d-flex flex-column justify-content-center gap-2">
-                          <span class="car-dates">Start Date:</span>
-                          <span class="car-date">2025-02-20</span>
-                        </div>
-
-                        <!-- end date -->
-                        <div class="d-flex flex-column justify-content-center gap-2">
-                          <span class="car-dates">End Date:</span>
-                          <span class="car-date">2025-02-27</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- charts here -->
-              <div class="row mt-3">
-                <!-- graph -->
-                <div class="col-12 col-md-6">
-                  <div class="">
-                    <div class="chart-container p-4">
-                      <div class="d-flex flex-wrap justify-content-between align-items-center">
-                        <div>
-                          <h5 class="fw-bold">Sales Trend</h5>
-                          <p><strong>$44.1k</strong> (+27%) than last year</p>
-                        </div>
-                        <select id="timeFilter" class="form-select w-auto">
-                          <option value="year">Year</option>
-                          <option value="month">Month</option>
-                        </select>
-                      </div>
-                      <canvas id="salesChart"></canvas>
-                    </div>
-                  </div>
-                </div>
-
-
-                <!-- circular chart -->
-                <div class="col-12 col-md-6 mt-2 mt-md-0">
-                  <div class="">
-                    <div class="chart-container p-4">
-                      <div class="chart-header">
-                        <h5 class="fw-bold">Customers Source</h5>
-                        <p class="m-0">(+42%) than last year</p>
-                      </div>
-                      <div class="chart-wrapper">
-                        <canvas id="customersChart" style="width: 200px !important; height: 200px !important;"></canvas>
-                        <div class="chart-text">+42%<br>than last year</div>
-                      </div>
-                      <div class="legend-container">
-                        <div class="legend-item"><span class="legend-color" style="background-color: #007867;"></span>
-                          Web (41%)</div>
-                        <div class="legend-item"><span class="legend-color" style="background-color: #5BE49B;"></span>
-                          iOS (12%)</div>
-                        <div class="legend-item"><span class="legend-color" style="background-color: #C8FAD6;"></span>
-                          Android (29%)</div>
-                        <div class="legend-item"><span class="legend-color" style="background-color: #004B50;"></span>
-                          Other (5%)</div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
+
+          <!-- JavaScript -->
+          <script>
+            function togglePassword() {
+              let passwordInput = document.getElementById("password");
+              let eyeIcon = document.getElementById("eyeIcon");
+
+              if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.replace("fa-eye", "fa-eye-slash");
+              } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.replace("fa-eye-slash", "fa-eye");
+              }
+            }
+          </script>
+
+          <!-- Image Uploading -->
+          <script>
+            document
+              .getElementById("file-upload")
+              .addEventListener("change", function (event) {
+                const file = event.target.files[0];
+                if (file) {
+                  const reader = new FileReader();
+                  reader.onload = function (e) {
+                    document.getElementById("preview-image").src = e.target.result;
+                  };
+                  reader.readAsDataURL(file);
+                }
+              });
+          </script>
+
+
+
+
         </div>
       </div>
     </div>
